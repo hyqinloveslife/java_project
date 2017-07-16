@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>file list</title>
+<script type="text/javascript" src="resource/js/jquery.js"></script>
+	<div>文件列表</div>
+</head>
+<body>
+	<div id="app"></div>
+	<hr>
+	<img style="width:200px;height:200px;" src="D:\ssm_img\1499780316767可爱.png">
+</body>
+<script type="text/javascript">
+	$(function(){
+		getFileList();
+	
+	});
+	
+	function getFileList(){
+		var webUrl="http://localhost:8080/testSSM/";
+		var url="user/imgs.do";
+		$.ajax({
+			url:url,
+			type:"get",
+			success:function(json){
+				console.log(JSON.parse(json.data));
+				var message=JSON.parse(json.data);
+				var _html="";
+				for ( var i = 0; i < message.length; i++) {
+					var array_element = message[i];
+					console.log(array_element.filePath);
+					var items="<div>"+array_element.fileName +"<img style='width:200px;height:200px;' src='"+array_element.filePath+"'/> "  +"</div>";
+					_html+=items;
+				}
+				
+				$("#app").html(_html);
+			},
+			error:function(){
+				
+			}
+		});
+	}
+</script>
+</html>

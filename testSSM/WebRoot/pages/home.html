@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../resource/js/jquery.js"></script>
+	
+  </head>
+  
+  <body>
+    <div id="app"></div>
+  </body>
+<script type="text/javascript">
+var webUrl="http://localhost:8080/testSSM/";
+	$(function(){
+		init();
+	})
+	
+	function init(){
+		var url=webUrl+"weather/weather.do";
+		$.ajax({
+			type:"get",
+			url:url,
+			dataType:"json",
+			data:{"city":"changsha"},
+			success:function(json){
+				console.log(json);
+				return;
+				var message=JSON.parse(json.data);
+				//alert(message.results[0].now.text);
+				var text=message.results[0].now.text;
+				var temperature=message.results[0].now.temperature;
+				$("#app").html(text+"   "+temperature);
+			}
+		});
+	}
+</script>  
+</html>

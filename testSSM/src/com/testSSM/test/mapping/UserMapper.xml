@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.testSSM.test.dao.IUserDao">
+	<select id="findUserById" parameterType="java.lang.String"
+		resultType="com.testSSM.test.model.User">
+		select * from user where id=#{id}
+	</select>
+
+	<select id="queryTest" resultType="com.testSSM.test.model.User"
+		parameterType="java.lang.String">
+		select * from user limit 1
+	</select>
+
+	<select id="queryAccount" resultType="com.testSSM.test.model.User"
+		parameterType="java.lang.String">
+		select * from user where account=#{account}
+	</select>
+
+	<insert id="save" parameterType="com.testSSM.test.model.User">
+		insert into user
+		(account,name,password,gender,age,addr,mail,manager)
+		values
+		(#{account},#{name},#{password},#{gender},#{age},#{addr},#{mail},#{manager}
+		)
+	</insert>
+
+	<select id="query" resultType="com.testSSM.test.model.User">
+		select ff.NAME,ff.password,ff.account,ff.ADDR,ff.age,ff.id,
+		case when ff.gender = 1 then '男'
+			when ff.gender = 2 then '女'
+			else '未说明性别'
+		end as gender,
+		ff.birth, ff.mail,ff.phone,
+		case when ff.manager = 1 then '管理员'
+			when ff.manager =2 then '会员'
+			else '未说明身份' end as manager,
+		case when ff.status =1 then '有效'
+			when ff.status = 0 then '无效'
+			else '未说明是否有效'
+			end as status
+		from user ff
+	</select>
+
+	<select id="queryUserList" resultType="com.testSSM.test.model.User">
+		select ff.NAME,ff.password,ff.account,ff.ADDR,ff.age,ff.id,
+		case when ff.gender = 1 then '男'
+			when ff.gender = 2 then '女'
+			else '未说明性别'
+		end as gender,
+		ff.birth, ff.mail,ff.phone,
+		case when ff.manager = 1 then '管理员'
+			when ff.manager =2 then '会员'
+			else '未说明身份' end as manager,
+		case when ff.status =1 then '有效'
+			when ff.status = 0 then '无效'
+			else '未说明是否有效'
+			end as status
+		from user ff
+		where 1=1
+		and account like concat('%',#{username},'%')  or id like concat('%',#{username},'%')  or name like concat('%',#{username},'%')
+		ORDER BY ff.id
+	</select>
+
+	<delete id="remove" parameterType="java.lang.String">
+		delete from user where id = #{id}
+	</delete>
+
+</mapper>
