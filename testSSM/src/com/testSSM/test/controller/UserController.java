@@ -51,7 +51,7 @@ public class UserController extends BaseController{
 	private UserService userService;
 	
 	/**
-	 * ×¢²á
+	 * ×¢ï¿½ï¿½
 	 * @param request
 	 * @param user
 	 * @return
@@ -67,7 +67,7 @@ public class UserController extends BaseController{
 		BeanUtils.copyProperties(user, userModel);
 		int result = userService.save(userModel);
 		if (result>0) {			
-			view.addObject("flag", "³É¹¦");
+			view.addObject("flag", "ï¿½É¹ï¿½");
 		}
 		view.setViewName("register");
 		
@@ -75,7 +75,7 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * ÓÃ»§ÁÐ±í
+	 * ï¿½Ã»ï¿½ï¿½Ð±ï¿½
 	 * @return
 	 */
 	@RequestMapping("userList.do")
@@ -83,19 +83,19 @@ public class UserController extends BaseController{
 		ModelAndView view=new ModelAndView();
 		List<User> users=userService.query();
 		view.addObject("users", users);
-		//setviewname»á¶¨Î»µ½web-infÄ¿Â¼ÏÂ
+		//setviewnameï¿½á¶¨Î»ï¿½ï¿½web-infÄ¿Â¼ï¿½ï¿½
 		view.setViewName("user/userList");
 		return view;
 	}
 	
 	/**
-	 * µÇÂ¼
+	 * ï¿½ï¿½Â¼
 	 * @return
 	 */
 	@RequestMapping("login.do")
 	public ModelAndView login(HttpServletRequest request,UserPojo userPojo){
 		ModelAndView view=new ModelAndView();
-		//Çå³ý¿Õ¸ñ
+		//ï¿½ï¿½ï¿½ï¿½Õ¸ï¿½
 		userPojo.setAccount(userPojo.getAccount().trim());
 		userPojo.setPassword(userPojo.getPassword().trim());
 		User user=userService.queryAccount(userPojo.getAccount());
@@ -107,7 +107,7 @@ public class UserController extends BaseController{
 				return view;
 			}
 		}
-		view.addObject("flag", "ÕËºÅ»òÃÜÂë´íÎó");
+		view.addObject("flag", "ï¿½ËºÅ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		view.setViewName("redirect:login.jsp");
 		
 		return view;
@@ -115,7 +115,7 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * Ç°¶ËµÇÂ¼
+	 * Ç°ï¿½Ëµï¿½Â¼
 	 * @author huangyq
 	 * @date 2017-7-7  
 	 * @version 1.0.0 
@@ -135,12 +135,12 @@ public class UserController extends BaseController{
 				object.setOther(new Other(1));
 			}else {
 				object.setOther(new Other(0));
-				object.setData("ÃÜÂë´íÎó");
+				object.setData("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			}
 		}else {			
 			Other other=new Other(0);
 			object.setOther(other);
-			object.setData("ÕËºÅ²»´æÔÚ");
+			object.setData("ï¿½ËºÅ²ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}
 		
 		return object;
@@ -163,7 +163,7 @@ public class UserController extends BaseController{
 				if (list.size()>0) {
 					view.addObject("users", list);
 				}else {
-					throw new  Exception("Ã»ÓÐÊý¾Ý");
+					throw new  Exception("Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 				}
 			}else {
 				view.addObject("users",userService.query());
@@ -175,8 +175,8 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * É¾³ý
-	 * ¸Ã¹¦ÄÜ×ö³ÉajaxÒì²½Ìá½»¿ÉÄÜ»á¸üºÃ
+	 * É¾ï¿½ï¿½
+	 * ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ajaxï¿½ì²½ï¿½á½»ï¿½ï¿½ï¿½Ü»ï¿½ï¿½ï¿½ï¿½
 	 * @return
 	 */
 	@RequestMapping("delete.do")
@@ -186,9 +186,9 @@ public class UserController extends BaseController{
 		System.out.println(id);
 		int result = userService.remove(id);
 		if (result>0) {
-			view.addObject("flag", "³É¹¦");
+			view.addObject("flag", "ï¿½É¹ï¿½");
 		}else {
-			view.addObject("flag", "Ê§°Ü");
+			view.addObject("flag", "Ê§ï¿½ï¿½");
 		}
 		view.addObject("users",userService.query());
 		view.setViewName("user/userList");
@@ -217,7 +217,7 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * ÎÄ¼þÉÏ´«
+	 * ï¿½Ä¼ï¿½ï¿½Ï´ï¿½
 	 * @author huangyq
 	 * @date 2017-7-7  
 	 * @version 1.0.0 
@@ -239,7 +239,7 @@ public class UserController extends BaseController{
 			String path=null;
 			String type=null;
 			String fileName=file.getOriginalFilename();
-			logger.debug("ÉÏ´«µÄÎÄ¼þÔ­Ãû³Æ:"+fileName);
+			logger.debug("ï¿½Ï´ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Ô­ï¿½ï¿½ï¿½ï¿½:"+fileName);
 			
 			type=fileName.indexOf(".")!=-1?fileName.substring(fileName.indexOf(".")+1,fileName.length()):null;
 			if (type!=null) {
@@ -252,11 +252,11 @@ public class UserController extends BaseController{
 					
 					//path=realPath+myPath+System.getProperty("file.separator")+trueFileName;
 					path = FILE_PATH+System.getProperty("file.separator")+trueFileName;
-					logger.debug("´æ·ÅÍ¼Æ¬ÎÄ¼þµÄÂ·¾¶:"+path); 
+					logger.debug("ï¿½ï¿½ï¿½Í¼Æ¬ï¿½Ä¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½:"+path); 
 					
 					file.transferTo(new File(path));
 					
-					//²»¹ÜÊ²Ã´ÎÄ¼þ£¬¶¼Òª´æÔÚÊý¾Ý¿âÀïÃæ
+					//ï¿½ï¿½ï¿½ï¿½Ê²Ã´ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½
 					record.setFileName(fileName);
 					record.setFilePath(path);
 					record.setLength(file.getSize());
@@ -266,34 +266,34 @@ public class UserController extends BaseController{
 					
 					if (result>0) {
 						other.setCode(SUCCESS_STATUS_CODE);
-						json.setData("ÉÏ´«³É¹¦");
+						json.setData("ï¿½Ï´ï¿½ï¿½É¹ï¿½");
 						json.setOther(other);
-						System.out.println("ÎÄ¼þ³É¹¦ÉÏ´«µ½Ö¸¶¨Ä¿Â¼ÏÂ");
+						System.out.println("ï¿½Ä¼ï¿½ï¿½É¹ï¿½ï¿½Ï´ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ä¿Â¼ï¿½ï¿½");
 					}else {
 						json.setOther(new Other(ERROR_STATUS_CODE));
-						json.setData("ÉÏ´«Ê§°Ü");
+						json.setData("ï¿½Ï´ï¿½Ê§ï¿½ï¿½");
 					}
 					
 				}else {
 					other.setCode(ERROR_STATUS_CODE);
-					json.setData("ÉÏ´«ÎÄ¼þÊ§°Ü");
+					json.setData("ï¿½Ï´ï¿½ï¿½Ä¼ï¿½Ê§ï¿½ï¿½");
 					json.setOther(other);
-					System.out.println("²»ÊÇÎÒÃÇÏëÒªµÄÎÄ¼þÀàÐÍ,Çë°´ÒªÇóÖØÐÂÉÏ´«");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ë°´Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½");
 					return json;
 				}
 			}
 		}else {
 			other.setCode(ERROR_STATUS_CODE);
 			json.setOther(other);
-			json.setData("Ã»ÓÐÕÒµ½Ïà¶ÔÓ¦µÄÎÄ¼þ");
-			System.out.println("Ã»ÓÐÕÒµ½Ïà¶ÔÓ¦µÄÎÄ¼þ");
+			json.setData("Ã»ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ä¼ï¿½");
+			System.out.println("Ã»ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ä¼ï¿½");
 			return json;
 		}
 		return json;
 	}
 	
 	/**
-	 * ÎÄ¼þÏÂÔØ
+	 * ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @author huangyq
 	 * @date 2017-7-9  
 	 * @version 1.0.0 
@@ -328,7 +328,7 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * ËùÓÐÍ¼Æ¬²é¿´
+	 * ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½é¿´
 	 * @author huangyq
 	 * @date 2017-7-11  
 	 * @version 1.0.0 
@@ -349,13 +349,13 @@ public class UserController extends BaseController{
 			object.setOther(other);
 		}else {
 			other.setCode(ERROR_STATUS_CODE);
-			object.setData("²éÑ¯ÎÞÊý¾Ý");
+			object.setData("ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}
 		return object;
 	}
 	
 	/**
-	 * µÇ³ö
+	 * ï¿½Ç³ï¿½
 	 * @author huangyq
 	 * @date 2017-7-7  
 	 * @version 1.0.0 
