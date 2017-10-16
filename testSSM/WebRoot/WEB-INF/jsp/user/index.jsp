@@ -80,7 +80,7 @@
 					}, {
 						id : '6',
 						text : '菜单管理',
-						href : '/resource/Menu/index.html'
+						href : '#'
 					} ]
 				} ]
 			}, {
