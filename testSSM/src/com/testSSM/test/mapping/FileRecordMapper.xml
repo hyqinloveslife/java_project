@@ -10,7 +10,7 @@
 	</insert>
 
 	<select id="query" resultType="com.testSSM.test.model.DownloadRecord">
-		select fileName,filePath,length,status,startTime,type 
+		select * 
 		from downloadRecord
 	</select>
 

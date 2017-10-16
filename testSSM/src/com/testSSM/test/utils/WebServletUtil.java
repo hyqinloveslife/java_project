@@ -66,7 +66,7 @@ public class WebServletUtil {
 
 			} else {
 
-				return "获取地址失败�?";
+				return "获取地址失败?";
 
 			}
 
