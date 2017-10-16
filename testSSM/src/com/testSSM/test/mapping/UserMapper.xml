@@ -43,7 +43,7 @@
 		else '未说明是否有效'
 		end as status
 		from user ff
-		order by ${ff.id}
+	<!-- order by ${ff.id}  -->
 	</select>
 
 	<select id="queryUserList" resultType="com.testSSM.test.model.User">
