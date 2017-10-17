@@ -3,19 +3,20 @@ package com.testSSM.test.model.entity;
 import java.util.Date;
 
 /**
- * ·��
+ * 路线bean
  * @author hyqin
  *
  */
 public class Route {
 	private String id;
-	private String startST;
-	private String endST;
-	private int price;
-	private int stNumber;
-	private String type;
-	private Date startTime;
-	private Date endTime;
+	private String startST;//起始站
+	private String endST;//终点站
+	private int price;//票价
+	private int stNumber;//站点数
+	private String type;//路线类型
+	private Date startTime;//开始时间
+	private Date endTime;//结束时间
+	private Date useTime;//启用时间
 	public String getId() {
 		return id;
 	}
@@ -63,6 +64,12 @@ public class Route {
 	}
 	public void setEndTime(Date endTime) {
 		this.endTime = endTime;
+	}
+	public Date getUseTime() {
+		return useTime;
+	}
+	public void setUseTime(Date useTime) {
+		this.useTime = useTime;
 	}
 	public Route() {
 		

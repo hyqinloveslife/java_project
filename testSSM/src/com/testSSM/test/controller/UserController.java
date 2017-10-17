@@ -41,6 +41,11 @@ import com.testSSM.test.pojo.UserPojo;
 import com.testSSM.test.service.FileRecordService;
 import com.testSSM.test.service.UserService;
 
+/**
+ * 用户的控制层
+ * @author huangyeq
+ *
+ */
 @Controller
 @RequestMapping("/user")
 public class UserController extends BaseController{
@@ -51,7 +56,7 @@ public class UserController extends BaseController{
 	private UserService userService;
 	
 	/**
-	 * ע��
+	 * 注锟斤拷
 	 * @param request
 	 * @param user
 	 * @return
@@ -67,7 +72,7 @@ public class UserController extends BaseController{
 		BeanUtils.copyProperties(user, userModel);
 		int result = userService.save(userModel);
 		if (result>0) {			
-			view.addObject("flag", "�ɹ�");
+			view.addObject("flag", "锟缴癸拷");
 		}
 		view.setViewName("register");
 		
@@ -75,7 +80,7 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * �û��б�
+	 * 锟矫伙拷锟叫憋拷
 	 * @return
 	 */
 	@RequestMapping("userList.do")
@@ -83,19 +88,19 @@ public class UserController extends BaseController{
 		ModelAndView view=new ModelAndView();
 		List<User> users=userService.query();
 		view.addObject("users", users);
-		//setviewname�ᶨλ��web-infĿ¼��
+		//setviewname锟结定位锟斤拷web-inf目录锟斤拷
 		view.setViewName("user/userList");
 		return view;
 	}
 	
 	/**
-	 * ��¼
+	 * 锟斤拷录
 	 * @return
 	 */
 	@RequestMapping("login.do")
 	public ModelAndView login(HttpServletRequest request,UserPojo userPojo){
 		ModelAndView view=new ModelAndView();
-		//����ո�
+		//锟斤拷锟斤拷崭锟�
 		userPojo.setAccount(userPojo.getAccount().trim());
 		userPojo.setPassword(userPojo.getPassword().trim());
 		User user=userService.queryAccount(userPojo.getAccount());
@@ -107,7 +112,7 @@ public class UserController extends BaseController{
 				return view;
 			}
 		}
-		view.addObject("flag", "�˺Ż��������");
+		view.addObject("flag", "锟剿号伙拷锟斤拷锟斤拷锟斤拷锟�");
 		view.setViewName("redirect:login.jsp");
 		
 		return view;
@@ -115,7 +120,7 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * ǰ�˵�¼
+	 * 前锟剿碉拷录
 	 * @author huangyq
 	 * @date 2017-7-7  
 	 * @version 1.0.0 
@@ -135,12 +140,12 @@ public class UserController extends BaseController{
 				object.setOther(new Other(1));
 			}else {
 				object.setOther(new Other(0));
-				object.setData("�������");
+				object.setData("锟斤拷锟斤拷锟斤拷锟�");
 			}
 		}else {			
 			Other other=new Other(0);
 			object.setOther(other);
-			object.setData("�˺Ų�����");
+			object.setData("锟剿号诧拷锟斤拷锟斤拷");
 		}
 		
 		return object;
@@ -163,7 +168,7 @@ public class UserController extends BaseController{
 				if (list.size()>0) {
 					view.addObject("users", list);
 				}else {
-					throw new  Exception("û������");
+					throw new  Exception("没锟斤拷锟斤拷锟斤拷");
 				}
 			}else {
 				view.addObject("users",userService.query());
@@ -175,8 +180,8 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * ɾ��
-	 * �ù�������ajax�첽�ύ���ܻ����
+	 * 删锟斤拷
+	 * 锟矫癸拷锟斤拷锟斤拷锟斤拷ajax锟届步锟结交锟斤拷锟杰伙拷锟斤拷锟�
 	 * @return
 	 */
 	@RequestMapping("delete.do")
@@ -186,9 +191,9 @@ public class UserController extends BaseController{
 		System.out.println(id);
 		int result = userService.remove(id);
 		if (result>0) {
-			view.addObject("flag", "�ɹ�");
+			view.addObject("flag", "锟缴癸拷");
 		}else {
-			view.addObject("flag", "ʧ��");
+			view.addObject("flag", "失锟斤拷");
 		}
 		view.addObject("users",userService.query());
 		view.setViewName("user/userList");
@@ -217,7 +222,7 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * �ļ��ϴ�
+	 * 锟侥硷拷锟较达拷
 	 * @author huangyq
 	 * @date 2017-7-7  
 	 * @version 1.0.0 
@@ -239,7 +244,7 @@ public class UserController extends BaseController{
 			String path=null;
 			String type=null;
 			String fileName=file.getOriginalFilename();
-			logger.debug("�ϴ����ļ�ԭ����:"+fileName);
+			logger.debug("锟较达拷锟斤拷锟侥硷拷原锟斤拷锟斤拷:"+fileName);
 			
 			type=fileName.indexOf(".")!=-1?fileName.substring(fileName.indexOf(".")+1,fileName.length()):null;
 			if (type!=null) {
@@ -252,11 +257,11 @@ public class UserController extends BaseController{
 					
 					//path=realPath+myPath+System.getProperty("file.separator")+trueFileName;
 					path = FILE_PATH+System.getProperty("file.separator")+trueFileName;
-					logger.debug("���ͼƬ�ļ���·��:"+path); 
+					logger.debug("锟斤拷锟酵计拷募锟斤拷锟铰凤拷锟�:"+path); 
 					
 					file.transferTo(new File(path));
 					
-					//����ʲô�ļ�����Ҫ�������ݿ�����
+					//锟斤拷锟斤拷什么锟侥硷拷锟斤拷锟斤拷要锟斤拷锟斤拷锟斤拷锟捷匡拷锟斤拷锟斤拷
 					record.setFileName(fileName);
 					record.setFilePath(path);
 					record.setLength(file.getSize());
@@ -266,34 +271,34 @@ public class UserController extends BaseController{
 					
 					if (result>0) {
 						other.setCode(SUCCESS_STATUS_CODE);
-						json.setData("�ϴ��ɹ�");
+						json.setData("锟较达拷锟缴癸拷");
 						json.setOther(other);
-						System.out.println("�ļ��ɹ��ϴ���ָ��Ŀ¼��");
+						System.out.println("锟侥硷拷锟缴癸拷锟较达拷锟斤拷指锟斤拷目录锟斤拷");
 					}else {
 						json.setOther(new Other(ERROR_STATUS_CODE));
-						json.setData("�ϴ�ʧ��");
+						json.setData("锟较达拷失锟斤拷");
 					}
 					
 				}else {
 					other.setCode(ERROR_STATUS_CODE);
-					json.setData("�ϴ��ļ�ʧ��");
+					json.setData("锟较达拷锟侥硷拷失锟斤拷");
 					json.setOther(other);
-					System.out.println("����������Ҫ���ļ�����,�밴Ҫ�������ϴ�");
+					System.out.println("锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷要锟斤拷锟侥硷拷锟斤拷锟斤拷,锟诫按要锟斤拷锟斤拷锟斤拷锟较达拷");
 					return json;
 				}
 			}
 		}else {
 			other.setCode(ERROR_STATUS_CODE);
 			json.setOther(other);
-			json.setData("û���ҵ����Ӧ���ļ�");
-			System.out.println("û���ҵ����Ӧ���ļ�");
+			json.setData("没锟斤拷锟揭碉拷锟斤拷锟接︼拷锟斤拷募锟�");
+			System.out.println("没锟斤拷锟揭碉拷锟斤拷锟接︼拷锟斤拷募锟�");
 			return json;
 		}
 		return json;
 	}
 	
 	/**
-	 * �ļ�����
+	 * 锟侥硷拷锟斤拷锟斤拷
 	 * @author huangyq
 	 * @date 2017-7-9  
 	 * @version 1.0.0 
@@ -328,7 +333,7 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * ����ͼƬ�鿴
+	 * 锟斤拷锟斤拷图片锟介看
 	 * @author huangyq
 	 * @date 2017-7-11  
 	 * @version 1.0.0 
@@ -349,13 +354,13 @@ public class UserController extends BaseController{
 			object.setOther(other);
 		}else {
 			other.setCode(ERROR_STATUS_CODE);
-			object.setData("��ѯ������");
+			object.setData("锟斤拷询锟斤拷锟斤拷锟斤拷");
 		}
 		return object;
 	}
 	
 	/**
-	 * �ǳ�
+	 * 锟角筹拷
 	 * @author huangyq
 	 * @date 2017-7-7  
 	 * @version 1.0.0 

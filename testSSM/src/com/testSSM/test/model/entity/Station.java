@@ -1,5 +1,10 @@
 package com.testSSM.test.model.entity;
 
+/**
+ * 站点bean
+ * @author huangyeq
+ *
+ */
 public class Station {
 	private String id;
 	private String name;
