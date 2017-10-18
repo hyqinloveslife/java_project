@@ -1,5 +1,7 @@
 package com.testSSM.test.model.entity;
 
+import java.util.Date;
+
 /**
  * 站点bean
  * @author huangyeq
@@ -8,6 +10,7 @@ package com.testSSM.test.model.entity;
 public class Station {
 	private String id;
 	private String name;
+	private Date useTime;
 	public String getId() {
 		return id;
 	}
@@ -19,6 +22,12 @@ public class Station {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public Date getUseTime() {
+		return useTime;
+	}
+	public void setUseTime(Date useTime) {
+		this.useTime = useTime;
 	}
 	public Station(String id, String name) {
 		super();
