@@ -2,44 +2,34 @@ package com.testSSM.test.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-
-import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.testSSM.test.common.DataJson;
 import com.testSSM.test.common.ListObject;
 import com.testSSM.test.common.Other;
 import com.testSSM.test.model.DownloadRecord;
-import com.testSSM.test.model.ResultData;
 import com.testSSM.test.model.User;
 import com.testSSM.test.pojo.UserPojo;
-import com.testSSM.test.service.FileRecordService;
 import com.testSSM.test.service.UserService;
+
+import net.sf.json.JSONArray;
 
 /**
  * 用户的控制层
@@ -112,7 +102,7 @@ public class UserController extends BaseController{
 				return view;
 			}
 		}
-		view.addObject("flag", "锟剿号伙拷锟斤拷锟斤拷锟斤拷锟�");
+		view.addObject("flag", "登录失败");
 		view.setViewName("redirect:login.jsp");
 		
 		return view;

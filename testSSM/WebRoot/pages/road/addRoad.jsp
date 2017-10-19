@@ -32,11 +32,11 @@
 			</div>
 			<div>
 				<label>站点(起)</label>
-				<input type="text" name="start_st" placeholder="始发站">
+				<input type="text" name="startST" placeholder="始发站">
 			</div>
 			<div>
 				<label>站点(终)</label>
-				<input type="text" name="end_st" placeholder="终点站">
+				<input type="text" name="endST" placeholder="终点站">
 			</div>
 			<div>
 				<label>票价</label>

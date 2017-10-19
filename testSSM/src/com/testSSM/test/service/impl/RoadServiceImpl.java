@@ -51,11 +51,17 @@ public class RoadServiceImpl implements IRoadService {
 
 	@Override
 	public int saveRoute(Route route) {
+		if(route.getUseTime()==null){
+			route.setUseTime(new Date());
+		}
 		return roadDao.saveRoute(route);
 	}
 
 	@Override
 	public int saveRoad(RoadPojo roadPojo) {
+		if (roadPojo.getUseTime()==null) {
+			roadPojo.setUseTime(new Date());
+		}
 		return roadDao.saveRoad(roadPojo);
 	}
 

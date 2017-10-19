@@ -9,14 +9,21 @@ import java.util.Date;
  */
 public class Route {
 	private String id;
+	private String route_name;
 	private String startST;//起始站
 	private String endST;//终点站
 	private int price;//票价
 	private int stNumber;//站点数
 	private String type;//路线类型
-	private Date startTime;//开始时间
-	private Date endTime;//结束时间
+	private String startTime;//开始时间
+	private String endTime;//结束时间
 	private Date useTime;//启用时间
+	public String getRoute_name() {
+		return route_name;
+	}
+	public void setRoute_name(String route_name) {
+		this.route_name = route_name;
+	}
 	public String getId() {
 		return id;
 	}
@@ -53,16 +60,17 @@ public class Route {
 	public void setType(String type) {
 		this.type = type;
 	}
-	public Date getStartTime() {
+	
+	public String getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(Date startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
-	public Date getEndTime() {
+	public String getEndTime() {
 		return endTime;
 	}
-	public void setEndTime(Date endTime) {
+	public void setEndTime(String endTime) {
 		this.endTime = endTime;
 	}
 	public Date getUseTime() {
@@ -74,18 +82,7 @@ public class Route {
 	public Route() {
 		
 	}
-	public Route(String id, String startST, String endST, int price, int stNumber, String type, Date startTime,
-			Date endTime) {
-		super();
-		this.id = id;
-		this.startST = startST;
-		this.endST = endST;
-		this.price = price;
-		this.stNumber = stNumber;
-		this.type = type;
-		this.startTime = startTime;
-		this.endTime = endTime;
-	}
+	
 	@Override
 	public String toString() {
 		return "Route [id=" + id + ", startST=" + startST + ", endST=" + endST + ", price=" + price + ", stNumber="

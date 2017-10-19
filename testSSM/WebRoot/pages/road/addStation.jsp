@@ -16,13 +16,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+	
+	<link rel="stylesheet" type="text/css" href="resource/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="resource/css/bootstrap-responsive.css">
 
   </head>
   
   <body>
-    This is my JSP page. <br>
+    <div class="container">
+		<form action="${basePath}/testSSM/road/save.do" method="post">
+			<div>
+				<label>站点(起)</label>
+				<input type="text" name="startST" placeholder="始发站">
+			</div>
+			
+			<button type="submit" >ok</button>
+		</form>
+	</div>
   </body>
 </html>

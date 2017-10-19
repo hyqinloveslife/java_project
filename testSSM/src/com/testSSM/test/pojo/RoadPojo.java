@@ -7,8 +7,8 @@ public class RoadPojo implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String station_id;
 	private String route_id;
-	private String start_st;//起始站
-	private String end_st;//终点站
+	private String startST;//起始站
+	private String endST;//终点站
 	private int price;//票价
 	private int stNumber;//站点数
 	private String type;//路线类型
@@ -29,17 +29,17 @@ public class RoadPojo implements Serializable{
 	public void setRoute_id(String route_id) {
 		this.route_id = route_id;
 	}
-	public String getStart_st() {
-		return start_st;
+	public String getStartST() {
+		return startST;
 	}
-	public void setStart_st(String start_st) {
-		this.start_st = start_st;
+	public void setStartST(String startST) {
+		this.startST = startST;
 	}
-	public String getEnd_st() {
-		return end_st;
+	public String getEndST() {
+		return endST;
 	}
-	public void setEnd_st(String end_st) {
-		this.end_st = end_st;
+	public void setEndST(String endST) {
+		this.endST = endST;
 	}
 	public int getPrice() {
 		return price;
