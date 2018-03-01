@@ -4,8 +4,8 @@ import java.util.List;
 
 import com.testSSM.test.model.entity.Route;
 import com.testSSM.test.model.entity.Station;
+import com.testSSM.test.pojo.RoadEvent;
 import com.testSSM.test.pojo.RoadPojo;
-import com.testSSM.test.service.impl.RoadEvent;
 
 public interface IRoadDao {
 	public List<Station> queryStation();

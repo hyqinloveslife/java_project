@@ -13,7 +13,11 @@ import java.util.List;
  *
  */
 public class VoteTree {
-	 /** 
+		/**
+		 * @Fields url : ≤Àµ•¡¥Ω”µÿ÷∑
+		 */
+		private String url;
+	 	/** 
 	    * @Fields id : ±‡∫≈ 
 	    */  
 	    private Long id;  
@@ -86,6 +90,12 @@ public class VoteTree {
 		}
 		public void setChildren(List children) {
 			this.children = children;
+		}
+		public String getUrl() {
+			return url;
+		}
+		public void setUrl(String url) {
+			this.url = url;
 		} 
 	    
 }

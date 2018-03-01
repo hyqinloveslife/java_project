@@ -22,7 +22,7 @@ import com.testSSM.test.model.entity.VoteTree;
 import com.testSSM.test.service.IVoteTreeService;
 
 /**
- * @author Administrator
+ * @author huangyeqin
  *
  */
 @Transactional

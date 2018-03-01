@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.testSSM.test.dao.IRoadDao;
 import com.testSSM.test.model.entity.Route;
 import com.testSSM.test.model.entity.Station;
+import com.testSSM.test.pojo.RoadEvent;
 import com.testSSM.test.pojo.RoadPojo;
 import com.testSSM.test.service.IRoadService;
 
@@ -67,9 +68,8 @@ public class RoadServiceImpl implements IRoadService {
 		return roadDao.saveRoad(roadPojo);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.testSSM.test.service.IRoadService#saveRoadEvent(com.testSSM.test.pojo.RoadPojo)
-	 */
+
+
 	@Override
 	public void saveRoadEvent(RoadPojo road) {
 		RoadEvent roadEvent = new RoadEvent();
