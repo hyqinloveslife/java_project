@@ -18,7 +18,6 @@ import com.testSSM.test.model.entity.VoteTree;
 public interface IVoteTreeService {
 	 public JSONArray getTreeJson();  
 	 
-	 
 	 List<VoteTree> getDeeptLevel(VoteTree voteTree);
 	 
 	 public List<VoteTree> getNextSubSet(VoteTree voteTree);

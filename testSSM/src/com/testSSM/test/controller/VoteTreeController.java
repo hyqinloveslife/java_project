@@ -16,14 +16,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.portlet.ModelAndView;
 
 import com.testSSM.test.common.ListObject;
 import com.testSSM.test.common.Other;
 import com.testSSM.test.service.IVoteTreeService;
 
 /**
- * @author Administrator
- *
+ * Éú³É²Ëµ¥Ê÷
+ * @author hyqin
+ * @date 
  */
 @Controller
 @RequestMapping(value="/menu")
