@@ -1,6 +1,10 @@
 eclipse.preferences.version=1
+encoding//WebRoot/sql/sql.sql=UTF-16
 encoding//conf/jdbc.properties=UTF-8
 encoding//conf/log4j.properties=UTF-8
+encoding//src/com/testSSM/test/controller/RoadController.java=UTF-8
+encoding//src/com/testSSM/test/controller/UserController.java=UTF-8
+encoding//src/com/testSSM/test/pojo/RoadPojo.java=UTF-8
 encoding//src/com/testSSM/test/utils/WebServletUtil.java=UTF-8
 encoding//src/config/jdbc.properties=UTF-8
 encoding//src/config/log4j.properties=UTF-8

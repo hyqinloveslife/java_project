@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'addStation.jsp' starting page</title>
+    <title>站点新增</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -31,7 +31,35 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			
 			<button type="submit" >ok</button>
+			<button id="btnAdd">add</button>
 		</form>
 	</div>
   </body>
+  <script type="text/javascript" src="../../resource/js/jquery.js"></script>
+  <script type="text/javascript">
+  var count=0;
+	$('#btnAdd').on('click',function(){
+		var _html = '';
+		_html += '<div>';
+		_html +='<input type = "text"  name = "station'+count+'" placeholder = "station" />';
+		_html +='<button onclick="btnRemove(this)">remove</button>';
+		_html +='</div>'
+		$('#section').append(_html);
+		count++;
+	});
+	
+	$('#ok').on('click',function(){
+		var arry = new Array();
+		var els = document.getElementsByName("station");
+		for (var i=0;i<els.length;i++) {
+			//alert(els[i].value);
+			arry.push(els[i].value);
+		}
+		alert(arry);
+	});
+	
+	function btnRemove(data){
+		data.parentNode.remove(data);
+	}
+  </script>
 </html>

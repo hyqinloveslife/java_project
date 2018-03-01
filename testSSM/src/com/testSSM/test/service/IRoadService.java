@@ -25,4 +25,12 @@ public interface IRoadService {
 	public int saveRoute(Route route);
 	
 	public int saveRoad(RoadPojo roadPojo);
+
+	/**
+	 * @author huangyq
+	 * @date 2017-11-13  
+	 * @version 1.0.0 
+	 * @param road
+	 */
+	public void saveRoadEvent(RoadPojo road);
 }

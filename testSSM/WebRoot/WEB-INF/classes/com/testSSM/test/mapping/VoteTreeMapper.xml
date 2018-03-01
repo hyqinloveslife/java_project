@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.testSSM.test.dao.IVoteTreeDao">
+	
+	<select id="minId" resultType="java.lang.Long">
+		select min(levels) from vote_tree  
+	</select>
+	
+	<select id="getFirstLevel" resultType="com.testSSM.test.model.entity.VoteTree">
+		select * from vote_tree where levels = #{minLevel};
+	</select>
+	
+	<select id="getNextSubSet" parameterType="com.testSSM.test.model.entity.VoteTree"
+		resultType="com.testSSM.test.model.entity.VoteTree">
+		select * from vote_tree where pid = #{id}
+	</select>
+	
+	<select id="getDeeptLevel" parameterType="com.testSSM.test.model.entity.VoteTree"
+		resultType="com.testSSM.test.model.entity.VoteTree">
+		select * from vote_tree
+		where pid = #{id}
+	</select>
+	
+	
+</mapper>

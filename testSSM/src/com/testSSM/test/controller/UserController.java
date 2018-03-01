@@ -70,14 +70,17 @@ public class UserController extends BaseController{
 	}
 	
 	/**
-	 * 锟矫伙拷锟叫憋拷
+	 * when the program log in , i wanan kept the session in jsp page,
+	 * then,get the session in backend program.
 	 * @return
 	 */
 	@RequestMapping("userList.do")
-	public ModelAndView userList(){
+	public ModelAndView userList(HttpSession session,HttpServletRequest request){
 		ModelAndView view=new ModelAndView();
 		List<User> users=userService.query();
 		view.addObject("users", users);
+		//request.getSession().setAttribute("1", "1");
+		session.setAttribute("1", "1");
 		//setviewname锟结定位锟斤拷web-inf目录锟斤拷
 		view.setViewName("user/userList");
 		return view;
@@ -143,7 +146,7 @@ public class UserController extends BaseController{
 	
 	
 	/**
-	 * 
+	 * find the user by some conditions
 	 * @return
 	 */
 	@RequestMapping("queryUserList.do")

@@ -2,11 +2,14 @@ package com.testSSM.test.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.testSSM.test.model.entity.Route;
@@ -21,7 +24,7 @@ import com.testSSM.test.service.IRoadService;
  */
 @Controller
 @RequestMapping("/road")
-public class RoadController {
+public class RoadController extends BaseController{
 	private static Logger logger=Logger.getLogger(RoadController.class);
 	@Resource
 	private IRoadService roadService;
@@ -38,8 +41,11 @@ public class RoadController {
 		System.out.println(road);
 		try {
 			Route route = new Route();
+			String username = getCommonUser(request);
 			BeanUtils.copyProperties(road, route);
+			
 			int result = roadService.saveRoute(route);
+			roadService.saveRoadEvent(road);
 			if(result>0){
 				model.setViewName("redirect:/index.jsp");
 			}else{
@@ -74,4 +80,21 @@ public class RoadController {
 		}
 		return model;
 	}
+	
+	/**
+	 * Save the stations by ajax and return a string
+	 * @author huangyq
+	 * @date 2017-10-24  
+	 * @version 1.0.0 
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value="/saveSt.do",method=RequestMethod.POST)
+	public String saveStations(HttpServletRequest request,HttpServletResponse response,RoadPojo roadPojo){
+		System.out.println(roadPojo);
+		return "1";
+	}
+	
 }

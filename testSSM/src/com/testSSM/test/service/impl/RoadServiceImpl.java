@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -53,6 +54,7 @@ public class RoadServiceImpl implements IRoadService {
 	public int saveRoute(Route route) {
 		if(route.getUseTime()==null){
 			route.setUseTime(new Date());
+			
 		}
 		return roadDao.saveRoute(route);
 	}
@@ -63,6 +65,26 @@ public class RoadServiceImpl implements IRoadService {
 			roadPojo.setUseTime(new Date());
 		}
 		return roadDao.saveRoad(roadPojo);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.testSSM.test.service.IRoadService#saveRoadEvent(com.testSSM.test.pojo.RoadPojo)
+	 */
+	@Override
+	public void saveRoadEvent(RoadPojo road) {
+		RoadEvent roadEvent = new RoadEvent();
+		Station station = new Station();
+		try {
+			BeanUtils.copyProperties(road, roadEvent);
+			BeanUtils.copyProperties(road, station);
+			int result = roadDao.saveStation(station);
+			if (result>0) {
+				roadDao.saveRoadEvent(roadEvent);				
+			}
+		}  catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 }
