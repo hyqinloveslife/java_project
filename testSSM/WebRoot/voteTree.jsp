@@ -27,85 +27,64 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div id="tree"></div>
   </body>
   <script type="text/javascript">
-  var data = [{"id":"1", "text":"首页","a_attr":{"href":"http://www.baidu.com","text":"链接到百度"}
-  									  ,"li_attr":{"href":"http://www.baidu.com","text":"链接到百度"}
+  var data = [{"id":"1", "text":"首页","li_attr":{"onclick":"test(1)"}
+  									  
   			  },
               {"id":"2", "text":"新闻"
-              ,"children":[{"id":"3", "text":"新闻1"}
-	  			          ,{"id":"3", "text":"新闻2"}]
+              ,"children":[{"id":"3", "text":"新闻1","li_attr":{"onclick":"test(2)"}}
+	  			          ,{"id":"4", "text":"新闻2","li_attr":{"onclick":"test(3)"}}]
   			  ,"state":{"opened":false,"disabled":false,"selected":true}}
 	  ];
 
-	
- /*  $(function(){
-	var data = getTree();
-	
-	$('#tree').jstree({
-		plugins: ["contextmenu"],
-		'core':{
-			  'data':data
-		},
-		 "contextmenu": {
-             "items": {
-                 "create": null,
-                 "rename": null,
-                 "remove": null,
-                 "ccp": null,
-                 "add": {
-                     "label": "add",
-                     "action": function (obj) {
-                         alert("add operation--clickedNode's id is:" + obj);
-                     }
-                 },
-                 "delete": {
-                     "label": "delete",
-                     "action": function (obj) {
-                         alert("add operation--clickedNode's id is:" + obj);
-                     }
-                 }
-             }
-         }
-	})
-  }); */
+	function test(val){
+		alert(val);
+	}
 
-
-  $(function(){
-	  $.ajax({
-			type : 'GET',
-			url : '${basePath}/testSSM/menu/tree.do',
-			success : function(json) {
-				//console.log(json.data[0].children);
-				message = json.data[0];
-				//message = JSON.stringify(message);
-				$('#tree').jstree({
-					plugins: ["contextmenu"],
-					'core':{
-						'data':message
-					},
-					"contextmenu": {
-			             "items": {
-			                 "create": null,
-			                 "rename": null,
-			                 "remove": null,
-			                 "ccp": null,
-			                 "add": {
-			                     "label": "add",
-			                     "action": function (obj) {
-			                         alert("add operation--clickedNode's id is:" + obj);
-			                     }
-			                 },
-			                 "delete": {
-			                     "label": "delete",
-			                     "action": function (obj) {
-			                         alert("add operation--clickedNode's id is:" + obj);
-			                     }
-			                 }
-			             }
-			         }
-				});
+	$(function() {
+		$('#tree').jstree({
+			'core' : {
+				'data' : data
 			}
-		});
+		})
+	});
 
-  });	
-  </script>
+			/* $(function(){
+			  $.ajax({
+					type : 'GET',
+					url : '${basePath}/testSSM/menu/tree.do',
+					success : function(json) {
+						//console.log(json.data[0].children);
+						message = json.data[0];
+						//message = JSON.stringify(message);
+						$('#tree').jstree({
+							plugins: ["contextmenu"],
+							'core':{
+								'data':message
+							},
+							"contextmenu": {
+					             "items": {
+					                 "create": null,
+					                 "rename": null,
+					                 "remove": null,
+					                 "ccp": null,
+					                 "add": {
+					                     "label": "add",
+					                     "action": function (obj) {
+					                         alert("add operation--clickedNode's id is:" + obj);
+					                     }
+					                 },
+					                 "delete": {
+					                     "label": "delete",
+					                     "action": function (obj) {
+					                         alert("add operation--clickedNode's id is:" + obj);
+					                     }
+					                 }
+					             }
+					         }
+						});
+					}
+				});
+
+			}); */
+		</script>
 </html>
