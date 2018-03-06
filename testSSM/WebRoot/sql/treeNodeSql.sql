@@ -31,4 +31,8 @@ select min(level) from vote_tree  ;
 update vote_tree set level=0 where id = 1;
 update vote_tree set level= 1 where pid = 1;
 update vote_tree set level = 2 where pid in(3,6);
+update vote_tree set icon = 'icon-sys';
+update vote_tree set url = 'http://localhost:8080/testSSM/file.html';
 ###
+
+select * from vote_tree;

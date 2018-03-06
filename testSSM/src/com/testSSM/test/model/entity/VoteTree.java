@@ -35,10 +35,13 @@ public class VoteTree {
 	    private Long levels;  
 	    /** 
 	    * @Fields children : 子节点集合 
-	    */  
+	    */
 	    private List children = new ArrayList();
+	    /**
+	     * @serialField icon : 图标
+	     */
+	    private String icon;
 	    
-	    private List li_attr = new ArrayList();
 	    
 		public VoteTree(Long id, String text) {
 			super();
@@ -56,24 +59,14 @@ public class VoteTree {
 		}
 		
 		public VoteTree(String url, Long id, String text, Long pid,
-				Long levels, List children, List li_attr) {
-			super();
+				Long levels, List children, String icon) {
 			this.url = url;
 			this.id = id;
 			this.text = text;
 			this.pid = pid;
 			this.levels = levels;
 			this.children = children;
-			this.li_attr = li_attr;
-		}
-		public VoteTree(Long id, String text, Long pid, Long levels,
-				List children) {
-			super();
-			this.id = id;
-			this.text = text;
-			this.pid = pid;
-			this.levels = levels;
-			this.children = children;
+			this.icon = icon;
 		}
 		public Long getId() {
 			return id;
@@ -111,12 +104,11 @@ public class VoteTree {
 		public void setUrl(String url) {
 			this.url = url;
 		}
-		public List getLi_attr() {
-			return li_attr;
+		public String getIcon() {
+			return icon;
 		}
-		public void setLi_attr(List li_attr) {
-			this.li_attr = li_attr;
-			li_attr.add(this.url);
+		public void setIcon(String icon) {
+			this.icon = icon;
 		} 
 	    
 }

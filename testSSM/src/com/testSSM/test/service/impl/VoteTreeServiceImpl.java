@@ -35,9 +35,9 @@ public class VoteTreeServiceImpl implements IVoteTreeService {
 	public JSONArray getTreeJson() {
 		Map<String, Object> treeMap = new HashMap<String, Object>();  
         Map<String, Object> treejsonMap = new HashMap<String, Object>();  
-        treeMap.put("id",1);  
-        treeMap.put("text", "功能菜单");  
-        treeMap.put("children", treeList());  
+        treeMap.put("menuid",1);  
+        treeMap.put("menuname", "功能菜单");  
+        treeMap.put("menus", treeList());  
         JSONArray jsonObject = JSONArray.fromObject(treeMap);  
 		return jsonObject;
 	}
@@ -51,7 +51,8 @@ public class VoteTreeServiceImpl implements IVoteTreeService {
         List<VoteTree> friList = voteTreeDao.getFirstLevel(minLevel);  
         for (VoteTree voteTree : friList) {  
             //根据一级目录查找所有的子集  
-        	voteTree.setChildren(nextSubSet);  
+        	voteTree.setChildren(nextSubSet);
+        	
         	nextSubSet =this.getNextSubSet(voteTree);  
         }  
         return nextSubSet; 
