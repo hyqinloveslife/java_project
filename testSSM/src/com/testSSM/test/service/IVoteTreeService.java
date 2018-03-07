@@ -33,4 +33,11 @@ public interface IVoteTreeService {
 	 * @return
 	 */
 	public int addMenu(VoteTree tree);
+
+	/**
+	 * É¾³ý²Ëµ¥
+	 * @param idStr
+	 * @return
+	 */
+	public int removeMenu(String idStr);
 }

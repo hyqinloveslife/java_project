@@ -113,4 +113,11 @@ public class VoteTreeServiceImpl implements IVoteTreeService {
 		return voteTreeDao.addMenu(tree);
 	}
 
+
+	@Override
+	public int removeMenu(String idStr) {
+		
+		return voteTreeDao.removeMenu(idStr);
+	}
+
 }

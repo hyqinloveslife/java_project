@@ -46,5 +46,7 @@ public interface IVoteTreeDao {
 	 * @param tree
 	 * @return
 	 */
-	int addMenu(VoteTree tree);  
+	int addMenu(VoteTree tree);
+
+	int removeMenu(String idStr);  
 }

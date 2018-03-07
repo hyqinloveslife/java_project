@@ -15,6 +15,10 @@
 		(#{text},#{pid},#{levels},#{url})
 	</insert>
 	
+	<delete id="removeMenu">
+		delete from vote_tree where id in(#{id})
+	</delete>
+	
 	<select id="minId" resultType="java.lang.Long">
 		select min(levels) from vote_tree  
 	</select>

@@ -69,16 +69,34 @@ public class VoteTreeController extends BaseController {
 				throw new Exception("没有写入数据库");
 			}else {
 				object.setOther(new Other(SUCCESS_STATUS_CODE, "添加成功"));
-				setJSONReturn("添加成功");
 			}
 		} catch (Exception e) {
 			try {
 				object.setOther(new Other(ERROR_STATUS_CODE, e.getMessage()));
-				setJSONReturn("添加失败:"+e.getMessage());
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}
 		}
 		return object;
 	}
+	
+	@RequestMapping(value="/removeMenu.do",method = RequestMethod.POST,produces="application/json;charset=utf-8")
+	@ResponseBody
+	public ListObject removeMenu(HttpServletRequest request,HttpServletResponse response){
+		ListObject object = new ListObject();
+		String idStr = request.getParameter("id");
+		try {
+			int result = voteTreeService.removeMenu(idStr);
+			if(result==0){
+				object.setOther(new Other(ERROR_STATUS_CODE, "没有写入数据库"));
+				throw new Exception("没有写入数据库");
+			}else{
+				object.setOther(new Other(SUCCESS_STATUS_CODE, "删除成功"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return object;
+	}
+	
 }	
