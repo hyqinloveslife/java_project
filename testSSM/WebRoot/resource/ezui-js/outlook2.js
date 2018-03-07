@@ -37,13 +37,13 @@ function InitLeftMenu() {
 			_message = _message.replace(/id/g,"menuid").replace(/text/g,"menuname").replace(/children/g,"menus");
 			
 			_menus =JSON.parse(_message);
-			console.log(_menus);
+			//console.log(_menus);
 			
 			$.each(_menus, function(i, n) {
 				var menulist ='';
 				menulist +='<ul>';
 				$.each(n.menus, function(j, o) {
-					console.log(JSON.stringify(o));
+					//console.log(JSON.stringify(o));
 										
 					menulist += '<li><div><a ref="'+o.menuid+'" href="#" rel="'+o.url+'" ><span class="icon '+o.icon+'">&nbsp;</span><span class="nav">'+o.menuname+'</span></a></div></li> ';
 					

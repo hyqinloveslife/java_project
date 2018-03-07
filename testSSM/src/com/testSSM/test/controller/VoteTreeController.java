@@ -5,6 +5,11 @@
  */
 package com.testSSM.test.controller;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +25,7 @@ import org.springframework.web.portlet.ModelAndView;
 
 import com.testSSM.test.common.ListObject;
 import com.testSSM.test.common.Other;
+import com.testSSM.test.model.entity.VoteTree;
 import com.testSSM.test.service.IVoteTreeService;
 
 /**
@@ -43,4 +49,36 @@ public class VoteTreeController extends BaseController {
 		return listObject;
 	}
 	
+	@RequestMapping(value="/query.do",method=RequestMethod.POST,produces="application/json;charset=utf-8")
+	@ResponseBody
+	public Map<String, Object> queryMenu(HttpServletRequest request,HttpServletResponse response){
+		Map<String, Object> map = new HashMap<String, Object>();
+		List<VoteTree> trees = voteTreeService.queryTrees(1, 20);
+		map.put("rows", trees);
+		return map;
+	}
+	
+	@RequestMapping(value="/addMenu.do",method = RequestMethod.POST,produces="application/json;charset=utf-8")
+	@ResponseBody
+	public ListObject addMenu(HttpServletRequest request,HttpServletResponse response,VoteTree tree){
+		ListObject object = new ListObject();
+		try {
+			int result = voteTreeService.addMenu(tree);
+			if(result==0){
+				object.setOther(new Other(ERROR_STATUS_CODE, "没有写入数据库"));
+				throw new Exception("没有写入数据库");
+			}else {
+				object.setOther(new Other(SUCCESS_STATUS_CODE, "添加成功"));
+				setJSONReturn("添加成功");
+			}
+		} catch (Exception e) {
+			try {
+				object.setOther(new Other(ERROR_STATUS_CODE, e.getMessage()));
+				setJSONReturn("添加失败:"+e.getMessage());
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+		}
+		return object;
+	}
 }	

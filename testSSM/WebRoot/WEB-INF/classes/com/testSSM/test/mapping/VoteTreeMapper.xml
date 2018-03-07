@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.testSSM.test.dao.IVoteTreeDao">
+	<select id="queryTrees" resultType="com.testSSM.test.model.entity.VoteTree">
+		select v1.id,v1.text,v1.pid,v1.levels,v1.url,v2.text as pid_text
+		from vote_tree v1,vote_tree v2
+		where v1.pid = v2.id
+		order by pid,id
+		limit #{0},#{1}
+	</select>
+	
+	<insert id="addMenu" parameterType="com.testSSM.test.model.entity.VoteTree" >
+		insert into vote_tree(text,pid,levels,url)
+		values
+		(#{text},#{pid},#{levels},#{url})
+	</insert>
 	
 	<select id="minId" resultType="java.lang.Long">
 		select min(levels) from vote_tree  
@@ -20,6 +33,7 @@
 		select * from vote_tree
 		where pid = #{id}
 	</select>
+	
 	
 	
 </mapper>

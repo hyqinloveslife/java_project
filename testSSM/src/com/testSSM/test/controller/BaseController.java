@@ -5,12 +5,16 @@
  */
 package com.testSSM.test.controller;
 
+import java.io.IOException;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang.StringUtils;
 import org.omg.CORBA.PUBLIC_MEMBER;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import com.testSSM.test.service.FileRecordService;
 
@@ -27,6 +31,15 @@ public class BaseController {
 	
 	public static final String USER = "user";
 	
+	private HttpServletResponse response ;
+	
+	@ModelAttribute
+	public void setReqAndRes(HttpServletResponse response){
+		this.response = response;
+	}
+	
+	//HttpServletResponse response = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getResponse();
+
 	@Resource
 	public FileRecordService fileRecordService;
 	
@@ -45,4 +58,11 @@ public class BaseController {
 		return username;
 	}
 	
+	public void setJSONReturn(String message){
+		try {
+			response.getWriter().print(message);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }

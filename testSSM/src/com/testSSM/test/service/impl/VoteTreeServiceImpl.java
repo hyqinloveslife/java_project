@@ -93,4 +93,24 @@ public class VoteTreeServiceImpl implements IVoteTreeService {
 		return trees;
 	}
 
+
+	/* (non-Javadoc)
+	 * @see com.testSSM.test.service.IVoteTreeService#queryTrees()
+	 */
+	@Override
+	public List<VoteTree> queryTrees(int startPos,  int pageSize) {
+		List<VoteTree> trees = voteTreeDao.queryTrees(startPos,pageSize);
+		return trees;
+	}
+
+
+	/* (non-Javadoc)
+	 * @see com.testSSM.test.service.IVoteTreeService#addMenu(com.testSSM.test.model.entity.VoteTree)
+	 */
+	@Override
+	public int addMenu(VoteTree tree) {
+		
+		return voteTreeDao.addMenu(tree);
+	}
+
 }

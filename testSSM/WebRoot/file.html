@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ÎÄ¼şÉÏ´«</title>
+<title>æ–‡ä»¶ä¸Šä¼ </title>
 
 <meta name="keywords" content="keyword1,keyword2,keyword3">
 <meta name="description" content="this is my page">
-<meta name="content-type" content="text/html; charset=gbk">
+<meta name="content-type" content="text/html; charset=utf-8">
 <script type="text/javascript" src="resource/js/jquery.js"></script>
 </head>
 
 <body>
 	<fieldset>
-		Ñ¡ÔñÎÄ¼ş: <input type="file" name="file" id="file1"> <br> 
-		<input type="button" id="upload" value="ÉÏ´«">
+		é€‰æ‹©æ–‡ä»¶: <input type="file" name="file" id="file1"> <br> 
+		<input type="button" id="upload" value="ä¸Šä¼ ">
 	</fieldset>
 	
 	<div>
-		<a href="user/download.do?fileName=map.txt">ÏÂÔØ</a>
+		<a href="user/download.do?fileName=map.txt">ä¸‹è½½</a>
 	</div>
 	
 </body>
@@ -32,12 +32,12 @@
 					type : "POST",
 					data : formData,
 					/**
-					 *±ØĞëfalse²Å»á×Ô¶¯¼ÓÉÏÕıÈ·µÄContent-Type
+					 *å¿…é¡»falseæ‰ä¼šè‡ªåŠ¨åŠ ä¸Šæ­£ç¡®çš„Content-Type
 					 */
 					contentType : false,
 					/**
-					 * ±ØĞëfalse²Å»á±Ü¿ªjQuery¶Ô formdata µÄÄ¬ÈÏ´¦Àí
-					 * XMLHttpRequest»á¶Ô formdata ½øĞĞÕıÈ·µÄ´¦Àí
+					 * å¿…é¡»falseæ‰ä¼šé¿å¼€jQueryå¯¹ formdata çš„é»˜è®¤å¤„ç†
+					 * XMLHttpRequestä¼šå¯¹ formdata è¿›è¡Œæ­£ç¡®çš„å¤„ç†
 					 */
 					processData : false,
 					success : function(json) {
@@ -51,7 +51,7 @@
 						}
 					},
 					error : function() {
-						alert("ÉÏ´«Ê§°Ü£¡");
+						alert("ä¸Šä¼ å¤±è´¥ï¼");
 					}
 				});
 			});

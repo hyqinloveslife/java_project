@@ -42,6 +42,7 @@ public class VoteTree {
 	     */
 	    private String icon;
 	    
+	    private String pid_text;
 	    
 		public VoteTree(Long id, String text) {
 			super();
@@ -109,6 +110,12 @@ public class VoteTree {
 		}
 		public void setIcon(String icon) {
 			this.icon = icon;
+		}
+		public String getPid_text() {
+			return pid_text;
+		}
+		public void setPid_text(String pid_text) {
+			this.pid_text = pid_text;
 		} 
 	    
 }

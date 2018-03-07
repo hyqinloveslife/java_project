@@ -22,4 +22,15 @@ public interface IVoteTreeService {
 	 
 	 public List<VoteTree> getNextSubSet(VoteTree voteTree);
 	 
+	 public List<VoteTree> queryTrees(int startPos,  int pageSize );
+
+	/**
+	 * Ìí¼Ó²Ëµ¥
+	 * @author huangyq
+	 * @date 2018-3-7  
+	 * @version 1.0.0 
+	 * @param tree
+	 * @return
+	 */
+	public int addMenu(VoteTree tree);
 }

@@ -25,5 +25,26 @@ public interface IVoteTreeDao {
     List<VoteTree> getNextSubSet(VoteTree tvote);  
       
     //递归查询  
-    List<VoteTree> getDeeptLevel(VoteTree tvote);  
+    List<VoteTree> getDeeptLevel(VoteTree tvote);
+
+	/**
+	 * 查询菜单列表
+	 * @author huangyq
+	 * @date 2018-3-7  
+	 * @version 1.0.0 
+	 * @param pageSize 
+	 * @param startPos 
+	 * @return
+	 */
+	List<VoteTree> queryTrees(int startPos, int pageSize);
+
+	/**
+	 * 新增菜单
+	 * @author huangyq
+	 * @date 2018-3-7  
+	 * @version 1.0.0 
+	 * @param tree
+	 * @return
+	 */
+	int addMenu(VoteTree tree);  
 }
