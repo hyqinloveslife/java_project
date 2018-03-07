@@ -48,5 +48,9 @@ public interface IVoteTreeDao {
 	 */
 	int addMenu(VoteTree tree);
 
-	int removeMenu(String idStr);  
+	int removeMenu(String idStr);
+
+	int updateMenu(VoteTree tree);
+
+	List getParentId();  
 }

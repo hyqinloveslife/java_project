@@ -40,4 +40,8 @@ public interface IVoteTreeService {
 	 * @return
 	 */
 	public int removeMenu(String idStr);
+
+	public int updateMenu(VoteTree tree) throws Exception;
+
+	public List getParentId();
 }

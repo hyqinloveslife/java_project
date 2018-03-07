@@ -19,6 +19,20 @@
 		delete from vote_tree where id in(#{id})
 	</delete>
 	
+	<update id="updateMenu" parameterType="com.testSSM.test.model.entity.VoteTree">
+		update vote_tree set pid = #{pid},text = #{text} ,url = #{url},levels = #{levels}
+		where id = #{id}
+	</update>
+	
+	<resultMap type="com.testSSM.test.model.entity.VoteTree" id="menuList">
+		<result property="id" column="id"/>
+		<result property="pid_text" column="pid_text" />
+	</resultMap>
+	
+	<select id="getParentId" resultMap="menuList">
+		select id, text as pid_text from vote_tree where levels in (0 , 1)
+	</select>
+	
 	<select id="minId" resultType="java.lang.Long">
 		select min(levels) from vote_tree  
 	</select>

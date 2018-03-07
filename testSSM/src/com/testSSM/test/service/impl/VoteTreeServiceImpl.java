@@ -120,4 +120,27 @@ public class VoteTreeServiceImpl implements IVoteTreeService {
 		return voteTreeDao.removeMenu(idStr);
 	}
 
+
+	@Override
+	public int updateMenu(VoteTree tree) throws Exception {
+		try {
+			if(tree.getPid()==null||tree.getPid().equals("")){
+				throw new Exception("pidÎª¿Õ");
+			}
+			if(tree.getLevels()==null||tree.getLevels().equals("")){
+				throw new Exception("levelÎª¿Õ");
+			}
+		} catch (Exception e) {
+			throw new Exception(e.getMessage());
+		}
+		return voteTreeDao.updateMenu(tree);
+	}
+
+
+	@Override
+	public List getParentId() {
+		// TODO Auto-generated method stub
+		return voteTreeDao.getParentId();
+	}
+
 }

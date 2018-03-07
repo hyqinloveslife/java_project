@@ -47,22 +47,25 @@
 	<!-- 编辑弹框开始 -->
 	<div id="edit_win" class="easyui-window" title="编辑用户信息" closed="true"
 		style="width:300px;height:240px;">
-		<form id="edit_user" method="post"
+		<form id="edit_menu" method="post"
 			style="padding:10px 20px 10px 40px;">
 			<p>
 				ID: <input id="id" name="id" type="text" readonly="readonly">
 			</p>
 			<p>
-				父ID :<select id="pid" style="width: 100px;">
-						
-					 </select>
-					 <span><button onclick="showPid()">查看父ID</button> </span>
+				上级菜单 :<select id="pid" name="pid" class="edit_pid" style="width: 100px;"></select>
 			</p>
 			<p>
-				姓名: <input id="text" name="text" type="text">
+				菜单名称: <input id="text" name="text" type="text">
 			</p>
 			<p>
-				类型: <input id="url" name="url" type="text">
+				菜单等级: <select id="levels" name="levels" style="width: 100px;">
+							<option value="1">1</option>
+							<option value="2">2</option>
+						  </select>
+			</p>
+			<p>
+				菜单链接: <input id="url" name="url" type="text">
 			</p>
 			<div style="padding:5px;text-align:center;">
 				<a href="#" id="edit_ok" class="easyui-linkbutton" iconCls="icon-ok">ok</a>
@@ -107,9 +110,6 @@
 
 	<script type="text/javascript">
 	var rootPath = "http://localhost:8080/testSSM";
-		function showChange(){
-			alert($("#se").val());
-		}
 	
 		function doSearch() {
 			$('#tt').datagrid('load', {
@@ -156,10 +156,32 @@
 		 });
 		 }
 		 }*/
+		/* 
+		 * 获取上级菜单列表
+		 */
+		function renderPID(){
+			$.ajax({
+				type: "GET",
+				url: rootPath+"/menu/getPid.do",
+				async: false,
+				dataType: "json",
+				success: function(result){
+					//console.log(result);
+					$.each(result, function(key, val) {
+						console.log(val)
+						$(".edit_pid").append("<option value="+val.id+">"+val.pid_text+":"+val.id+"</option>");
+					})
+				},
+				error: function(){
+					alert("请求出错");
+				}
+			});
+		} 
 
 		function edit(index) {
 			$('#edit_win').window('open');
 			$('#tt').datagrid('selectRow', index);
+			renderPID();
 			var row = $('#tt').datagrid('getSelected');
 			if (row) {
 				alert('ID  :  ' + row.id+"\n父ID : "+row.pid + "\n菜单名  :  " + row.text + "\n菜单链接  :  " + row.url);
@@ -168,7 +190,7 @@
 				$('#url').val(row.url);
 				$('#pid').val(row.pid);
 				$('#edit_ok').click(function() {
-					$('#edit_user').form('submit', {
+					$('#edit_menu').form('submit', {
 						url : rootPath+"/menu/updateMenu.do",
 						onSubmit : function() {
 							return $(this).form('validate');

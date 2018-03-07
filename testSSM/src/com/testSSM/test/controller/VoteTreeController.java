@@ -5,7 +5,6 @@
  */
 package com.testSSM.test.controller;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,19 +13,17 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.sf.json.JSONArray;
-
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.portlet.ModelAndView;
 
 import com.testSSM.test.common.ListObject;
 import com.testSSM.test.common.Other;
 import com.testSSM.test.model.entity.VoteTree;
 import com.testSSM.test.service.IVoteTreeService;
+
+import net.sf.json.JSONArray;
 
 /**
  * 生成菜单树
@@ -98,5 +95,33 @@ public class VoteTreeController extends BaseController {
 		}
 		return object;
 	}
+	
+	@RequestMapping(value="/updateMenu.do",method = RequestMethod.POST)
+	@ResponseBody
+	public ListObject updateMenu(HttpServletRequest request,HttpServletResponse response,VoteTree tree){
+		ListObject object = new ListObject();
+		try {
+			int result = voteTreeService.updateMenu(tree);
+			if(result==0){
+				object.setOther(new Other(ERROR_STATUS_CODE, "没有写入数据库"));
+				throw new Exception("没有写入数据库");
+			}else{
+				object.setOther(new Other(SUCCESS_STATUS_CODE, "修改成功"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return object;
+	}
+	
+	@SuppressWarnings("rawtypes")
+	@RequestMapping(value="/getPid.do",method = RequestMethod.GET)
+	@ResponseBody
+	public List getParentId(HttpServletRequest request,HttpServletResponse response){
+		List list = voteTreeService.getParentId();
+		System.out.println(list);
+		return list;
+	}
+	
 	
 }	
