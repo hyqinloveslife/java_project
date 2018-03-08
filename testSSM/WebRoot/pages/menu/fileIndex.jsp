@@ -104,7 +104,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							dataType : "json",
 							success : function(result) {
 								count++;
-
 							},
 							error : function() {
 								alert("ERROR");
@@ -129,7 +128,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			//alert(fileName);
 			var data ={fileName:fileName,realPath:realPath} 
 			//文件下载为什么不能用异步提交？
-			window.location.href = rootPath+"/user/download.do?fileName="+fileName+"&realPath="+realPath;
+			var url = encodeURI(rootPath+"/user/download.do?fileName="+fileName+"&realPath="+realPath);
+			window.location.href = url;
 			/* $.ajax({
 				type: "post",
 				data:data,

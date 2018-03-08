@@ -15,4 +15,6 @@ public interface FileRecordService extends IBaseService<DownloadRecord>{
 	
 	public List<DownloadRecord> query();
 	
+	@Override
+	int remove(String id);
 }

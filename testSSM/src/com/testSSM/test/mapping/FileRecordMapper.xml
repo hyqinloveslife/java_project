@@ -14,4 +14,7 @@
 		from downloadRecord
 	</select>
 
+	<delete id="removeFile">
+			delete from downloadRecord where id =#{id}
+	</delete>
 </mapper>

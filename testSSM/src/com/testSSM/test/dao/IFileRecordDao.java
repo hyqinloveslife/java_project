@@ -15,4 +15,6 @@ public interface IFileRecordDao {
 	public List<DownloadRecord> query();
 	
 	public int insert(DownloadRecord file);
+
+	public int removeFile(String id);
 }

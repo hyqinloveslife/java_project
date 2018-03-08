@@ -273,14 +273,15 @@ public class UserController extends BaseController {
 
 					String realPath = request.getSession().getServletContext()
 							.getRealPath("/"); // +"upload/"
-					String myPath = "fileUpload";
+					String myPath = "upload";
+					
+					System.out.println("realPath : "+realPath+myPath);
+					
+					String trueFileName = String.valueOf(System.currentTimeMillis()) + fileName;
 
-					String trueFileName = String.valueOf(System
-							.currentTimeMillis()) + fileName;
-
-					// path=realPath+myPath+System.getProperty("file.separator")+trueFileName;
-					path = FILE_PATH + System.getProperty("file.separator")
-							+ trueFileName;
+					//path = FILE_PATH + System.getProperty("file.separator") + trueFileName;
+					
+					path = realPath+myPath+System.getProperty("file.separator")+trueFileName;
 					logger.debug("解析出来的路径:" + path);
 
 					file.transferTo(new File(path));
@@ -289,8 +290,7 @@ public class UserController extends BaseController {
 					record.setFilePath(path);
 					record.setLength(file.getSize());
 					record.setType(file.getContentType());
-					record.setStartTime(new Timestamp(System
-							.currentTimeMillis()));
+					record.setStartTime(new Timestamp(System.currentTimeMillis()));
 					int result = fileRecordService.insert(record);
 
 					if (result > 0) {
@@ -327,11 +327,11 @@ public class UserController extends BaseController {
 	 * @param request
 	 * @param response
 	 * @return
+	 * @throws IOException 
 	 */
-	@RequestMapping(value = "/download.do",method = RequestMethod.POST)
-	@ResponseBody
+	@RequestMapping(value = "/download.do",produces="application/json;charset=utf-8")
 	public ListObject download(HttpServletRequest request,
-			HttpServletResponse response, String fileName) {
+			HttpServletResponse response, String fileName) throws IOException {
 		ListObject object = new ListObject();
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("multipart/form-data");
@@ -355,8 +355,10 @@ public class UserController extends BaseController {
 				os.write(b, 0, length);
 			}
 			object.setOther(new Other(SUCCESS_STATUS_CODE, "下载成功"));
+			response.getWriter().print("<script>alert('下载成功')</scritp>");
 		} catch (Exception e) {
 			object.setOther(new Other(ERROR_STATUS_CODE, "下载失败"));
+			response.getWriter().print("<script>alert('下载失败')</scritp>");
 		}finally{
 			if (os!=null) {
 				try {
@@ -430,6 +432,25 @@ public class UserController extends BaseController {
 		List<DownloadRecord> list = fileRecordService.query();
 		map.put("rows", list);
 		return map; 
+	}
+	
+	@RequestMapping(value="removeFile.do",method = RequestMethod.POST)
+	@ResponseBody
+	public ListObject removeFiles(HttpServletRequest request,HttpServletResponse response,String id){
+		ListObject object = new ListObject();
+		
+		try {
+			int result = fileRecordService.remove(id);
+			if(result == 0){
+				object.setOther(new Other(ERROR_STATUS_CODE, "没有写入数据库"));
+			}else{
+				object.setOther(new Other(SUCCESS_STATUS_CODE, "删除成功"));
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return object;
 	}
 	
 	/**
