@@ -11,62 +11,71 @@
 <script type="text/javascript" src="../../resource/js/jquery.js"></script>
 <script type="text/javascript" src="../../resource/ezui-js/jquery.easyui.min.1.2.2.js"></script>
 <script type="text/javascript" src="../../resource/ezui-js/locale/easyui-lang-zh_CN.js"></script>
-
+<style type="text/css">
+	.edit_box input{width: 240px;}
+	.edit_box select{width: 240px;}
+	.add_box input {width: 240px;}
+	.add_box select {width: 240px;}
+</style>
 </style>
 </head>
 
 <body>
-	<table id="tt" class="easyui-datagrid" style="width:900;height:500px;text-align: center;"
+	<table id="tt" class="easyui-datagrid" style="width:900;height:500px;"
 		url="http://localhost:8080/testSSM/menu/query.do" toolbar="#tb"
-		title="Load Data" iconCls="icon-save" rownumbers="true"
+		title="菜单列表" iconCls="icon-save" rownumbers="true"
 		pagination="true">
-		<thead>
-			<tr>
-				<th field="ck" checkbox="true"></th>
-				<th field="id" width="50" sortable="true">ID</th>
-				<th field="text" width="100">菜单名称</th>
-				<th field="pid" width = "50">上级目录id</th>
-				<th field="pid_text" width="100">上级菜单名称</th>
-				<th field="url" width="300">菜单链接</th>
-				<th field="operate" width="100" formatter="edit_function">操作</th>
-			</tr>
-		</thead>
+			<thead>
+				<tr>
+					<th field="ck"  checkbox="true"></th>
+					<th field="id" width="50" sortable="true">ID</th>
+					<th field="text" width="100" align="center">菜单名称</th>
+					<th field="pid" width = "80" styler="render">上级目录id</th>
+					<th field="pid_text" width="100" align="center">上级菜单名称</th>
+					<th field="url" data-options="halign:'center', align:'center'" width="300">菜单链接</th>
+					
+					<th field="operate" width="100" formatter="edit_function" frozen="true">操作</th>
+				</tr>	
+			</thead>
 		<div id="tb" style="padding:3px">
-			<span>姓名：</span> <input id="search_NAME"
-				style="line-height:26px;border:1px solid #ccc"> <span>类型：</span>
-			<input id="search_TYPE"
-				style="line-height:26px;border:1px solid #ccc"> <a href="#"
-				class="easyui-linkbutton" plain="true" iconCls="icon-search"
-				onclick="doSearch()">查找</a> <a href="#" class="easyui-linkbutton"
-				iconCls="icon-add" onclick="insert()">添加</a> <a href="#"
-				class="easyui-linkbutton" iconCls="icon-cancel"
-				onclick="deleteUsers()">删除</a>
+			<span>姓名：</span> <input id="search_NAME" class="easyui-textbox" style="line-height:20px;border:1px solid #ccc"> 
+			<span>类型：</span> <input id="search_TYPE" style="line-height:20px;border:1px solid #ccc">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-search" onclick="doSearch()">查找</a> 
+			<a href="#" class="easyui-linkbutton" iconCls="icon-add" onclick="insert()">添加</a> 
+			<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="deleteUsers()">删除</a>
 		</div>
 	</table>
 
 	<!-- 编辑弹框开始 -->
 	<div id="edit_win" class="easyui-window" title="编辑用户信息" closed="true"
-		style="width:300px;height:240px;">
-		<form id="edit_menu" method="post"
-			style="padding:10px 20px 10px 40px;">
-			<p>
-				ID: <input id="id" name="id" type="text" readonly="readonly">
-			</p>
-			<p>
-				上级菜单 :<select id="pid" name="pid" class="edit_pid" style="width: 100px;"></select>
-			</p>
-			<p>
-				菜单名称: <input id="text" name="text" type="text">
-			</p>
-			<p>
-				菜单等级: <select id="levels" name="levels" style="width: 100px;">
-							<option value="1">1</option>
-							<option value="2">2</option>
-						  </select>
-			</p>
-			<p>
-				菜单链接: <input id="url" name="url" type="text">
-			</p>
+		style="width:400px;height:250px;">
+		<form id="edit_menu" method="post" style="padding:10px 20px 10px 40px;">
+			<table class="edit_box" cellpadding="5">
+				<tr>
+					<td> ID: </td> 
+					<td> <input id="id" name="id" type="text" readonly="readonly"> </td>
+				</tr>
+				<tr>
+					<td>上级菜单 :</td>
+					<td><select id="pid" name="pid" class="edit_pid" ></select></td>
+				</tr>
+				<tr>
+					<td>菜单名称:</td> 
+					<td> <input id="text" name="text" type="text"></td>
+				</tr>
+				<tr>
+					<td>菜单等级:</td> 
+					<td> <select id="levels" name="levels" >
+								<option value="1">1</option>
+								<option value="2">2</option>
+							  </select>
+					</td>		  
+				</tr>
+				<tr>
+					<td>菜单链接:</td> 
+					<td> <input id="url" name="url" type="text"></td>
+				</tr>
+			</table>	
 			<div style="padding:5px;text-align:center;">
 				<a href="#" id="edit_ok" class="easyui-linkbutton" iconCls="icon-ok">ok</a>
 				<a href="#" id="edit_cancel" class="easyui-linkbutton"
@@ -80,27 +89,34 @@
 	<div id="add_win" class="easyui-window" title="添加新用户" closed="true"
 		style="width:400px;height:300px;">
 		<form id="add_user" method="post" style="padding:10px 20px 10px 40px;">
-			<p>
-				上级菜单 :<select id="pid" class="add_pid" name="pid" style="width: 100px;" onchange="changeOpt()">
-							<option value="1">功能菜单</option>
-							<option value="2">系统管理</option>
-							<option value="3">用户管理</option>
-							<option value="6">投票管理</option>
-						 </select>
-			</p>
-
-			<p>
-				菜单名称: <input id="text" name="text" type="text">
-			</p>
-			<p>
-				菜单等级: <select id="levels" name="levels" style="width: 100px;">
-							<option value="1">1</option>
-							<option value="2">2</option>
-						  </select>
-			</p>
-			<p>
-				菜单链接: <input id="url" name="url" type="text">
-			</p>
+			<table class="add_box" cellpadding="5">
+				<tr>
+					<td>上级菜单 :</td>
+					<td> <select id="pid" class="add_pid" name="pid"  onchange="changeOpt()">
+								<option value="1">功能菜单</option>
+								<option value="2">系统管理</option>
+								<option value="3">用户管理</option>
+								<option value="6">投票管理</option>
+							 </select>
+					</td>
+							 
+				<tr>
+					<td>菜单名称:</td>
+					<td> <input id="text" name="text" type="text"></td>
+				</tr>
+				<tr>
+					<td>菜单等级:</td> 
+					<td> <select id="levels" name="levels">
+								<option value="1">1</option>
+								<option value="2">2</option>
+							  </select>
+					</td>		  
+				</tr>
+				<tr>
+					<td>菜单链接:</td>
+					<td> <input id="url" name="url" type="text"></td>
+				</tr>
+			</table>
 		</form>
 		<div style="padding:5px;text-align:center;">
 			<a  id="add_ok" class="easyui-linkbutton" iconCls="icon-ok">ok</a>
@@ -110,7 +126,12 @@
 
 	<script type="text/javascript">
 	var rootPath = "http://localhost:8080/testSSM";
-	
+		
+	function render(value,row,index){
+		if(value==1){
+			return 'background-color:#ffee00;color:red;';
+		}
+	}
 		function doSearch() {
 			$('#tt').datagrid('load', {
 				菜单ID : $('#id').val(),

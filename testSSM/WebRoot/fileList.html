@@ -21,7 +21,7 @@
 		var webUrl="http://localhost:8080/testSSM/";
 		var url="user/imgs.do";
 		$.ajax({
-			url:url,
+			url:webUrl + url,
 			type:"get",
 			success:function(json){
 				console.log(JSON.parse(json.data));

@@ -86,7 +86,6 @@ public class DownloadRecord {
 	public DownloadRecord(String uid, String ip, int port, String type,
 			String fileName, String filePath, long length, int status,
 			Timestamp startTime, Timestamp endTime) {
-		super();
 		this.id = uid;
 		this.ip = ip;
 		this.port = port;
@@ -99,7 +98,14 @@ public class DownloadRecord {
 		this.endTime = endTime;
 	}
 	public DownloadRecord() {
-		super();
+		
+	}
+	@Override
+	public String toString() {
+		return "DownloadRecord [id=" + id + ", ip=" + ip + ", port=" + port
+				+ ", type=" + type + ", fileName=" + fileName + ", filePath="
+				+ filePath + ", length=" + length + ", status=" + status
+				+ ", startTime=" + startTime + ", endTime=" + endTime + "]";
 	}
     
 }

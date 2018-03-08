@@ -2,10 +2,13 @@ package com.testSSM.test.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.Timestamp;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +19,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -33,73 +37,76 @@ import net.sf.json.JSONArray;
 
 /**
  * 用户的控制层
+ * 
  * @author huangyeq
- *
+ * 
  */
 @Controller
 @RequestMapping("/user")
-public class UserController extends BaseController{
-	private static Logger logger=Logger.getLogger(UserController.class);
-	private static final String SUCCESS="1";
-	private static final String ERROR="0";
+public class UserController extends BaseController {
+	private static Logger logger = Logger.getLogger(UserController.class);
+	private static final String SUCCESS = "1";
+	private static final String ERROR = "0";
 	@Resource
 	private UserService userService;
-	
+
 	/**
-	 * 注锟斤拷
+	 * 用户注册
+	 * 
 	 * @param request
 	 * @param user
 	 * @return
 	 */
 	@ResponseBody
 	@RequestMapping("register.do")
-	public ModelAndView register(HttpServletRequest request,UserPojo user){
-		ModelAndView view=new ModelAndView();
-		if (user.getAccount()==null) {
+	public ModelAndView register(HttpServletRequest request, UserPojo user) {
+		ModelAndView view = new ModelAndView();
+		if (user.getAccount() == null) {
 			return view;
 		}
-		User userModel=new User();
+		User userModel = new User();
 		BeanUtils.copyProperties(user, userModel);
 		int result = userService.save(userModel);
-		if (result>0) {			
-			view.addObject("flag", "锟缴癸拷");
+		if (result > 0) {
+			view.addObject("flag", "注册成功");
 		}
 		view.setViewName("register");
-		
+
 		return view;
 	}
-	
+
 	/**
-	 * when the program log in , i wanan kept the session in jsp page,
-	 * then,get the session in backend program.
+	 * when the program log in , i wanan kept the session in jsp page, then,get
+	 * the session in backend program.
+	 * 
 	 * @return
 	 */
 	@RequestMapping("userList.do")
-	public ModelAndView userList(HttpSession session,HttpServletRequest request){
-		ModelAndView view=new ModelAndView();
-		List<User> users=userService.query();
+	public ModelAndView userList(HttpSession session, HttpServletRequest request) {
+		ModelAndView view = new ModelAndView();
+		List<User> users = userService.query();
 		view.addObject("users", users);
-		//request.getSession().setAttribute("1", "1");
+		// request.getSession().setAttribute("1", "1");
 		session.setAttribute("1", "1");
-		//setviewname锟结定位锟斤拷web-inf目录锟斤拷
 		view.setViewName("user/userList");
 		return view;
 	}
-	
+
 	/**
-	 * 锟斤拷录
+	 * 登陆 返回modelandview
+	 * 
 	 * @return
 	 */
 	@RequestMapping("login.do")
-	public ModelAndView login(HttpServletRequest request,UserPojo userPojo){
-		ModelAndView view=new ModelAndView();
-		//锟斤拷锟斤拷崭锟�
+	public ModelAndView login(HttpServletRequest request, UserPojo userPojo) {
+		ModelAndView view = new ModelAndView();
+		// 锟斤拷锟斤拷崭锟�
 		userPojo.setAccount(userPojo.getAccount().trim());
 		userPojo.setPassword(userPojo.getPassword().trim());
-		User user=userService.queryAccount(userPojo.getAccount());
-		if (user!=null) {
+		User user = userService.queryAccount(userPojo.getAccount());
+		if (user != null) {
 			if (user.getPassword().equals(userPojo.getPassword())
-					&&user.getAccount().equals(userPojo.getAccount())) {
+					&& user.getAccount().equals(userPojo.getAccount())) {
 				request.getSession().setAttribute("user", user.getName());
 				view.setViewName("user/index");
 				return view;
@@ -107,101 +114,117 @@ public class UserController extends BaseController{
 		}
 		view.addObject("flag", "登录失败");
 		view.setViewName("redirect:login.jsp");
-		
+
 		return view;
-				
+
 	}
-	
+
 	/**
-	 * 前锟剿碉拷录
+	 * 登陆 返回json
+	 * 
 	 * @author huangyq
-	 * @date 2017-7-7  
-	 * @version 1.0.0 
+	 * @date 2017-7-7
+	 * @version 1.0.0
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping(value="/login2.do",method=RequestMethod.POST)
-	public ListObject log_in(HttpServletRequest request,HttpSession session,String param) {
+	@RequestMapping(value = "/login2.do", method = RequestMethod.POST)
+	public ListObject log_in(HttpServletRequest request, HttpSession session,
+			String param) {
 		ListObject object = new ListObject();
 		String account = request.getParameter("account");
 		String password = request.getParameter("password");
-		User user =userService.queryAccount(account);
-		if (user!=null) {
+		User user = userService.queryAccount(account);
+		if (user != null) {
 			if (user.getPassword().equals(password)
-					&&user.getAccount().equals(account)) {
+					&& user.getAccount().equals(account)) {
 				object.setData(user);
-				object.setOther(new Other(1));
-			}else {
-				object.setOther(new Other(0));
-				object.setData("锟斤拷锟斤拷锟斤拷锟�");
+				object.setOther(new Other(SUCCESS_STATUS_CODE));
+			} else {
+				object.setOther(new Other(ERROR_STATUS_CODE));
+				object.setData("登陆失败");
 			}
-		}else {			
-			Other other=new Other(0);
+		} else {
+			Other other = new Other(0);
 			object.setOther(other);
-			object.setData("锟剿号诧拷锟斤拷锟斤拷");
+			object.setData("登陆成功");
 		}
-		
+
 		return object;
 	}
-	
-	
+
 	/**
 	 * find the user by some conditions
+	 * 
 	 * @return
 	 */
 	@RequestMapping("queryUserList.do")
-	public ModelAndView queryUserList(HttpServletRequest request,String username){
-		String param=request.getParameter("username");
+	public ModelAndView queryUserList(HttpServletRequest request,
+			String username) {
+		String param = request.getParameter("username");
 		ModelAndView view = null;
-		List<User> list=null;
+		List<User> list = null;
 		try {
 			view = new ModelAndView("user/userList");
 			if (!StringUtils.isEmpty(username)) {
-				list=userService.queryUserList(username);
-				if (list.size()>0) {
+				list = userService.queryUserList(username);
+				if (list.size() > 0) {
 					view.addObject("users", list);
-				}else {
-					throw new  Exception("没锟斤拷锟斤拷锟斤拷");
+				} else {
+					throw new Exception("查询用户列表");
 				}
-			}else {
-				view.addObject("users",userService.query());
+			} else {
+				view.addObject("users", userService.query());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return view;
 	}
-	
+
 	/**
-	 * 删锟斤拷
-	 * 锟矫癸拷锟斤拷锟斤拷锟斤拷ajax锟届步锟结交锟斤拷锟杰伙拷锟斤拷锟�
+	 * 删除用户
+	 * 
 	 * @return
 	 */
 	@RequestMapping("delete.do")
-	public ModelAndView deleteUser(HttpServletRequest request) {
+	public ModelAndView deleteUser(HttpServletRequest request,
+			HttpServletResponse response) {
 		String id = request.getParameter("id");
-		ModelAndView view =new ModelAndView();
+		ModelAndView view = new ModelAndView();
 		System.out.println(id);
-		int result = userService.remove(id);
-		if (result>0) {
-			view.addObject("flag", "锟缴癸拷");
-		}else {
-			view.addObject("flag", "失锟斤拷");
+		try {
+			int result = userService.remove(id);
+			if (result > 0) {
+				view.addObject("flag", "删除成功");
+				response.getWriter().print("<script>alert('删除成功')</script>");
+			} else {
+				view.addObject("flag", "删除失败");
+				response.getWriter().print("<script>alert('删除失败')</script>");
+			}
+		} catch (IOException e) {
+			try {
+				response.getWriter().print(
+						"<script>alert('删除失败 : '+" + e.getMessage()
+								+ ")</script>");
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
 		}
-		view.addObject("users",userService.query());
+		view.addObject("users", userService.query());
 		view.setViewName("user/userList");
 		return view;
 	}
-	
+
 	@ResponseBody
-	@RequestMapping(value="remove.do",method=RequestMethod.POST)
+	@RequestMapping(value = "remove.do", method = RequestMethod.POST)
 	public String deleteUser2(HttpServletRequest request) {
 		try {
 			String id = request.getParameter("id");
 			int result = userService.remove(id);
-			if (result>0) {
+			if (result > 0) {
 				return SUCCESS;
-			}else {
+			} else {
 				return ERROR;
 			}
 		} catch (Exception e) {
@@ -213,12 +236,13 @@ public class UserController extends BaseController{
 		}
 		return "-1";
 	}
-	
+
 	/**
-	 * 锟侥硷拷锟较达拷
+	 * 文件上传
+	 * 
 	 * @author huangyq
-	 * @date 2017-7-7  
-	 * @version 1.0.0 
+	 * @date 2017-7-7
+	 * @version 1.0.0
 	 * @param file
 	 * @param request
 	 * @param response
@@ -227,140 +251,214 @@ public class UserController extends BaseController{
 	 * @throws Exception
 	 */
 	@ResponseBody
-	@RequestMapping(value = "/upload.do",method = RequestMethod.POST)
-	public ListObject photoUpload(MultipartFile file,HttpServletRequest request,HttpServletResponse response
-			,HttpSession session) throws Exception{
+	@RequestMapping(value = "/upload.do", method = RequestMethod.POST)
+	public ListObject photoUpload(MultipartFile file,
+			HttpServletRequest request, HttpServletResponse response,
+			HttpSession session) throws Exception {
 		DownloadRecord record = new DownloadRecord();
-		ListObject json=new ListObject();
+		ListObject json = new ListObject();
 		Other other = new Other();
-		if (file!=null) {
-			String path=null;
-			String type=null;
-			String fileName=file.getOriginalFilename();
-			logger.debug("锟较达拷锟斤拷锟侥硷拷原锟斤拷锟斤拷:"+fileName);
-			
-			type=fileName.indexOf(".")!=-1?fileName.substring(fileName.indexOf(".")+1,fileName.length()):null;
-			if (type!=null) {
-				if ("GIF".equals(type.toUpperCase())||"PNG".equals(type.toUpperCase())||"JPG".equals(type.toUpperCase())){
-					
-					String realPath=request.getSession().getServletContext().getRealPath("/");   //+"upload/"
-					String myPath="fileUpload";
-					
-					String trueFileName=String.valueOf(System.currentTimeMillis())+fileName;
-					
-					//path=realPath+myPath+System.getProperty("file.separator")+trueFileName;
-					path = FILE_PATH+System.getProperty("file.separator")+trueFileName;
-					logger.debug("锟斤拷锟酵计拷募锟斤拷锟铰凤拷锟�:"+path); 
-					
+		if (file != null) {
+			String path = null;
+			String type = null;
+			String fileName = file.getOriginalFilename();
+			logger.debug("解析出来的文件名:" + fileName);
+
+			type = fileName.indexOf(".") != -1 ? fileName.substring(
+					fileName.indexOf(".") + 1, fileName.length()) : null;
+			if (type != null) {
+				if ("GIF".equals(type.toUpperCase())
+						|| "PNG".equals(type.toUpperCase())
+						|| "JPG".equals(type.toUpperCase())) {
+
+					String realPath = request.getSession().getServletContext()
+							.getRealPath("/"); // +"upload/"
+					String myPath = "fileUpload";
+
+					String trueFileName = String.valueOf(System
+							.currentTimeMillis()) + fileName;
+
+					// path=realPath+myPath+System.getProperty("file.separator")+trueFileName;
+					path = FILE_PATH + System.getProperty("file.separator")
+							+ trueFileName;
+					logger.debug("解析出来的路径:" + path);
+
 					file.transferTo(new File(path));
-					
-					//锟斤拷锟斤拷什么锟侥硷拷锟斤拷锟斤拷要锟斤拷锟斤拷锟斤拷锟捷匡拷锟斤拷锟斤拷
+
 					record.setFileName(fileName);
 					record.setFilePath(path);
 					record.setLength(file.getSize());
 					record.setType(file.getContentType());
-					record.setStartTime(new Timestamp(System.currentTimeMillis()));
+					record.setStartTime(new Timestamp(System
+							.currentTimeMillis()));
 					int result = fileRecordService.insert(record);
-					
-					if (result>0) {
+
+					if (result > 0) {
 						other.setCode(SUCCESS_STATUS_CODE);
-						json.setData("锟较达拷锟缴癸拷");
+						json.setData("上传成功");
 						json.setOther(other);
-						System.out.println("锟侥硷拷锟缴癸拷锟较达拷锟斤拷指锟斤拷目录锟斤拷");
-					}else {
+					} else {
 						json.setOther(new Other(ERROR_STATUS_CODE));
-						json.setData("锟较达拷失锟斤拷");
+						json.setData("文件上传失败");
 					}
-					
-				}else {
+
+				} else {
 					other.setCode(ERROR_STATUS_CODE);
-					json.setData("锟较达拷锟侥硷拷失锟斤拷");
+					json.setData("文件上传失败");
 					json.setOther(other);
-					System.out.println("锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷要锟斤拷锟侥硷拷锟斤拷锟斤拷,锟诫按要锟斤拷锟斤拷锟斤拷锟较达拷");
 					return json;
 				}
 			}
-		}else {
+		} else {
 			other.setCode(ERROR_STATUS_CODE);
 			json.setOther(other);
-			json.setData("没锟斤拷锟揭碉拷锟斤拷锟接︼拷锟斤拷募锟�");
-			System.out.println("没锟斤拷锟揭碉拷锟斤拷锟接︼拷锟斤拷募锟�");
+			json.setData("文件上传失败");
 			return json;
 		}
 		return json;
 	}
-	
+
 	/**
-	 * 锟侥硷拷锟斤拷锟斤拷
+	 * 文件下载
+	 * 
 	 * @author huangyq
-	 * @date 2017-7-9  
-	 * @version 1.0.0 
+	 * @date 2017-7-9
+	 * @version 1.0.0
 	 * @param request
 	 * @param response
 	 * @return
 	 */
-	@RequestMapping(value="/download.do")
-	public String download(HttpServletRequest request,HttpServletResponse response,String fileName) {
+	@RequestMapping(value = "/download.do",method = RequestMethod.POST)
+	@ResponseBody
+	public ListObject download(HttpServletRequest request,
+			HttpServletResponse response, String fileName) {
+		ListObject object = new ListObject();
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("multipart/form-data");
-		response.setHeader("Content-Disposition", "attachment;fileName="+fileName);
+		response.setHeader("Content-Disposition", "attachment;fileName="
+				+ fileName);
+		OutputStream os = null;
+		InputStream inputStream =null;
 		try {
-			//String path = Thread.currentThread().getContextClassLoader().getResource("").getPath()+"download";
-			String path = request.getSession().getServletContext().getRealPath("/download");
-			
-			InputStream inputStream = new FileInputStream(new File(path+File.separator+fileName));
-			OutputStream os = response.getOutputStream();
-			byte [] b=new byte[2048];
+			String realPath = request.getParameter("realPath");
+			// String path =
+			// Thread.currentThread().getContextClassLoader().getResource("").getPath()+"download";
+			String path = request.getSession().getServletContext()
+					.getRealPath("/download");
+
+			//inputStream = new FileInputStream(new File(path+ File.separator + fileName));
+			inputStream = new FileInputStream(new File(realPath));
+			os = response.getOutputStream();
+			byte[] b = new byte[2048];
 			int length;
-			while ((length=inputStream.read(b))>0) {
-				os.write(b,0,length);
+			while ((length = inputStream.read(b)) > 0) {
+				os.write(b, 0, length);
 			}
-			os.close();
-			inputStream.close();
-			
+			object.setOther(new Other(SUCCESS_STATUS_CODE, "下载成功"));
 		} catch (Exception e) {
-			e.printStackTrace();
+			object.setOther(new Other(ERROR_STATUS_CODE, "下载失败"));
+		}finally{
+			if (os!=null) {
+				try {
+					os.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (inputStream!=null) {
+				try {
+					inputStream.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
-		
-		return null;
+
+		return object;
 	}
-	
+
 	/**
-	 * 锟斤拷锟斤拷图片锟介看
+	 * 图片查看
+	 * 
 	 * @author huangyq
-	 * @date 2017-7-11  
-	 * @version 1.0.0 
+	 * @date 2017-7-11
+	 * @version 1.0.0
 	 * @param request
 	 * @param response
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping(value="/imgs.do",method=RequestMethod.GET)
-	public ListObject imgQuery(HttpServletRequest request,HttpServletResponse response){
+	@RequestMapping(value = "/imgs.do", method = RequestMethod.GET)
+	public ListObject imgQuery(HttpServletRequest request,
+			HttpServletResponse response) {
 		ListObject object = new ListObject();
 		Other other = new Other();
 		List<DownloadRecord> list = fileRecordService.query();
-		if (list!=null) {
+		if (list != null) {
 			JSONArray jsonArray = JSONArray.fromObject(list);
 			object.setData(jsonArray.toString());
 			other.setCode(SUCCESS_STATUS_CODE);
 			object.setOther(other);
-		}else {
+		} else {
 			other.setCode(ERROR_STATUS_CODE);
-			object.setData("锟斤拷询锟斤拷锟斤拷锟斤拷");
+			object.setData("查看图片失败");
 		}
 		return object;
 	}
-	
+
 	/**
-	 * 锟角筹拷
+	 * 显示所有文件信息
+	 * 
 	 * @author huangyq
-	 * @date 2017-7-7  
-	 * @version 1.0.0 
+	 * @date 2017-7-18
+	 * @version 1.0.0
 	 * @return
 	 */
-	public ModelAndView logout(){
-		ModelAndView view=new ModelAndView();
+	@RequestMapping(value = "fileList.do", method = RequestMethod.GET)
+	public ModelAndView fileList() {
+		ModelAndView view = new ModelAndView();
+		view.setViewName("user/fileList");
+		List<DownloadRecord> list = fileRecordService.query();
+		view.addObject("files", list);
+		return view;
+	}
+
+	@RequestMapping(value="files.do",method = RequestMethod.POST,produces="application/json;charset=utf-8")
+	@ResponseBody
+	public Map<String, Object> getFileList(HttpServletRequest request,HttpServletResponse response){
+		Map<String, Object> map = new HashMap<String, Object>();
+		List<DownloadRecord> list = fileRecordService.query();
+		map.put("rows", list);
+		return map; 
+	}
+	
+	/**
+	 * 初始化 “用户”列表 JSP页面,具有分页功能
+	 * 
+	 * @date 2017-7-29
+	 * @version 1.0.0
+	 * @param request
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "showUsers.do", method = RequestMethod.GET)
+	public String showMyUsers(HttpServletRequest request, Model model) {
+		int loginUserId = 1;
+		this.userService.showProductsByPage(request, model, loginUserId);
+
+		return "user/userList";
+	}
+
+	/**
+	 * 登出
+	 * 
+	 * @author huangyq
+	 * @date 2017-7-7
+	 * @version 1.0.0
+	 * @return
+	 */
+	public ModelAndView logout() {
+		ModelAndView view = new ModelAndView();
 		return view;
 	}
 }
