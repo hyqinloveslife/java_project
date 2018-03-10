@@ -2,6 +2,7 @@ package com.testSSM.test.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -451,6 +452,36 @@ public class UserController extends BaseController {
 		}
 		
 		return object;
+	}
+	
+	
+	@RequestMapping(value="/previewPhoto.do")
+	@ResponseBody
+	public void previewPhoto(HttpServletRequest request,HttpServletResponse response,String filePath) throws IOException{
+		response.setContentType("text/html;charset=UTF-8");
+		response.setContentType("multipart/form-data");
+		//String fullFileName = request.getSession().getServletContext().getRealPath(filePath);
+		FileInputStream fis = new FileInputStream(filePath);
+		OutputStream os = response.getOutputStream();
+		
+		try {
+			int count = 0;
+			byte [] buffer = new byte[1024*1024];
+			while ((count=fis.read())!=-1) {
+				os.write(buffer,0,count);
+			}
+			os.flush();
+		} catch (Exception e) {
+			e.getStackTrace();
+		}finally {
+			if (fis!=null) {
+				fis.close();
+			}
+			if (os!=null) {
+				os.close();
+			}
+		}
+		
 	}
 	
 	/**

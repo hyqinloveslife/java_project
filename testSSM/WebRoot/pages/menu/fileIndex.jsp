@@ -149,8 +149,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		function show(index){
 			$('#tt').datagrid('selectRow', index);
 			var row = $('#tt').datagrid('getSelected');
-			console.log(row);
-		}
+			var filePath = row.filePath;
+			var strs = filePath.split('\\');
+			var name = strs[strs.length-2]+'/'+strs[strs.length-1]
+			/* alert(strs[strs.length-2]+'/'+strs[strs.length-1]);
+			return; */
+			var filePath = rootPath+'/' + name;  
+			//window.location.href=filePath;
+			window.open(filePath);
+		} 
 		
 		function option_function(val, obj, index) {
 			return '<a href="#" onclick="show(' + index + ')">查看</a>&nbsp;'+
