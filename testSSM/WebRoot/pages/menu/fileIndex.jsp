@@ -154,10 +154,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			var name = strs[strs.length-2]+'/'+strs[strs.length-1]
 			/* alert(strs[strs.length-2]+'/'+strs[strs.length-1]);
 			return; */
-			var filePath = rootPath+'/' + name;  
-			//window.location.href=filePath;
-			window.open(filePath);
+			var filePath = encodeURI(rootPath+'/' + name);  
+			
+			//window.open(filePath,"","height=200","width=300","top="+top+",left="+left);
+			openWindow(filePath, 400, 500);
 		} 
+		
+		function openWindow(url,h,w){
+			var left=Math.round((window.screen.availWidth-w)/2);
+    		var top=Math.round((window.screen.availHeight-100-h)/2);
+			window.open(url,"","height="+h+",width="+w+",top="+top+",left="+left);
+		}
 		
 		function option_function(val, obj, index) {
 			return '<a href="#" onclick="show(' + index + ')">查看</a>&nbsp;'+
