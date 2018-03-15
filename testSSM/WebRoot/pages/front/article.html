@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文章编辑列表</title>
+<script type="text/javascript" src="../../resource/js/jquery.js"></script>
+<script type="text/javascript" src="../../resource/js/bootstrap.js"></script>
+<script type="text/javascript" src="../../resource/ezui-js/jquery.easyui.min.1.2.2.js"></script>
+<link type="text/css" rel="stylesheet"
+	href="../../resource/css/bootstrap-responsive.css">
+<link type="text/css" rel="stylesheet"
+	href="../../resource/css/bootstrap.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<ul class="nav nav-tabs nav-stacked">
+					<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+					<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+					<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+					<li class="divider"></li>
+					<li><a href="#"><i class="i"></i> Make admin</a></li>
+				</ul>
+			</div>
+			<div class="span10">
+				<table class="table table-bordered table-striped table-hover" 	>
+					<!-- table-hover 鼠标悬停   table-condensed 紧凑  table-striped 斑马线 -->
+					<caption>这个一个表单</caption>
+					<thead>
+						<tr class="success">
+							success  info warning error  四个属性
+							<td>name</td>
+							<td>time</td>
+							<td>age</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>zhangsan</td>
+							<td>20180315</td>
+							<td>18</td>
+						</tr>
+						<tr>
+							<td>zhangsan</td>
+							<td>20180315</td>
+							<td>18</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="pagination pagination-centered">
+					<ul>
+						<li><a href="#">Prev</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">Next</a></li>
+					</ul>
+				</div>
+				<div class="tabbable">
+					<ul class="nav nav-tabs">
+						<!-- nav-pills 样式 -->
+						<li class="active"><a href="#tab1" data-toggle="tab">首頁</a></li>
+						<li><a href="#tab2" data-toggle="tab">新聞</a></li>
+						<li><a href="#tab3" data-toggle="tab">文章</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="tab1">
+							<p>I'm in Section 1.</p>
+						</div>
+						<div class="tab-pane" id="tab2">
+							<p>Howdy, I'm in Section 2.</p>
+							<div class="alert">
+								<button type="button" class="close" data-dismiss="alert">&times;</button>
+								<strong>Warning!</strong> Best check yo self, you're not looking
+								too good.
+							</div>
+						</div>
+						<div class="tab-pane" id="tab3">
+							<p>To make tabs tabbable, create a .tab-pane with unique ID
+								for every tab and wrap them in .tab-content.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -59,4 +59,13 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
+
+	<!-- 配置日志 -->
+	<context:annotation-config>
+		<property name="logImpl">
+			<value>LOG4J</value>
+		</property>
+	</context:annotation-config>
+
 </beans>
+

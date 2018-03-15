@@ -448,6 +448,7 @@ public class UserController extends BaseController {
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		}
 		
 		return object;

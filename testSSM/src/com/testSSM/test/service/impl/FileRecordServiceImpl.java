@@ -39,7 +39,7 @@ public class FileRecordServiceImpl implements FileRecordService{
 	
 	@Override
 	public int remove(String id) {
-		// TODO Auto-generated method stub
+		
 		return recordDao.removeFile(id);
 	}
 

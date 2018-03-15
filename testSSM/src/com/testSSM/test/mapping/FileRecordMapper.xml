@@ -14,7 +14,7 @@
 		from downloadRecord
 	</select>
 
-	<delete id="removeFile">
-			delete from downloadRecord where id =#{id}
+	<delete id="removeFile" parameterType="com.testSSM.test.model.DownloadRecord">
+		delete from downloadRecord where id =#{id}
 	</delete>
 </mapper>

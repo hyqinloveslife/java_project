@@ -6,6 +6,7 @@
 package com.testSSM.test.model;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 import org.apache.ibatis.type.Alias;
 @Alias("downloadRecord")
@@ -19,8 +20,8 @@ public class DownloadRecord {
     private String filePath;
     private long length;
     private int status;
-    private Timestamp startTime;
-    private Timestamp endTime;
+    private Date startTime;
+    private Date endTime;
 	
 	public String getId() {
 		return id;
@@ -71,13 +72,13 @@ public class DownloadRecord {
 	public void setStatus(int status) {
 		this.status = status;
 	}
-	public Timestamp getStartTime() {
+	public Date getStartTime() {
 		return startTime;
 	}
 	public void setStartTime(Timestamp startTime) {
 		this.startTime = startTime;
 	}
-	public Timestamp getEndTime() {
+	public Date getEndTime() {
 		return endTime;
 	}
 	public void setEndTime(Timestamp endTime) {

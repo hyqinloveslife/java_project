@@ -4,7 +4,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html>
   <head>
     
@@ -21,6 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript" src="../../resource/js/jquery.js"></script>
 	<script type="text/javascript" src="../../resource/ezui-js/jquery.easyui.min.1.2.2.js"></script>
 	<script type="text/javascript" src="../../resource/ezui-js/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="../../resource/js/demo/times.js"></script>
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
@@ -38,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<th field="fileName" width="150" align="center">文件名称</th>
 				<th field="filePath" width ="380">文件目录</th>
 				<th field="length" width="100" align="center">文件大小</th>
-				<th field="startTime" data-options="halign:'center', align:'center'" width="100">上传时间</th>
+				<th field="startTime" formatter="dateFormatter" width="100">上传时间</th>
 				<th field="type" width="100" >文件类型</th>
 				
 				<th field="operate" width="100" formatter="option_function" >操作</th>
@@ -62,6 +63,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			});
 		}
 
+		function dateFormatter(value,obj,index){
+			//console.log(value);
+			if(value == undefined){
+				return "";
+			}
+			var date = new Date(value);
+			var times = date.getFullYear()+"/"+(date.getUTCMonth() +1)+"/"+date.getDate();
+			//date  = date.Format("yyyy/mm/dd")
+			return times;
+		}
+		
 		function del(index) {
 			$('#tt').datagrid('selectRow', index);
 			var row = $('#tt').datagrid('getSelected');
