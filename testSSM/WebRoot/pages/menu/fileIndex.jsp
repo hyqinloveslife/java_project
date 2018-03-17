@@ -161,7 +161,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		function show(index){
 			$('#tt').datagrid('selectRow', index);
 			var row = $('#tt').datagrid('getSelected');
-			console.log(row);
+			var filePath = row.filePath;
+			var strs = filePath.split('\\');
+			var name = strs[strs.length-2]+'/'+strs[strs.length-1]
+			/* alert(strs[strs.length-2]+'/'+strs[strs.length-1]);
+			return; */
+			var filePath = encodeURI(rootPath+'/' + name);  
+			
+			//window.open(filePath,"","height=200","width=300","top="+top+",left="+left);
+			openWindow(filePath, 400, 500);
+		} 
+		
+		function openWindow(url,h,w){
+			var left=Math.round((window.screen.availWidth-w)/2);
+    		var top=Math.round((window.screen.availHeight-100-h)/2);
+			window.open(url,"","height="+h+",width="+w+",top="+top+",left="+left);
 		}
 		
 		function option_function(val, obj, index) {

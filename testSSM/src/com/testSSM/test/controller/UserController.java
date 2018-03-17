@@ -2,6 +2,7 @@ package com.testSSM.test.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -34,6 +35,7 @@ import com.testSSM.test.pojo.UserPojo;
 import com.testSSM.test.service.UserService;
 
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 
 /**
  * 用户的控制层
@@ -434,6 +436,16 @@ public class UserController extends BaseController {
 		return map; 
 	}
 	
+	@RequestMapping(value="files2.do",method = RequestMethod.POST,produces="application/json;charset=utf-8")
+	@ResponseBody
+	public String getFileLists(HttpServletRequest request,HttpServletResponse response){
+		Map<String, Object> map = new HashMap<String, Object>();
+		List<DownloadRecord> list = fileRecordService.query();
+		JSONArray json = JSONArray.fromObject(list);
+		return json.toString(); 
+	}
+	
+	
 	@RequestMapping(value="removeFile.do",method = RequestMethod.POST)
 	@ResponseBody
 	public ListObject removeFiles(HttpServletRequest request,HttpServletResponse response,String id){
@@ -452,6 +464,36 @@ public class UserController extends BaseController {
 		}
 		
 		return object;
+	}
+	
+	
+	@RequestMapping(value="/previewPhoto.do")
+	@ResponseBody
+	public void previewPhoto(HttpServletRequest request,HttpServletResponse response,String filePath) throws IOException{
+		response.setContentType("text/html;charset=UTF-8");
+		response.setContentType("multipart/form-data");
+		//String fullFileName = request.getSession().getServletContext().getRealPath(filePath);
+		FileInputStream fis = new FileInputStream(filePath);
+		OutputStream os = response.getOutputStream();
+		
+		try {
+			int count = 0;
+			byte [] buffer = new byte[1024*1024];
+			while ((count=fis.read())!=-1) {
+				os.write(buffer,0,count);
+			}
+			os.flush();
+		} catch (Exception e) {
+			e.getStackTrace();
+		}finally {
+			if (fis!=null) {
+				fis.close();
+			}
+			if (os!=null) {
+				os.close();
+			}
+		}
+		
 	}
 	
 	/**
