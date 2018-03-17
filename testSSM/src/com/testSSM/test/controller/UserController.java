@@ -452,7 +452,9 @@ public class UserController extends BaseController {
 		ListObject object = new ListObject();
 		
 		try {
+			
 			int result = fileRecordService.remove(id);
+			
 			if(result == 0){
 				object.setOther(new Other(ERROR_STATUS_CODE, "没有写入数据库"));
 			}else{

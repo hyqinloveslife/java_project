@@ -7,17 +7,20 @@
 <script type="text/javascript" src="../../resource/js/bootstrap.js"></script>
 <script type="text/javascript" src="../../resource/js/bootstrap-table.js"></script>
 <link type="text/css" rel="stylesheet" href="../../resource/css/bootstrap-responsive.css">
-<link type="text/css" rel="stylesheet" href="../../resource/css/bootstrap.css">
-<link type="text/css" rel="stylesheet" href="../../resource/css/bootstrap-theme.css">
+<!-- <link type="text/css" rel="stylesheet" href="../../resource/css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="../../resource/css/bootstrap-theme.css"> -->
 <link type="text/css" rel="stylesheet" href="../../resource/css/fresh-bootstrap-table.css">
 <script type="text/javascript" src="../../resource/js/demo/times.js"></script>
+<script type="text/javascript" src="../../resource/js/common.js"></script>
 
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<script type="text/javascript" src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-
+<link href="https://cdn.bootcss.com/toastr.js/2.1.4/toastr.css" rel="stylesheet">
 
 </head>
 <body>
@@ -199,6 +202,34 @@
 	        $('#btn_delete').on('click',function(){
 	        	var selectRow = $('#fileTables').bootstrapTable('getSelections');
 	        	console.log(selectRow);
+	        	var ids = [];
+	        	for(var i = 0;i<selectRow.length;i++){
+	        		ids.push(selectRow[i].id);
+	        	}
+	        	console.log(ids);
+	        	Ewin.confirm({message:'确定要删除选择的数据吗？'}).on(function(e) {
+	        		if(!e){
+	        			return;
+	        		}
+	        		$.ajax({
+	        			type:'post',
+	        			url:rootPath+'/user/removeFile.do',
+	        			data:{"id":JSON.stringify(ids)},
+	        			success:function(data){
+	        				console.log(data);
+	        				if(data.other.code=='0'){
+								toastr.error(data.other.message);	        					
+	        				}else{
+	        					toastr.success(data.other.message);
+	        				}
+        					$('#fileTables').bootstrapTable('refresh');
+	        				
+	        			},
+	        			error:function(){
+	        				toastr.error('Error');
+	        			}
+	        		})
+	        	})
 	        });
 	        
 	        //2.修改
@@ -261,6 +292,29 @@
 		//查看选择的数据
 		//var some = $('#fileTables').bootstrapTable('getSelections');
 		//console.log(some);
+		Ewin.confirm({message:'确定要删除选择的数据吗？'}).on(function(e) {
+       		if(!e){
+       			return;
+       		}
+       		$.ajax({
+       			type:'post',
+       			url:rootPath+'/user/removeFile.do',
+       			data:{"id":id},
+       			success:function(data){
+       				console.log(data);
+       				if(data.other.code=='0'){
+						toastr.error(data.other.message);	        					
+       				}else{
+       					toastr.success(data.other.message);
+       				}
+      					$('#fileTables').bootstrapTable('refresh');
+       				
+       			},
+       			error:function(){
+       				toastr.error('Error');
+       			}
+       		})
+       	})
 	}
 	</script>
 </body>
