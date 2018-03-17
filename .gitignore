@@ -1,0 +1,5 @@
+
+testSSM/src/config/log4j.properties
+*.properties
+testSSM/src/config/jdbc.properties
+testSSM/.classpath
