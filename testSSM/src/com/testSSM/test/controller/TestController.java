@@ -8,6 +8,8 @@ import net.sf.json.JSONArray;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -48,11 +50,11 @@ public class TestController {
 	
 	@ResponseBody
 	@RequestMapping("register.do")
-	public ModelAndView register(HttpServletRequest request,UserPojo user){
+	public ModelAndView register(HttpServletRequest request,@Validated UserPojo user,BindingResult result){
 		ModelAndView view=new ModelAndView();
 		view.addObject("", "");
 		view.setViewName("register");
-		
+		result.rejectValue("value", "error" );
 		return view;
 	}
 	

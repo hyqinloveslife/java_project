@@ -21,6 +21,10 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -100,9 +104,16 @@ public class UserController extends BaseController {
 	 * @return
 	 */
 	@RequestMapping("login.do")
-	public ModelAndView login(HttpServletRequest request, UserPojo userPojo) {
+	public ModelAndView login(HttpServletRequest request, @Validated UserPojo userPojo,BindingResult result) {
 		ModelAndView view = new ModelAndView();
-		// 锟斤拷锟斤拷崭锟�
+		
+		//测试bindingResult的验证功能
+		String accountString = userPojo.getAccount().trim();
+		if (accountString==null|| accountString.equals("")) {
+			result.addError(new ObjectError("account", "账号不能为空"));
+		}
+		
+		// 
 		userPojo.setAccount(userPojo.getAccount().trim());
 		userPojo.setPassword(userPojo.getPassword().trim());
 		User user = userService.queryAccount(userPojo.getAccount());
@@ -114,8 +125,11 @@ public class UserController extends BaseController {
 				return view;
 			}
 		}
+		
+		result.addError(new ObjectError("account", "账号或密码错误"));
 		view.addObject("flag", "登录失败");
 		view.setViewName("redirect:login.jsp");
+		
 
 		return view;
 
