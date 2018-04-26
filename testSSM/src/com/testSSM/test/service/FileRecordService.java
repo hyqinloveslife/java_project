@@ -17,4 +17,13 @@ public interface FileRecordService extends IBaseService<DownloadRecord>{
 	
 	@Override
 	int remove(String id);
+
+	/**
+	 * @author huangyq
+	 * @date 2018-4-8  
+	 * @version 1.0.0 
+	 * @param paramRecord
+	 * @return
+	 */
+	public int updateFile(DownloadRecord paramRecord);
 }

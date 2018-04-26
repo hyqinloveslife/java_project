@@ -9,6 +9,8 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 import org.apache.ibatis.type.Alias;
+
+import com.mysql.jdbc.Blob;
 @Alias("downloadRecord")
 public class DownloadRecord {
 	public static final int STATUS_SUCCESS = 1;
@@ -22,7 +24,22 @@ public class DownloadRecord {
     private int status;
     private Date startTime;
     private Date endTime;
+    
+	private Blob resource;
 	
+	private byte [] qrcode;
+	public byte[] getQrcode() {
+		return qrcode;
+	}
+	public void setQrcode(byte[] qrcode) {
+		this.qrcode = qrcode;
+	}
+	public void setStartTime(Date startTime) {
+		this.startTime = startTime;
+	}
+	public void setEndTime(Date endTime) {
+		this.endTime = endTime;
+	}
 	public String getId() {
 		return id;
 	}
@@ -108,5 +125,18 @@ public class DownloadRecord {
 				+ filePath + ", length=" + length + ", status=" + status
 				+ ", startTime=" + startTime + ", endTime=" + endTime + "]";
 	}
+	/**
+	 * @return the resource
+	 */
+	public Blob getResource() {
+		return resource;
+	}
+	/**
+	 * @param resource the resource to set
+	 */
+	public void setResource(Blob resource) {
+		this.resource = resource;
+	}
+
     
 }

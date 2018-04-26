@@ -15,6 +15,15 @@
 		<input type="button" id="upload" value="上传">
 	</fieldset>
 	
+	<fieldset>
+		<div>
+			<input type="file" name="files" id="file2">
+			<input type="button" id="save" value="上传文件">
+		</div>
+		<a href="user/download2.do">下载2</a>
+	</fieldset>
+	
+	
 	<div>
 		<a href="user/download.do?fileName=map.txt">下载</a>
 	</div>
@@ -55,6 +64,41 @@
 					}
 				});
 			});
+		
+		
+		$("#save").click(
+				function() {
+					var formData = new FormData();
+					formData.append("file",
+							document.getElementById("file2").files[0]);
+					$.ajax({
+						url : "user/savefile.do",
+						type : "POST",
+						data : formData,
+						/**
+						 *必须false才会自动加上正确的Content-Type
+						 */
+						contentType : false,
+						/**
+						 * 必须false才会避开jQuery对 formdata 的默认处理
+						 * XMLHttpRequest会对 formdata 进行正确的处理
+						 */
+						processData : false,
+						success : function(json) {
+							var code=json.other.code;
+							var message=json.data;
+							if (code == "1") {
+								alert(message);
+							}
+							if (code == "0") {
+								alert(message);
+							}
+						},
+						error : function() {
+							alert("上传失败！");
+						}
+					});
+				});
 	});
 </script>
 </html>

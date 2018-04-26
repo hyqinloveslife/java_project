@@ -26,7 +26,7 @@ public class FileRecordServiceImpl implements FileRecordService{
 	
 	@Override
 	public DownloadRecord findById(DownloadRecord t) {
-		return null;
+		return recordDao.findById(t.getId());
 	}
 
 	
@@ -62,6 +62,16 @@ public class FileRecordServiceImpl implements FileRecordService{
 	public int insert(DownloadRecord file) {
 		// TODO Auto-generated method stub
 		return recordDao.insert(file);
+	}
+
+
+	/* (non-Javadoc)
+	 * @see com.testSSM.test.service.FileRecordService#updateFile(com.testSSM.test.model.DownloadRecord)
+	 */
+	@Override
+	public int updateFile(DownloadRecord paramRecord) {
+		// TODO Auto-generated method stub
+		return recordDao.updateFile(paramRecord);
 	}
 
 }

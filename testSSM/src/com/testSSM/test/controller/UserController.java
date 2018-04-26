@@ -1,8 +1,10 @@
 package com.testSSM.test.controller;
 
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -16,30 +18,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import net.sf.json.JSONArray;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.mysql.jdbc.Blob;
 import com.testSSM.test.common.ListObject;
 import com.testSSM.test.common.Other;
 import com.testSSM.test.model.DownloadRecord;
 import com.testSSM.test.model.User;
 import com.testSSM.test.pojo.UserPojo;
 import com.testSSM.test.service.UserService;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 /**
  * 用户的控制层
@@ -333,7 +335,144 @@ public class UserController extends BaseController {
 		}
 		return json;
 	}
-
+	
+	/**
+	 * 文件流上传
+	 * @author huangyq
+	 * @date 2018-4-8  
+	 * @version 1.0.0 
+	 * @param file
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@RequestMapping(value="/savefile.do" ,method=RequestMethod.POST)
+	public ListObject saveFile(MultipartFile file,
+			HttpServletRequest request, HttpServletResponse response){
+		DownloadRecord paramRecord = new DownloadRecord();
+		paramRecord.setId("14");
+		FileInputStream fis = null;
+		OutputStream os = null;
+		try {
+			fis = (FileInputStream) file.getInputStream();
+			
+			byte [] data = file.getBytes();
+			Blob blob = null ;
+			blob.getBinaryStream(0, data.length);
+			paramRecord.setResource(blob);
+			int result = fileRecordService.updateFile(paramRecord);
+			if (result>0) {
+				response.getWriter().print("<script>alert('上传成功')</scritp>");
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.getStackTrace();
+		}finally{
+			if (fis!=null) {
+				try {
+					fis.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (os!=null) {
+				try {
+					os.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		return null;
+	}
+	
+	/**
+	 * io流文件下载
+	 * @author huangyq
+	 * @date 2018-4-8  
+	 * @version 1.0.0 
+	 * @param request
+	 * @param response
+	 * 1.获取outputstream要用response.getOutputStream();
+	 * 2.fileName要前面就设置好，不然下载的时候就报错，默认文件名为 download2.do
+	 * 2.保存io流的数据 ，库里面要blob，bean里面用byte
+	 */
+	@RequestMapping(value="/download2.do",method=RequestMethod.GET, produces="application/json;charset=utf-8")
+	public String downloadFile(HttpServletRequest request,HttpServletResponse response){
+		String fileName = "abc.jpg";
+		DownloadRecord t = new DownloadRecord();
+		t.setId("12");
+		DownloadRecord record = fileRecordService.findById(t);
+		byte [] arr = record.getQrcode();
+		
+		try {
+			downloadFile("", "", arr, request, response);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			return "";
+		}
+		return null;
+	}
+	
+	/**
+	 * 文件下载的通用方法
+	 * @author huangyq
+	 * @date 2018-4-26  
+	 * @version 1.0.0 
+	 * @param fileName
+	 * @param filePath
+	 * @param resource
+	 */
+	@SuppressWarnings("unused")
+	private void downloadFile(String fileName,String filePath, Object resource
+			,HttpServletRequest request,HttpServletResponse response) throws Exception{
+		if (StringUtils.isEmpty(fileName)) {
+			throw new Exception("文件名不能为空");
+			
+		}
+		//设置下载文件的格式
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("multipart/form-data");
+		response.setHeader("Content-Disposition", "attachment;fileName=" + fileName);
+		
+		OutputStream os = null;
+		ByteArrayInputStream inputStream =null;
+		
+		byte [] arr = (byte[]) resource;
+		
+		try {
+			inputStream = new ByteArrayInputStream(arr);
+			os = response.getOutputStream();
+			
+			int len = 0;
+			byte[] buf = new byte[1024];  
+			while((len = inputStream.read(buf))!=-1){
+				os.write(buf,0,len);
+			}
+		} catch (Exception e) {
+			throw new Exception(e.getMessage());
+		}finally{
+			if (os!=null) {
+				try {
+					os.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if (inputStream!=null) {
+				try {
+					inputStream.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		
+	}
+	
 	/**
 	 * 文件下载
 	 * 

@@ -17,4 +17,14 @@
 	<delete id="removeFile" parameterType="com.testSSM.test.model.DownloadRecord">
 		delete from downloadRecord where id =#{id}
 	</delete>
+	
+	<select id="findById" parameterType="com.testSSM.test.model.DownloadRecord" 
+			resultType="com.testSSM.test.model.DownloadRecord" >
+		select * from downloadRecord where id = #{id}
+	</select>
+	
+	
+	<update id="updateFile" parameterType="com.testSSM.test.model.DownloadRecord" >
+		update downloadRecord set resource=#{resource} where id = #{id}
+	</update>
 </mapper>
