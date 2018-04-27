@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bootstrap树菜单</title>
+<script type="text/javascript" src="../../resource/js/jquery.js"></script>
+<script type="text/javascript"
+	src="../../resource/js/bootstrap-treeview.js"></script>
+<link rel="stylesheet" href="../../resource/css/bootstrap.css">
+</head>
+<body>
+	<div id="treeview" style="width: 300px;"></div>
+
+	<script type="text/javascript">
+		$('#treeview').treeview({
+			data : getTree(),
+			level:5,
+			backColor:'gray',
+			enableLinks:true
+			
+		});
+	
+		function getTree() {
+			var tree = [
+				{
+					text : "Parent 1",
+					nodes : [
+						{
+							text : "Child 1",
+							nodes : [
+								{
+									text : "Grandchild 1",
+									icon: "glyphicon glyphicon-pencil",
+									href : "http://localhost:8080/testSSM/pages/front/article.html"
+								},
+								{
+									text : "Grandchild 2",
+									icon: "glyphicon glyphicon-pencil",
+									href : "http://localhost:8080/testSSM/pages/front/article.html"
+								}
+							]
+						},
+						{
+							text : "Child 2"
+						}
+					]
+				},
+				{
+					text : "Parent 2"
+				},
+				{
+					text : "Parent 3"
+				},
+				{
+					text : "Parent 4"
+				},
+				{
+					text : "Parent 5"
+				}
+			];
+			return tree;
+		}
+	</script>
+</body>
+</html>

@@ -4,3 +4,4 @@ testSSM/src/config/log4j.properties
 testSSM/src/config/jdbc.properties
 testSSM/.classpath
 testSSM/src/config/log4j.properties
+testSSM/WebRoot/WEB-INF/classes/com/testSSM/test/controller/UserController.class
