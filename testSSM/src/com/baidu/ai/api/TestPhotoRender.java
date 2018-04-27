@@ -39,6 +39,17 @@ public class TestPhotoRender {
 	    JSONObject res = client.basicGeneral(image, options);
 	    System.out.println(res.toString(2));
 		
+	 // 参数为本地图片二进制数组
+	    byte[] file = readImageFile(image);
+	    res = client.basicGeneral(file, options);
+	    System.out.println(res.toString(2));
+	    
+	    
+	    // 通用文字识别, 图片参数为远程url图片
+	    JSONObject res = client.basicGeneralUrl(url, options);
+	    System.out.println(res.toString(2));
+	    
+	    
 	    JSONArray object = res.getJSONArray("words_result");
 	    StringBuffer buffer = new StringBuffer();
 	    for (int i = 0; i < object.length(); i++) {
