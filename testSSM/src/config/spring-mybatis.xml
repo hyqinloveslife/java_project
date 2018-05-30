@@ -63,7 +63,7 @@
 	<!-- 配置日志 -->
 	<context:annotation-config>
 		<property name="logImpl">
-			<value>LOG4J</value>
+			<value>STDOUT_LOGGING</value>
 		</property>
 	</context:annotation-config>
 
