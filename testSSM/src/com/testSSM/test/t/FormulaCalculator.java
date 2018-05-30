@@ -5,6 +5,8 @@ import java.util.LinkedList;
 
 import org.junit.Test;
 
+import com.baidu.ai.api.PhotoRenderUtils;
+
 /**
  * Àƒ‘Ú‘ÀÀ„
  * @author hyqin
@@ -16,8 +18,9 @@ public class FormulaCalculator {
 	
 	@Test
 	public void test() {
+		String fString = PhotoRenderUtils.getFormulaByPhoto("g:\\1212.png", "1");
 		FormulaCalculator f = new FormulaCalculator();
-		double result = f.getResult(abc);// 
+		double result = f.getResult(fString);// 
 		System.out.println(result);
 	}
 
