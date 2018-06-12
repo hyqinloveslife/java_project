@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>测试ligerui的datagrid</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=gbk">
+<link rel="stylesheet" type="text/css"
+	href="../resource/ligerUI/skins/Aqua/css/ligerui-all.css">
+<link rel="stylesheet" type="text/css"
+	href="../resource/ligerUI/skins/Aqua/css/ligerui-grid.css">
+<script type="text/javascript" src="../resource/js/jquery.js"></script>
+<script type="text/javascript"
+	src="../resource/ligerUI/js/ligerui.all.js"></script>
+</head>
+
+<body>
+	This is my HTML page.
+	<br>
+	<div id="mainGrid"></div>
+
+
+	<script type="text/javascript">
+    	var gridData = [
+    		{ id: '01', name: '部门01',birth:'1991-9-9',gender:'男',address:'北京西城区'},
+    		{ id: '02', name: '部门02',birth:'1991-9-9',gender:'男',address:'北京西城区' },
+    		{ id: '03', name: '部门03',birth:'1991-9-9',gender:'男',address:'北京西城区' },
+    		{ id: '04', name: '部门04',birth:'1991-9-9',gender:'男',address:'北京西城区' },
+    		{ id: '05', name: '部门05',birth:'1991-9-9',gender:'男',address:'北京西城区' },
+    		{ id: '06', name: '部门06',birth:'1991-9-9',gender:'男',address:'北京西城区' }
+    	];
+    	
+    	var grid = $('#mainGrid').ligerGrid({
+    		columns:[
+    			{display: "操作1",width: "100",render: function(record,index,value,column){
+    				//this     这里指向grid
+    				//record   行数据
+    				//rowindex 行索引
+    				//value    当前的值，对应record[column.name]
+    				//column   列信息
+    				return ' <a href="#">编辑</a> ';
+    			}},
+    			{display: "操作",width: "200",render: function(record,index,value,column){
+    				var a = '';
+    				a+='<input type="button" value="Add" onclick="add()">';
+    				a+='<input type="button" value="Edit" onclick="edit()">';
+    				a+='<input type="button" value="Delete" onclick="delete()">';
+    				return a;
+    			}},
+    			{name:"id",display: "id",width: "200"},
+    			{name:"name",display: "名称",width: "200"},
+    			{display: "个人信息",columns: [
+    				{name:"birth",display: "生日",width: "200"},
+    				{name:"gender",display: "性别",width: "200"}
+    			]},
+    			
+    			{
+    				name:"address",display: "地址",width: "200",
+    				isAllowHide: true,       //是否允许隐藏,如果允许，将会出现在【显示/隐藏列右键菜单】
+    				isSort: true,            //是否允许此列排序,默认为允许排序 
+    				hide: false,             //是否隐藏
+    				align: 'center',           //单元格内容对齐方式:left/center/right
+    				type: 'string',          //类型,用于排序
+    				//自定义单元格渲染器
+    				render : function (record, rowindex, value, column) {
+    					return value;  //返回此单元格显示的HTML内容(一般根据value和row的内容进行组织)
+    				},
+    				 //列汇总
+	   				totalSummary: {
+	   				  	align: 'center',   //汇总单元格内容对齐方式:left/center/right 
+	   				  	type: 'count',     //汇总类型sum,max,min,avg ,count。可以同时多种类型
+	   				  	render: function (e) {  //汇总渲染器，返回html加载到单元格
+	   				  		//e 汇总Object(包括sum,max,min,avg,count)
+	   				  		return "<div>总数：" + e.count + "</div>";
+	   				  	}
+	   				},
+	   				toolbar: {
+	                    items: [
+	                    { text: '增加', click: itemclick, icon: 'add' },
+	                    { line: true },
+	                    { text: '修改', click: itemclick, icon: 'modify' },
+	                    { line: true },
+	                    { text: '删除', click: itemclick, img: '../../../lib/ligerUI/skins/icons/delete.gif' }
+	                    ]
+	                },
+	   				//单元格编辑器
+	   				editor: {
+	   					type: 'text'
+	   				},
+	   				//多表头支持
+	   				columns: null		
+    			},
+    		],
+    		data:{Rows:gridData},
+    		checkbox: true,//是否显示复选框
+    		rownumbers: true,
+    		width: "100%"
+    	
+    	});
+    
+    //通过扩展$.ligerDefaults.Grid.formatters['columntype']来实现，columntype是column配置的type参数。比如现在要格式化一个货币格式的
+    	$.ligerDefaults.Grid.formatters['currency'] = function (num, column) {
+              //num 当前的值
+            //column 列信息
+              if (!num) return "$0.00";
+              num = num.toString().replace(/\$|\,/g, '');
+              if (isNaN(num))
+                  num = "0.00";
+              sign = (num == (num = Math.abs(num)));
+              num = Math.floor(num * 100 + 0.50000000001);
+             cents = num % 100;
+             num = Math.floor(num / 100).toString();
+             if (cents < 10)
+                 cents = "0" + cents;
+             for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++)
+                 num = num.substring(0, num.length - (4 * i + 3)) + ',' +
+         num.substring(num.length - (4 * i + 3));
+             return "$" + (((sign) ? '' : '-') + '' + num + '.' + cents);
+         };
+         
+         
+         function itemclick(item){
+         	alert(item.text);
+         }
+         
+    </script>
+</body>
+</html>
