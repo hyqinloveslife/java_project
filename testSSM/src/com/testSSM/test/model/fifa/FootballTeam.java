@@ -18,6 +18,12 @@ public class FootballTeam {
 	private String ageLimit;//注册年限
 	private String championNum;//获得冠军数
 	
+	public String getChampionNum() {
+		return championNum;
+	}
+	public void setChampionNum(String championNum) {
+		this.championNum = championNum;
+	}
 	public String getId() {
 		return id;
 	}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>比赛信息</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=gbk">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<link rel="stylesheet" type="text/css" href="../../resource/ligerUI/skins/jquery-ui.css" />
+
+	<script type="text/javascript" src="../../resource/ligerUI/skins/Aqua/css/style.js"></script>
+	<script type="text/javascript" src="../../resource/js/jquery.js"></script>
+	<script type="text/javascript" src="../../resource/ligerUI/js/ligerui.all.js"></script>
+	<script type="text/javascript" src="../../resource/js/jquery.cookie.js"></script>
+  </head>
+  
+  <body>
+    This is my HTML page. <br>
+    <!-- <form action="" name="form1" method="post" id="form1" class="liger-form">
+    	<div class="fields">
+    		<input data-type="text" data-label="标语" data-name="title" >
+    		<input data-type="date" data-label="入职日期" data-name="addDate" data-newline="false"/>
+    		<input data-type="text" data-label="姓名" data-name="title" >
+    		<input data-type="date" data-label="生日" data-name="addDate" data-newline="false"/>
+    	</div>
+    </form> -->
+    	
+    <div id="form"></div>
+   
+    <div id="form2"></div>
+  </body>
+  
+  <script type="text/javascript">
+  var webUrl="http://localhost:8080/testSSM/";
+  	$(function(){
+  		$("#form").ligerForm({
+                  inputWidth: 170, labelWidth: 90, space: 40,
+                  fields: [
+	                  { name: "ProductID", type: "hidden" },
+	                  { display: "产品名称", name: "ProductName", newline: true, type: "text" , group: "基础信息",readonly: true}, 
+	                  { display: "城市", name: "SupplierID", newline: false, type: "select", comboboxName: "CompanyName", options: { valueFieldID: "SupplierID" } },
+	                  { display: "类别 ", name: "CategoryID", newline: false, type: "select", comboboxName: "CategoryName", options: { valueFieldID: "CategoryID" }, width: 240 },
+	                  { display: "日期 ", name: "AddTime", newline: true, type: "date"  },
+	                  { display: "折扣", name: "QuantityPerUnit", newline: false, type: "number" },
+	                  { display: "单价", name: "UnitPrice", newline: false,  type: "number",validate:{required: true} },
+	                  { display: "库存量", name: "UnitsInStock", newline: true, type: "digits", group: "库存" },
+	                  { display: "订购量", name: "UnitsOnOrder", newline: false, type: "digits" },
+	                  { display: "总金额", name: "totalPrice", newline: false, type: "digits" },
+	                  { display: "备注", name: "Remark", newline: true, type: "text" ,width:470 }
+                  ],
+                  buttons: [
+		                { text: '保存', width: 60, click: f_save },
+		                { text: '关闭', width: 60, click: f_close }
+		            ]
+             }); 	
+  		
+  		showSelect();
+  		
+  	//又tab标签的表单
+  		form = $("#form2").ligerForm({
+                inputWidth: 170, labelWidth: 90, space: 40,
+                validate : true,
+                fields: [
+                { name: "ProductID", type: "hidden" }, 
+                { display: "日期 ", name: "AddTime", newline: true, type: "date" ,validate:{required:true } },
+                { display: "折扣", name: "QuantityPerUnit", newline: true, type: "number",validate:{required:true } },
+                { display: "单价", name: "UnitPrice", newline: true,  type: "number",validate:{required:true } } 
+                ],
+                tab: {
+                    items : [
+                        {
+                            title: '第一个页签', fields: [
+                                   { display: "库存量", name: "UnitsInStock", newline: true, type: "digits"  },
+                                    { display: "订购量", name: "UnitsOnOrder", newline: false, type: "digits" }
+                            ]
+                        },
+                        {
+                            title: '第二个页签(备注)(隐藏label)', fields: [
+                                    { display: "备注", name: "Remark", newline: true, type: "textarea", width: 470, validate: {   }, hideLabel: true }
+                            ]
+                        }
+                    ]
+                }
+            }); 	
+  	});
+  
+  	function f_save(){
+  		var form = liger.get("form");
+  		var editor = form.getEditor("SupplierID").getValue();
+  		console.log(editor);
+  		
+  		var data = liger.get("form").getData();
+  		var SupplierID = data["SupplierID"];
+  		console.log("data :"+data["SupplierID"]);
+  		var data =JSON.parse (JSON.stringify(data, '"', ''));
+  		
+  		var formValue =  $("#form").ligerGetGridManager();
+  		console.log(formValue);
+  		
+  		//return;
+  		$.ajax({
+  			type: "post",
+  			url: webUrl+ "match/save.do",
+  			data: data,
+  			//datatype: "json",
+  			//contentType:"application/json",
+  			success: function(json){
+  				alert(json);
+  			}
+  		});
+  	}
+  
+  	function setDatas(){
+  		console.log(1111);
+  		var _this = liger.get('ProductName');
+  		_this.set('data', 'iPhone手机');
+  	}
+  	
+  	function f_close(){
+  		alert("关闭");
+  	}
+  	
+  	function showSelect(){
+  		/*绑定城市的值*/
+  		$('input[name="CompanyName"]').ligerComboBox({
+  			data:[
+  				{text:'北京',id:'bj'},
+  				{ text: '北京', id: 'bj1' },
+                { text: '天津', id: 'tj' },
+                { text: '厦门', id: '44' },
+                { text: '广州', id: 'gz' },
+                { text: '深圳', id: 'sz' },
+                { text: '上海', id: 'ss' }
+  			],
+  			value: 'bj',
+            initIsTriggerEvent: false,
+            onSelected: function (value)
+            {
+                console.log('选中事件:' + value);
+            }
+  		});
+  		
+  		$('input[name="CategoryName"]').ligerComboBox({
+  			data:[
+  				{text:'酒水饮料',id:'bj'},
+  				{ text: '蛋糕点心', id: 'bj1' },
+                { text: '茶叶', id: 'tj' },
+                { text: '冰淇淋', id: '44' },
+                { text: '水果', id: 'gz' },
+                { text: '干果坚果', id: 'sz' },
+                { text: '熟食', id: 'ss' }
+  			],
+  			value: 'bj',
+            initIsTriggerEvent: false,
+            onSelected: function (value)
+            {
+                console.log('选中事件:' + value);
+            }
+  		});
+  	}
+  </script>
+</html>

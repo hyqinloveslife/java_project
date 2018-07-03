@@ -18,6 +18,7 @@ public class Match {
 	private String teamBlue;//蓝方队伍
 	private String teamRed;//红方队伍
 	private String isDogfall;//是否平局
+	private String matchDate;//比赛日期
 	private String gameTime;//比赛时长
 	private String beginTime;//开始时间
 	private String endTime;//结束时间
@@ -27,6 +28,12 @@ public class Match {
 	private String scoreBlue;//蓝方分数
 	private String status;//比赛状态
 	private String matchType;//比赛类型  小组赛or淘汰赛or半决赛or角色
+	public String getMatchDate() {
+		return matchDate;
+	}
+	public void setMatchDate(String matchDate) {
+		this.matchDate = matchDate;
+	}
 	public String getId() {
 		return id;
 	}
