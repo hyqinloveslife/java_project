@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.testSSM.test.common.ListObject;
+import com.testSSM.test.common.Other;
 import com.testSSM.test.model.fifa.FootballTeam;
 import com.testSSM.test.service.MatchService;
 
@@ -73,20 +74,26 @@ public class MatchController extends BaseController{
 	@RequestMapping(value="/saveTeam.do",method=RequestMethod.POST)
 	public ListObject saveTeamInfo(HttpServletRequest request,HttpServletResponse response){
 		Map<?,?> paramMap = getParameterMap(request);
-		Object object = request.getParameter("data");
+		ListObject object = new ListObject();
 		logger.info("已经进入save方法"+paramMap);
-		String ss = (String) paramMap.get("SupplierID");
-		String str1 = MapUtils.getString(paramMap, "SupplierID");
-		logger.info("从map中解析出来的字符串   :   "+str1+"  ----"+ss);
+		String ss = (String) paramMap.get("homefield");
+		String str1 = MapUtils.getString(paramMap, "ageLimit");
 		
 		try {
 			int result = matchService.addFootballTeam(paramMap);
+			if(result>0){
+				object.setOther(new Other(SUCCESS_STATUS_CODE, "成功"));
+			}else{
+				object.setOther(new Other(SUCCESS_STATUS_CODE, "信息未保存"));
+			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			object.setData("");
+			object.setOther(new Other(ERROR_STATUS_CODE, "操作失败:"+e.getMessage()));
 			e.printStackTrace();
 		}
 		
-		return null;
+		return object;
 	}
 	
 }
