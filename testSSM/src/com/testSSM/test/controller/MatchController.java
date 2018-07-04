@@ -1,7 +1,6 @@
 package com.testSSM.test.controller;
 
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.testSSM.test.common.ListObject;
+import com.testSSM.test.model.fifa.FootballTeam;
 import com.testSSM.test.service.MatchService;
 
 /**
@@ -44,8 +44,49 @@ public class MatchController extends BaseController{
 		String ss = (String) paramMap.get("SupplierID");
 		String str1 = MapUtils.getString(paramMap, "SupplierID");
 		logger.info("从map中解析出来的字符串   :   "+str1+"  ----"+ss);
+		
+		int result = matchService.addMatch(paramMap);
+		
 		return null;
 	}
 	
+	/**
+	 * 获取队伍信息
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@SuppressWarnings("rawtypes")
+	@ResponseBody
+	@RequestMapping(value="/team.do")
+	public List findTeam(HttpServletRequest request,HttpServletResponse response){
+		List footballTeams = matchService.getFootBallTeam();
+		
+		return footballTeams;
+	}
 
+	/**
+	 * 保存球赛信息
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value="/saveTeam.do",method=RequestMethod.POST)
+	public ListObject saveTeamInfo(HttpServletRequest request,HttpServletResponse response){
+		Map<?,?> paramMap = getParameterMap(request);
+		Object object = request.getParameter("data");
+		logger.info("已经进入save方法"+paramMap);
+		String ss = (String) paramMap.get("SupplierID");
+		String str1 = MapUtils.getString(paramMap, "SupplierID");
+		logger.info("从map中解析出来的字符串   :   "+str1+"  ----"+ss);
+		
+		try {
+			int result = matchService.addFootballTeam(paramMap);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
 }

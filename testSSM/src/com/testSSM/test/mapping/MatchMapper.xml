@@ -5,7 +5,27 @@
 		insert into match (id) values(#{id})
 	</insert>
 
+	<insert id="saveTeam" parameterType="com.testSSM.test.model.fifa.FootballTeam">
+		insert into footballteam (registerCode,teamName,homeField,teamBoss,teamManager,registDate,registAddress,ageLimit)
+		values
+		(#{registerCode},#{teamName},#{homeField},#{teamBoss},#{teamManager},#{registDate},#{registAddress},#{ageLimit})
 	
+	</insert>
+
+	<select id="getFootBallTeam" resultMap="myTeamMap">
+		select id, teamName,homeField
+		from footballteam
+	</select>
 	
+	<resultMap type="com.testSSM.test.model.fifa.FootballTeam" id="myTeamMap">
+		<!--指定主键列的封装规则
+        id定义主键会底层有优化；
+        column：指定哪一列
+        property：指定对应的javaBean属性
+        -->
+        <id column="id" property="id" />
+        <id column="teamName" property="teamName"/>
+        <id column="homeField" property="homeField" />
+	</resultMap>
 	
 </mapper>

@@ -17,7 +17,6 @@
   </head>
   
   <body>
-    This is my HTML page. <br>
     <!-- <form action="" name="form1" method="post" id="form1" class="liger-form">
     	<div class="fields">
     		<input data-type="text" data-label="标语" data-name="title" >
@@ -29,7 +28,7 @@
     	
     <div id="form"></div>
    
-    <div id="form2"></div>
+    <!-- <div id="form2"></div> -->
   </body>
   
   <script type="text/javascript">
@@ -38,21 +37,27 @@
   		$("#form").ligerForm({
                   inputWidth: 170, labelWidth: 90, space: 40,
                   fields: [
-	                  { name: "ProductID", type: "hidden" },
-	                  { display: "产品名称", name: "ProductName", newline: true, type: "text" , group: "基础信息",readonly: true}, 
-	                  { display: "城市", name: "SupplierID", newline: false, type: "select", comboboxName: "CompanyName", options: { valueFieldID: "SupplierID" } },
-	                  { display: "类别 ", name: "CategoryID", newline: false, type: "select", comboboxName: "CategoryName", options: { valueFieldID: "CategoryID" }, width: 240 },
-	                  { display: "日期 ", name: "AddTime", newline: true, type: "date"  },
-	                  { display: "折扣", name: "QuantityPerUnit", newline: false, type: "number" },
-	                  { display: "单价", name: "UnitPrice", newline: false,  type: "number",validate:{required: true} },
-	                  { display: "库存量", name: "UnitsInStock", newline: true, type: "digits", group: "库存" },
-	                  { display: "订购量", name: "UnitsOnOrder", newline: false, type: "digits" },
-	                  { display: "总金额", name: "totalPrice", newline: false, type: "digits" },
-	                  { display: "备注", name: "Remark", newline: true, type: "text" ,width:470 }
+	                  { display: "比赛类型", name: "matchType", newline: true, type: "text" ,  group: "基础信息"}, 
+	                  { display: "比赛队伍一", name: "teamBlue", newline: false, type: "select", comboboxName: "teamName1" },
+	                  { display: "比赛队伍二", name: "teamRed", newline: false, type: "select", comboboxName: "teamName" },
+	                  { display: "比赛场地 ", name: "playField", newline: false, type: "text", width: 340 },
+	                  { display: "比赛城市 ", name: "playCity", newline: true, type: "text"  },
+	                  { display: "比赛国家", name: "playCounty", newline: false, type: "text" },
+	                  { display: "比赛日期", name: "matchDate", newline: false,  type: "date",validate:{required: true} },
+	                  { display: "比赛时长", name: "gameTime", newline: false, type: "number" },
+	                  { display: "开始时间", name: "beginTime", newline: true, type: "date",showTime: true },
+	                  { display: "结束时间", name: "endTime", newline: false, type: "date" ,showTime: true },
+	                  { display: "补时时间", name: "injoureingTime", newline: false, type: "text"  },
+	                  { display: "胜利队伍", name: "winner", newline: false, type: "select",comboboxName: "winnerName" },
+	                  { display: "红方分数", name: "scoreRed", newline: true,  type: "digits",validate:{required: true},nullText: '请输入纯数字' },
+	                  { display: "蓝方分数", name: "scoreBlue", newline: false, type: "digits",validate: {required: true} ,nullText: '请输入纯数字'},
+	                  { display: "主裁判", name: "mainReferee", newline: true, type: "text",group: "裁判信息" },
+	                  { display: "副裁判", name: "secendReferee", newline: false, type: "text" },
+	                  { display: "视频裁判",name: "videoReferee",newline: false,type: "text"}
                   ],
                   buttons: [
-		                { text: '保存', width: 60, click: f_save },
-		                { text: '关闭', width: 60, click: f_close }
+		                { text: '保存', width: 60, click: f_save ,id:'bt_save'  },
+		                { text: '关闭', width: 60, click: f_close ,Id: "bt_close"}
 		            ]
              }); 	
   		
@@ -88,18 +93,19 @@
   
   	function f_save(){
   		var form = liger.get("form");
-  		var editor = form.getEditor("SupplierID").getValue();
+  		var editor = form.getEditor("matchType").getValue();
+  		form.getEditor("matchType").setValue("笨蛋");
   		console.log(editor);
   		
   		var data = liger.get("form").getData();
-  		var SupplierID = data["SupplierID"];
-  		console.log("data :"+data["SupplierID"]);
+  		var SupplierID = data["matchType"];
+  		console.log("data :"+data["matchType"]);
   		var data =JSON.parse (JSON.stringify(data, '"', ''));
   		
   		var formValue =  $("#form").ligerGetGridManager();
   		console.log(formValue);
   		
-  		//return;
+  		return;
   		$.ajax({
   			type: "post",
   			url: webUrl+ "match/save.do",
@@ -108,6 +114,10 @@
   			//contentType:"application/json",
   			success: function(json){
   				alert(json);
+  				//回调函数，把按钮设置为不可用
+  				
+	            $("#bt_save").ligerGetTextBoxManager().setDisabled();
+	            
   			}
   		});
   	}
@@ -124,7 +134,7 @@
   	
   	function showSelect(){
   		/*绑定城市的值*/
-  		$('input[name="CompanyName"]').ligerComboBox({
+  		/* $('input[name="teamName"]').ligerComboBox({
   			data:[
   				{text:'北京',id:'bj'},
   				{ text: '北京', id: 'bj1' },
@@ -140,19 +150,40 @@
             {
                 console.log('选中事件:' + value);
             }
-  		});
+  		}); */
+  		$("input[name='injoureingTime']").ligerSpinner({ type: 'int',isNegative:false ,step: 1});
   		
-  		$('input[name="CategoryName"]').ligerComboBox({
+  		//下拉框所展示的列
+  		var columns=[
+  			{header: 'id',name: "id",width: "50"},
+  			{header: "名字",name: "teamName",width: "150"},
+  			{header: "主场",name: "homeField",width: "200"}
+  		];
+  		
+  		$('input[name^="teamName"]').ligerComboBox({
+  			url:webUrl+ 'match/team.do',
+  			valueField:'id',
+  			textField:'teamName',
+  			columns: columns,
+  			selectBoxWidth : "400",
+  			width: "170",
+  			autocomplete: true,
+  			onChangeValue :setWinner
+  		});
+  	}
+  	
+  	//根据前面选择的数据，来设置胜利队伍
+  	function setWinner(){
+  		var teamBlue = liger.get("form").getEditor("teamBlue").getValue();
+  		var teamRed = liger.get("form").getEditor("teamRed").getValue();
+  		var teamBlueVal = liger.get("form").getEditor("teamBlue").getText();
+  		var teamRedVal = liger.get("form").getEditor("teamRed").getText();
+  		
+  		$('input[name="winnerName"]').ligerComboBox({
   			data:[
-  				{text:'酒水饮料',id:'bj'},
-  				{ text: '蛋糕点心', id: 'bj1' },
-                { text: '茶叶', id: 'tj' },
-                { text: '冰淇淋', id: '44' },
-                { text: '水果', id: 'gz' },
-                { text: '干果坚果', id: 'sz' },
-                { text: '熟食', id: 'ss' }
+                { text: teamRedVal, id: teamRed },
+                { text: teamBlueVal, id: teamBlue }
   			],
-  			value: 'bj',
             initIsTriggerEvent: false,
             onSelected: function (value)
             {
@@ -160,5 +191,6 @@
             }
   		});
   	}
+  	
   </script>
 </html>
