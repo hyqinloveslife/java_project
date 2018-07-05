@@ -19,6 +19,9 @@ import com.testSSM.test.common.Other;
 import com.testSSM.test.model.fifa.FootballTeam;
 import com.testSSM.test.service.MatchService;
 
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
 /**
  * 比赛的controller
  * @author hyqin
@@ -67,7 +70,7 @@ public class MatchController extends BaseController{
 	}
 
 	/**
-	 * 保存球赛信息
+	 * 保存球队信息
 	 * @return
 	 */
 	@ResponseBody
@@ -94,6 +97,35 @@ public class MatchController extends BaseController{
 		}
 		
 		return object;
+	}
+	
+	/**
+	 * 保存球赛信息
+	 * @return
+	 */
+	@SuppressWarnings("rawtypes")
+	@ResponseBody
+	@RequestMapping(value="/getTeamInfo.do",method=RequestMethod.POST)
+	public JSONArray getTeamInfo(HttpServletRequest request,HttpServletResponse response){
+		ListObject object = new ListObject();
+		logger.info("--------------->已经进入getTeamInfo方法");
+		JSONArray json = null;
+		try {
+			List teams = matchService.getFootballTeam();
+			if(teams.size() >0){
+				json = JSONArray.fromObject(teams);
+				logger.info("json==========================>"+json);
+				object.setData(json);
+				object.setOther(new Other(SUCCESS_STATUS_CODE, "成功"));
+			}else{
+				object.setOther(new Other(SUCCESS_STATUS_CODE, "信息未保存"));
+			}
+		} catch (Exception e) {
+			object.setOther(new Other(ERROR_STATUS_CODE, "操作失败:"+e.getMessage()));
+			e.printStackTrace();
+		}
+		
+		return json;
 	}
 	
 }

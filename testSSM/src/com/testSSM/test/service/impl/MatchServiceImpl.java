@@ -84,4 +84,10 @@ public class MatchServiceImpl implements MatchService {
 		return matchDao.saveTeam(team);
 	}
 
+	@Override
+	public List getFootballTeam() {
+		
+		return matchDao.getFootBallTeam();
+	}
+
 }

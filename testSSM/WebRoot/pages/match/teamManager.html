@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>比赛信息</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=gbk">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<link rel="stylesheet" type="text/css"
+	href="../../resource/ligerUI/skins/jquery-ui.css" />
+
+<script type="text/javascript"
+	src="../../resource/ligerUI/skins/Aqua/css/style.js"></script>
+<script type="text/javascript" src="../../resource/js/jquery.js"></script>
+<script type="text/javascript"
+	src="../../resource/ligerUI/js/ligerui.all.js"></script>
+<script type="text/javascript" src="../../resource/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../indexdata.js"></script>
+</head>
+
+<body>
+
+	<div id="message" style="width:800px"></div>
+	<div class="l-loading" style="display:block" id="pageloading"></div>
+	<form>
+		<div id="maingrid" style="margin:0; padding:0"></div>
+	</form>
+
+
+	<div style="display:none;"></div>
+</body>
+
+<script type="text/javascript">
+	//定义参数
+	var allTeamInfo;
+	var global ;
+	
+	$(function() {
+		getTeamData();//获取数据
+		
+	});
+	
+	function getTeamData(){
+		$.ajax({
+			url:webUrl + "match/getTeamInfo.do",
+			type: "post",
+			sync: true,
+			success: function(json){
+				allTeamInfo = json;
+				console.log(allTeamInfo);
+				
+				gridInit();//表格渲染
+			}		
+		
+		});
+	}
+	
+	function gridInit(){
+		global = $("#maingrid").ligerGrid({
+			checkbox: true,
+			columns: [
+				{display: "主键" ,name: "id" ,hide: true},
+				{display: "球队注册码",name: "registerCode",align: "center",width: "120"},
+				{display: "球队名称",name: "teamName",align: "center",width: "120"},
+				{display: "主场",name: "homeField",align: "center",width: "120"},
+				{display: "球队老板",name: "teamBoss",align: "center",width: "120"},
+				{display: "球队经理",name: "teamManager",align: "center",width: "120"},
+				{display: "注册时间",name: "registDate",align: "center",width: "120"},
+				{display: "注册地",name: "registAddress",align: "center",width: "120"}
+			],
+			toolbar: { items: [
+                { text: '增加', click: itemclick, img: '../../resource/ligerUI/skins/icons/add.gif',ligeruiid:'add' },
+                { line: true },
+                { text: '修改', click: itemclick, img: '../../resource/ligerUI/skins/icons/modify.gif',ligeruiid:'mod' },
+                { line: true },
+                { text: '删除', click: itemclick, img: '../../resource/ligerUI/skins/icons/delete.gif' ,ligeruiid:'delete'}
+                ]
+            },
+			title: "球队信息",
+			pageSize: 20,
+			width: "100%",
+			rownumbers: true,
+			colDraggable:true,
+			rowDraggable : true,
+			selectRowButtonOnly : true,
+			data:{Rows: allTeamInfo} 
+			
+		});
+		
+		$("#pageloading").hide(); 
+	}
+	
+	//点击事件
+	function itemclick(item){
+		console.log(item);
+		//alert(item.text);
+		
+		switch(item.ligeruiid){
+			case 'add':
+				$.ligerDialog.open({ 
+					url: 'team.html', width: 1000, height: 600, modal: false, isResize: true 
+				});
+				break;
+			case 'mod':
+				var rows = global.getCheckedRows(); //获取选择的行的数据
+				//var rows = global.getData();  //获取所有数据
+				console.log(rows);
+				if(rows.length == 0){
+					$.ligerDialog.alert("请至少选择一行数据", '提示', 'warn');
+					return; 
+				}else if(rows.length !=1){
+					$.ligerDialog.alert("只能选择一行数据进行编辑", '提示', 'warn');
+					return; 
+				}else{
+					$.ligerDialog.open({
+		                height:600,
+		                width: 800,
+		                title : '球队信息',
+		                url: 'teamEdit.html', 
+		                showMax: false,
+		                showToggle: true,
+		                showMin: false,
+		                isResize: true,
+		                slide: false,
+		                data: {
+		                    row: rows
+		                },
+		                //自定义参数
+		                myDataName: rows["registerCode"]
+		            });				
+				}
+				break;
+			case 'delete':
+				alert(item.text);
+				break;
+			default:
+				alert(item.text);			
+		}
+	
+	}
+</script>
+</html>

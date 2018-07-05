@@ -13,7 +13,7 @@
 	</insert>
 
 	<select id="getFootBallTeam" resultMap="myTeamMap">
-		select id, teamName,homeField
+		select id, teamName,homeField,registerCode,teamBoss,teamManager,registDate,registAddress,ageLimit
 		from footballteam
 	</select>
 	

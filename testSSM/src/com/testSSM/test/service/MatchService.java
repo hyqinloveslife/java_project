@@ -14,4 +14,6 @@ public interface MatchService extends IBaseService<Match>{
 
 	int addFootballTeam(Map<?, ?> paramMap) throws Exception;
 
+	List getFootballTeam();
+
 }

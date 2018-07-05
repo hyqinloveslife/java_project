@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>球队信息编辑</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=gbk">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<link rel="stylesheet" type="text/css" href="../../resource/ligerUI/skins/jquery-ui.css" />
+
+	<script type="text/javascript" src="../../resource/ligerUI/skins/Aqua/css/style.js"></script>
+	<script type="text/javascript" src="../../resource/js/jquery.js"></script>
+	<script type="text/javascript" src="../../resource/ligerUI/js/ligerui.all.js"></script>
+	<script type="text/javascript" src="../../resource/js/jquery.cookie.js"></script>
+	<style type="text/css">
+		#form{
+			margin: 10px;
+		}
+	</style>
+  </head>
+  
+  <body>
+    <!-- <form action="" name="form1" method="post" id="form1" class="liger-form">
+    	<div class="fields">
+    		<input data-type="text" data-label="标语" data-name="title" >
+    		<input data-type="date" data-label="入职日期" data-name="addDate" data-newline="false"/>
+    		<input data-type="text" data-label="姓名" data-name="title" >
+    		<input data-type="date" data-label="生日" data-name="addDate" data-newline="false"/>
+    	</div>
+    </form> -->
+    	
+    <div id="form" ></div>
+   
+    <!-- <div id="form2"></div> -->
+  </body>
+  
+  <script type="text/javascript">
+  var webUrl="http://localhost:8080/testSSM/";
+  var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)
+  	$(function(){
+  		var form = $("#form").ligerForm({
+                  inputWidth: 170, labelWidth: 90, space: 40,
+                  fields: [
+	                  { display: "球队注册码", name: "registerCode", newline: true, type: "text" ,readonly: true,  group: "基础信息"}, 
+	                  { display: "球队名称", name: "teamName", newline: false, type: "text",validate:{required: true} },
+	                  { display: "主场", name: "homeField", newline: false, type: "text",validate:{required: true} },
+	                  { display: "球队老板 ", name: "teamBoss", newline: true, type: "text"	 },
+	                  { display: "球队经理 ", name: "teamManager", newline: false, type: "text"  },
+	                  { display: "注册时间", name: "registDate", newline: true, type: "date",group: "注册信息" },
+	                  { display: "注销时间", name: "cancelDate", newline: false, type: "date" },
+	                  { display: "注册地", name: "registAddress", newline: false, type: "text" },
+	                  { display: "注册年限", name: "ageLimit", newline: true, type: "digits",nullText: "输入数字" }
+	                 
+                  ],
+                  buttons: [
+		                { text: '保存', width: 60, click: f_save ,id:'bt_save',disabled: false, name: "bt_saves"  },
+		                { text: '清除', width: 60, click: f_close ,id: "bt_close"}
+		            ]
+             });
+           
+           //设置表单内容
+           
+           var dialogData = dialog.get('data');//获取data参数 
+           var data = dialogData.row[0]; 
+           console.log("==>获取的表单数据 ： "+data.id);
+           form.setData({
+           		registerCode:data.registerCode,
+           		teamName:data.teamName,
+           		homeField:data.homeField,
+           		teamBoss:data.teamBoss,
+           		teamManager:data.teamManager,
+           		registDate:data.registDate,
+           		cancelDate:data.cancelDate,
+           		registAddress:data.registAddress,
+           		ageLimit:data.ageLimit
+           });   	
+  	});
+  
+  	function f_save(){
+  		var data = liger.get("form").getData();
+  		
+  		var data =JSON.parse (JSON.stringify(data, '"', ''));
+  		
+  		var formValue =  $("#form").ligerGetGridManager();
+  		console.log(formValue);
+  		
+  		$.ligerDialog.confirm('是否要保存?',function(yes){
+  			if(!yes){
+	  			return;	
+  			}else{
+		  		$.ajax({
+		  			type: "post",
+		  			url: webUrl+ "match/saveTeam.do",
+		  			data: data,
+		  			//datatype: "json",
+		  			//contentType:"application/json",
+		  			sync: true,
+		  			success: function(json){
+		  				console.log(json);
+		  				$.ligerDialog.alert(json.other.message, '提示', 'success'); 
+		  				//回调函数，把按钮设置为不可用
+		  				
+			            //jQuery选择器，选择所有包含ligeruiid属性的div
+			            var manager = $("div[ligeruiid='bt_save']").ligerButton({
+			                disabled: true
+			            });
+			            
+		  			}
+		  		});
+  			}
+  				
+  		});
+  	}
+  
+  	//清除所有表单内容
+  	function f_close(){
+  		
+  		$.ligerDialog.alert('清除成功', '提示', 'success'); 
+  	}
+  	
+  	function myValidate(){
+  		
+  	
+  	}
+  	
+  </script>
+</html>
