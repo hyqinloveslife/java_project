@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.testSSM.test.common.ListObject;
 import com.testSSM.test.common.Other;
-import com.testSSM.test.model.fifa.FootballTeam;
 import com.testSSM.test.service.MatchService;
+import com.testSSM.test.utils.PropertiesUtils;
+import com.weixin.api.AccessTokenTool;
 
 import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 /**
  * 比赛的controller
@@ -126,6 +126,51 @@ public class MatchController extends BaseController{
 		}
 		
 		return json;
+	}
+	
+	/**
+	 * 获取民族信息
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@SuppressWarnings("rawtypes")
+	@ResponseBody
+	@RequestMapping(value="/nation.do")
+	public List getNation(HttpServletRequest request,HttpServletResponse response){
+		List nations = matchService.getNation();
+		logger.info(nations);
+		return nations;
+	}
+	
+	/**
+	 * 获取民族信息
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@SuppressWarnings("rawtypes")
+	@ResponseBody
+	@RequestMapping(value="/education.do")
+	public List getEducation(HttpServletRequest request,HttpServletResponse response){
+		List educations = matchService.getEducation();
+		logger.info(educations);
+		return educations;
+	}
+	
+	/**
+	 * 获取token信息
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value="/token.do")
+	public String testToken(HttpServletRequest request,HttpServletResponse response){
+		String token = AccessTokenTool.getAccessToken();
+		logger.info(PropertiesUtils.readValue("appsecret"));
+		logger.info(token);
+		return token;
 	}
 	
 }

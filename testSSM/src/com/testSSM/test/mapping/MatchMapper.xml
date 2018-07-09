@@ -28,4 +28,24 @@
         <id column="homeField" property="homeField" />
 	</resultMap>
 	
+	<!-- 获取民族信息 -->
+	<select id="getNations" resultMap="myNationMap">
+		select id,name text
+		 from nation
+	</select>
+	<resultMap type="java.util.Map" id="myNationMap">
+		<!-- com.testSSM.test.pojo.NationPojo -->
+		<id column="id" property="id"/>
+		<id column="name" property="text"/>
+	</resultMap>
+	
+	<!-- 获取学历信息 -->
+	<select id="getEducation" resultMap="myEduMap">
+		select id,name text
+		from education
+	</select>
+	<resultMap type="java.util.Map" id="myEduMap">
+		<id column="id" property="id"/>
+		<id column="name" property="text"/>
+	</resultMap>
 </mapper>

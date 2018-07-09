@@ -90,4 +90,16 @@ public class MatchServiceImpl implements MatchService {
 		return matchDao.getFootBallTeam();
 	}
 
+	@Override
+	public List getNation() {
+		// TODO Auto-generated method stub
+		return matchDao.getNations();
+	}
+
+	@Override
+	public List getEducation() {
+		// TODO Auto-generated method stub
+		return matchDao.getEducation();
+	}
+
 }

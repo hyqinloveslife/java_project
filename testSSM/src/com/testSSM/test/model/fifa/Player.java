@@ -1,4 +1,7 @@
 package com.testSSM.test.model.fifa;
+
+import org.apache.commons.lang.time.DateUtils;
+
 /**
  * 球员
  * @author hyqin
@@ -11,6 +14,7 @@ public class Player {
 	private String idCard;//身份证号
 	private String nativePlace;//籍贯
 	private int age;//年龄
+	private String nation;//民族
 	private String birth;//生日
 	private String householdPlace;//户口所在地
 	private String address;//现在居住地
@@ -27,6 +31,12 @@ public class Player {
 	private String email;//邮箱
 	private String deadDate;//死亡事件
 	private String charactor;//所踢位置
+	public String getNation() {
+		return nation;
+	}
+	public void setNation(String nation) {
+		this.nation = nation;
+	}
 	public String getCharactor() {
 		return charactor;
 	}
@@ -133,6 +143,7 @@ public class Player {
 		return registDate;
 	}
 	public void setRegistDate(String registDate) {
+		
 		this.registDate = registDate;
 	}
 	public String getFirstPlayDate() {

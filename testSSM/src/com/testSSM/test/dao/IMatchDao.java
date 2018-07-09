@@ -11,4 +11,8 @@ public interface IMatchDao {
 	public List getFootBallTeam();
 
 	public int saveTeam(FootballTeam team);
+
+	public List getNations();
+
+	public List getEducation();
 }

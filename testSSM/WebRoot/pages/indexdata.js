@@ -37,7 +37,7 @@ var indexdata =
 				"pid": 6,
 				"pid_text": "",
 				"text": "发布新投票",
-				"url": "http://localhost:8080/testSSM/pages/menu/menuIndex.html"
+				"url": "http://localhost:8080/testSSM/pages/match/match.html"
 			}],
 			"icon": "",
 			"id": 6,
@@ -58,8 +58,8 @@ var indexdata =
 			"levels": 1,
 			"pid": 1,
 			"pid_text": "",
-			"text": "留言管理",
-			"url": ""
+			"text": "留言管理1",
+			"url": "http://localhost:8080/testSSM/pages/match/match.html"
 		}, {
 			"children": [{
 				"id": 7,
@@ -106,5 +106,6 @@ var indexdata =
 			"pid_text": "",
 			"text": "菜单管理",
 			"url": ""
-		}]
+		}];
+
 

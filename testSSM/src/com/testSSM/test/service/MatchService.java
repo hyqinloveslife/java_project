@@ -16,4 +16,8 @@ public interface MatchService extends IBaseService<Match>{
 
 	List getFootballTeam();
 
+	List getNation();
+
+	List getEducation();
+
 }

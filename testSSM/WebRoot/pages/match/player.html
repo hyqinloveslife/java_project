@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>球员信息</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=gbk">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<link rel="stylesheet" type="text/css" href="../../resource/ligerUI/skins/jquery-ui.css" />
+
+	<script type="text/javascript" src="../../resource/ligerUI/skins/Aqua/css/style.js"></script>
+	<script type="text/javascript" src="../../resource/js/jquery.js"></script>
+	<script type="text/javascript" src="../../resource/ligerUI/js/ligerui.all.js"></script>
+	<script type="text/javascript" src="../../resource/js/jquery.cookie.js"></script>
+	<style type="text/css">
+		#form{
+			margin: 10px;
+		}
+	</style>
+  </head>
+  
+  <body>
+    	
+    <div id="form" ></div>
+   
+  </body>
+  
+  <script type="text/javascript">
+  var webUrl="http://localhost:8080/testSSM/";
+  	$(function(){
+  		$("#form").ligerForm({
+                  inputWidth: 170, labelWidth: 90, space: 40,
+                  fields: [
+	                  { display: "球员注册码", name: "playerCode", newline: true, type: "text" ,validate:{required: true},  group: "基础信息"}, 
+	                  { display: "球员名称", name: "playerName", newline: false, type: "text",validate:{required: true} },
+	                  { display: "身份证号", name: "idCard", newline: false, type: "text",validate:{required: true} },
+	                  { display: "籍贯 ", name: "nativePlace", newline: true, type: "text"	 },
+	                  { display: "年龄 ", name: "age", newline: false, type: "text" ,readonly: true  },
+	                  { display: "生日", name: "birth", newline: false, type: "date" ,readonly: true },
+	                  { display: "户口所在地", name: "householdPlace", newline: true, type: "text" },
+	                  { display: "民族", name: "nation", newline: false, type: "select",comboboxName: "nationName"},
+	                  { display: "性别", name: "gender", newline: false, type: "select" ,comboboxName: "genderValue"},
+	                  { display: "婚姻状况", name: "maritalStatus", newline: true, type: "select" ,comboboxName:"maritalStatusValue"},
+	                  { display: "现在居住地", name: "address", newline: false, type: "text" },
+	                  { display: "身份", name: "identity", newline: false, type: "select" ,comboboxName:"identity"},
+	                  { display: "参加时间", name: "workDate", newline: true, type: "date" },
+	                  { display: "学历", name: "education", newline: false, type: "select" ,comboboxName:"educationValue"},
+	                  { display: "联系电话", name: "phone", newline: false, type: "text" },
+	                  { display: "邮箱", name: "email", newline: true, type: "text",nullText: "输入数字" },
+	                  { display: "所踢位置", name: "charactor", newline: false, type: "select" ,comboboxName:"charactor"},
+	                  { display: "注册地", name: "registAddress", newline: false, type: "text" }
+	                 
+                  ],
+                  buttons: [
+		                { text: '保存', width: 60, click: f_save ,id:'bt_save',disabled: false, name: "bt_saves"  },
+		                { text: '清除', width: 60, click: f_close ,id: "bt_close"}
+		            ]
+             }); 	
+  		
+  		//初始化下拉框
+  		initSelect();
+  		
+  	});
+  
+  	function f_save(){
+  		var data = liger.get("form").getData();
+  		
+  		var data =JSON.parse (JSON.stringify(data, '"', ''));
+  		
+  		var formValue =  $("#form").ligerGetGridManager();
+  		console.log(formValue);
+  		
+  		$.ligerDialog.confirm('是否要保存?',function(yes){
+  			if(!yes){
+	  			return;	
+  			}else{
+		  		$.ajax({
+		  			type: "post",
+		  			url: webUrl+ "match/saveTeam.do",
+		  			data: data,
+		  			//datatype: "json",
+		  			//contentType:"application/json",
+		  			sync: true,
+		  			success: function(json){
+		  				console.log(json);
+		  				$.ligerDialog.alert(json.other.message, '提示', 'success'); 
+		  				//回调函数，把按钮设置为不可用
+		  				
+			            //jQuery选择器，选择所有包含ligeruiid属性的div
+			            var manager = $("div[ligeruiid='bt_save']").ligerButton({
+			                disabled: true
+			            });
+			            
+		  			}
+		  		});
+  			}
+  				
+  		});
+  	}
+  
+  	//清除所有表单内容
+  	function f_close(){
+  		
+  		$.ligerDialog.alert('清除成功', '提示', 'success'); 
+  	}
+  	
+  	//初始化下拉框的值
+  	function initSelect(){
+  		var nations  = new nation();
+  		gender();//性别
+  		education();//学历
+  		maritalStatusValue();//婚姻状态
+  	}
+  	
+  	//获取性别
+  	function gender(){
+  		$('input[name="genderValue"]').ligerComboBox({
+ 			data:[
+ 				{text:'男',id:'1'},
+ 				{text:'女',id:'2'},
+ 				{text:'不详',id:'0'}
+ 			],
+            initIsTriggerEvent: false,
+            onSelected: function (value)
+            {
+               console.log('选中事件:' + value);
+            }
+ 		});
+  	}
+  	
+  	//获取婚姻状态
+  	function maritalStatusValue(){
+  		$('input[name="maritalStatusValue"]').ligerComboBox({
+ 			data:[
+ 				{text:'已婚',id:'1'},
+ 				{text:'未婚',id:'2'},
+ 				{text:'丧偶',id:'3'},
+ 				{text:'不详',id:'4'}
+ 			],
+            initIsTriggerEvent: false,
+            onSelected: function (value)
+            {
+               console.log('选中事件:' + value);
+            }
+ 		});
+  	}
+  	
+  	//获取民族的值
+  	function nation(){
+  		$.ajax({
+  			type: "post",
+  			url: webUrl+ "match/nation.do",
+  			data: {},
+  			//datatype: "json",
+  			//contentType:"application/json",
+  			sync: true,
+  			success: function(json){
+  				console.log(json);
+  				var nations = JSON.stringify(json);
+  				$('input[name="nationName"]').ligerComboBox({
+		 			data:json,
+		            initIsTriggerEvent: false,
+		            onSelected: function (value)
+		            {
+		               console.log('选中事件:' + value);
+		            }
+		 		});
+	            
+  			}
+  		});
+  	}
+  	
+  	//获取学历的值
+  	function education(){
+  		$.ajax({
+  			type: "post",
+  			url: webUrl+ "match/education.do",
+  			data: {},
+  			//datatype: "json",
+  			//contentType:"application/json",
+  			sync: true,
+  			success: function(json){
+  				console.log(json);
+  				var nations = JSON.stringify(json);
+  				$('input[name="educationValue"]').ligerComboBox({
+		 			data:json,
+		            initIsTriggerEvent: false,
+		            onSelected: function (value)
+		            {
+		               console.log('选中事件:' + value);
+		            }
+		 		});
+	            
+  			}
+  		});
+  	}
+  </script>
+</html>
