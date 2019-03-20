@@ -55,7 +55,7 @@ public class MatchServiceImpl implements MatchService {
 	@Override
 	public int addMatch(Map<?, ?> paramMap) {
 		
-		return 0;
+		return matchDao.saveMatchInfo(paramMap);
 	}
 
 	@Override

@@ -4,6 +4,7 @@
 	<insert id="insert" parameterType="com.testSSM.test.model.fifa.Match">
 		insert into match (id) values(#{id})
 	</insert>
+	
 
 	<insert id="saveTeam" parameterType="com.testSSM.test.model.fifa.FootballTeam">
 		insert into footballteam (registerCode,teamName,homeField,teamBoss,teamManager,registDate,registAddress,ageLimit)
@@ -48,4 +49,17 @@
 		<id column="id" property="id"/>
 		<id column="name" property="text"/>
 	</resultMap>
+	
+	<!--  -->
+	<insert id="saveMatchInfo" parameterType="java.util.HashMap" >
+		insert into bookshop.match (matchCode,teamBlue)
+		values(
+				#{matchType},
+				#{teamBlue}
+		)
+	</insert>
+	
+	
+	
+	
 </mapper>

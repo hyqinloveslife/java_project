@@ -3,12 +3,14 @@ package com.testSSM.test.controller;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.collections.MapUtils;
 import org.apache.log4j.Logger;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +18,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.testSSM.test.common.ListObject;
 import com.testSSM.test.common.Other;
+import com.testSSM.test.dto.MatchInputDTO;
+import com.testSSM.test.dto.MatchInputDTOConvert;
+import com.testSSM.test.model.fifa.Match;
 import com.testSSM.test.service.MatchService;
 import com.testSSM.test.utils.PropertiesUtils;
 import com.weixin.api.AccessTokenTool;
@@ -39,19 +44,25 @@ public class MatchController extends BaseController{
 	 * 保存球赛信息
 	 * @return
 	 */
+	
 	@ResponseBody
 	@RequestMapping(value="/save.do",method=RequestMethod.POST)
 	public ListObject saveMatchInfo(HttpServletRequest request,HttpServletResponse response){
 		Map<?,?> paramMap = getParameterMap(request);
-		Object object = request.getParameter("data");
+		ListObject object = new ListObject();
 		logger.info("已经进入save方法"+paramMap);
 		String ss = (String) paramMap.get("SupplierID");
 		String str1 = MapUtils.getString(paramMap, "SupplierID");
 		logger.info("从map中解析出来的字符串   :   "+str1+"  ----"+ss);
 		
 		int result = matchService.addMatch(paramMap);
-		
-		return null;
+		if(result==0){
+			object.setOther(new Other(ERROR_STATUS_CODE, "error"));
+		}else{
+			object.setOther(new Other(SUCCESS_STATUS_CODE, "success"));
+		}
+			
+		return object;
 	}
 	
 	/**
@@ -159,18 +170,19 @@ public class MatchController extends BaseController{
 	}
 	
 	/**
-	 * 获取token信息
-	 * @param request
-	 * @param response
+	 * 简单的测试一下转换类
+	 * @param matchInputDTO
 	 * @return
 	 */
-	@ResponseBody
-	@RequestMapping(value="/token.do")
-	public String testToken(HttpServletRequest request,HttpServletResponse response){
-		String token = AccessTokenTool.getAccessToken();
-		logger.info(PropertiesUtils.readValue("appsecret"));
-		logger.info(token);
-		return token;
+	public Match addMatch(MatchInputDTO matchInputDTO){
+		
+		Match match = new MatchInputDTOConvert().converts(matchInputDTO);
+		
+		Match m2 = matchInputDTO.convertToMatch();//最方便高效的一个方法
+		
+		return match;
 	}
+	
+	
 	
 }

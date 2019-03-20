@@ -12,7 +12,9 @@ import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -20,20 +22,29 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import net.sf.json.JSONObject;
-
+import org.apache.commons.lang.CharSet;
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.time.DateUtils;
-import org.springframework.http.HttpRequest;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.HttpClientUtils;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.message.BasicNameValuePair;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.mysql.jdbc.Util;
 import com.testSSM.test.common.ListObject;
 import com.testSSM.test.common.Other;
+
+import net.sf.json.JSONObject;
 
 @Controller
 @RequestMapping("/zhihu")
@@ -50,7 +61,11 @@ public class ZhihuController extends BaseController{
 	 */
 	@ResponseBody
 	@RequestMapping("/zhihuList.do")
-	public ListObject getZhihuList(HttpServletRequest request){
+	public ListObject getZhihuList(HttpServletRequest request,HttpServletResponse response){
+		//设置跨域访问
+		response.setHeader("Access-Control-Allow-Origin","*");
+		response.setHeader("Access-Control-Allow-Credentials", "true");
+		
 		ListObject listObject = new ListObject();
 		String paramUrl="http://news-at.zhihu.com/api/4/news/latest";//最新消息
 		StringBuilder sb = new StringBuilder();
@@ -134,9 +149,14 @@ public class ZhihuController extends BaseController{
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping("/zhihuMessageInfo.do")
-	public ListObject msgDetails(HttpServletRequest request){
+	@RequestMapping(value = "/zhihuMessageInfo.do",method=RequestMethod.GET)
+	public ListObject msgDetails(HttpServletRequest request,HttpServletResponse response){
 		ListObject listObject = new ListObject();
+		
+		//设置跨域访问
+		response.setHeader("Access-Control-Allow-Origin","*");
+		response.setHeader("Access-Control-Allow-Credentials", "true");
+		
 		String id = request.getParameter("id");
 		if(StringUtils.isEmpty(id)){
 			listObject.setOther(new Other(ERROR_STATUS_CODE));
@@ -209,6 +229,22 @@ public class ZhihuController extends BaseController{
 		
 		return result;
 		
+	}
+	
+	
+	public String testHttpClient() throws Exception{ 
+		HttpClient client = new DefaultHttpClient();
+		HttpPost httpPost = new HttpPost("");
+		
+		NameValuePair pair = new BasicNameValuePair("", "");
+		
+		httpPost.setEntity(new StringEntity("string", Charset.forName("")));
+		httpPost.setEntity(new UrlEncodedFormEntity(new ArrayList<NameValuePair>()));
+		
+		HttpResponse response = client.execute(httpPost);
+		response.getStatusLine().getStatusCode();
+		
+		return null;
 	}
 	
 }
