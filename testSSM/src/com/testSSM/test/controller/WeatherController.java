@@ -28,12 +28,12 @@ public class WeatherController extends BaseController{
 	@RequestMapping(value="/getWeather.do",method=RequestMethod.GET)
 	public String getWeather() {
 		System.out.println(1);
-		return "";
+		return "today is a nice day";
 	}
 	
 	/**
 	 * 
-	 * @author wws
+	 * @author hyqin
 	 * @date 2017-7-6  
 	 * @version 1.0.0 
 	 * @return

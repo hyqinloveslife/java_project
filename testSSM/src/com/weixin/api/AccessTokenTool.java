@@ -4,13 +4,15 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
 
+import com.testSSM.test.utils.PropertiesUtils;
+
 import net.sf.json.JSONException;
 
 public class AccessTokenTool {
 	private static Logger log = Logger.getLogger(AccessTokenTool.class);
 
-	public static final String AppId = "wx6d7cea528d5abbbb";
-	public static final String AppSecret = "7d2a8f9f8ed0ab5cf45eaaf351e2eed2";
+	public static final String AppId = "wx97bbd9ca195d50df";
+	public static final String AppSecret = "763d0ec54e097798898227f120273af5";
 
 	
 	public static final String GET_ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="
@@ -40,11 +42,28 @@ public class AccessTokenTool {
 
 		return access_token;
 	}
-
+	
+	/**
+	 * 根据配置文件来读取id
+	 * @return
+	 */
+	private static String getUrl(){
+		String AppId = PropertiesUtils.readValue("appID");
+		String AppSecret = PropertiesUtils.readValue("appsecret");
+		if(AppId==null||AppSecret==null){
+			log.info("============> 没有获取到id和secret");
+		}
+		return "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="
+		+ AppId + "&secret=" + AppSecret;
+	}
+	
 	private static String initAccessToken() {
-		String responseContent = AccessTokenUtil.getAccessToken(GET_ACCESS_TOKEN_URL);
+		String responseContent = AccessTokenUtil.getAccessToken(getUrl());
 		JSONObject object = new JSONObject();
 		try {
+			if(responseContent.contains("errcode")){
+				return responseContent;
+			}
 			object = new JSONObject(responseContent);
 			
 			return (String) object.get("access_token");				

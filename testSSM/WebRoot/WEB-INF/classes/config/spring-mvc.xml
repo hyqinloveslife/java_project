@@ -30,6 +30,11 @@
 		</property>
 	</bean>
 	
+	<!-- 自定义拦截器 -->
+	<mvc:interceptors>
+		<bean class="com.testSSM.test.interceptor.MyInterceptor" />
+	</mvc:interceptors>
+	
 	<!-- 加载静态资源 -->
 	<mvc:annotation-driven />
 	<mvc:resources location="/resource/js" mapping="/javascript/**"/>

@@ -32,7 +32,6 @@
   </body>
   
   <script type="text/javascript">
-  var webUrl="http://localhost:8080/testSSM/";
   	$(function(){
   		$("#form").ligerForm({
                   inputWidth: 170, labelWidth: 90, space: 40,
@@ -94,7 +93,7 @@
   	function f_save(){
   		var form = liger.get("form");
   		var editor = form.getEditor("matchType").getValue();
-  		form.getEditor("matchType").setValue("笨蛋");
+  		form.getEditor("matchType").setValue("zhangsan");
   		console.log(editor);
   		
   		var data = liger.get("form").getData();
@@ -105,7 +104,6 @@
   		var formValue =  $("#form").ligerGetGridManager();
   		console.log(formValue);
   		
-  		return;
   		$.ajax({
   			type: "post",
   			url: webUrl+ "match/save.do",
@@ -113,7 +111,7 @@
   			//datatype: "json",
   			//contentType:"application/json",
   			success: function(json){
-  				alert(json);
+  				console.log(json);
   				//回调函数，把按钮设置为不可用
   				
 	            $("#bt_save").ligerGetTextBoxManager().setDisabled();

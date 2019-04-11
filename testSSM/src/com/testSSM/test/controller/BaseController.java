@@ -17,6 +17,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractController;
 
 import com.testSSM.test.service.FileRecordService;
 
@@ -24,7 +26,7 @@ import com.testSSM.test.service.FileRecordService;
  * @author Administrator
  *
  */
-public class BaseController {
+public class BaseController extends AbstractController{
 	public static final int SUCCESS_STATUS_CODE = 1;
 	public static final int ERROR_STATUS_CODE = 0;
 	public static final String FILE_PATH = "D:\\ssm_img";
@@ -137,6 +139,12 @@ public class BaseController {
 
 		return returnMap;
 
+	}
+
+	@Override
+	protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
