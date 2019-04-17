@@ -13,8 +13,8 @@ package com.outlets.thread.pool;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 import java.util.concurrent.Callable;
 
 /**
@@ -27,7 +27,7 @@ import java.util.concurrent.Callable;
  */
 public class FileReaderThread implements Callable {
     private static BufferedReader br = null;
-    private List<String> list;
+    private Vector<String> list;
 
     static {
         try {
@@ -42,8 +42,8 @@ public class FileReaderThread implements Callable {
         String line = null;
         int count = 0;
         while (true) {
-            this.list = new ArrayList<>();
-            synchronized (br) {
+            this.list = new Vector<>();
+//            synchronized (br) {
                 while ((line = br.readLine()) != null) {
 //                    line = new String(line.getBytes("utf-8"),"gbk");
                     if (count < 15) {
@@ -55,7 +55,7 @@ public class FileReaderThread implements Callable {
                         break;
                     }
                 }
-            }
+//            }
             Thread.sleep(10);
             display(list);
             if (line == null) {
