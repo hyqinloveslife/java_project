@@ -169,6 +169,11 @@ public class Queue {
         return location == queue_size ? true : false;
     }
 
+    //查看队列元素的个数
+    public int length(){
+        return this.location+1;
+    }
+
     //打印队列的元素
     public void print() {
         for (int i = 0; i < queue_size; i++) {
