@@ -27,7 +27,8 @@ public class TestListNode {
 //        strNode.add("hello");
 //        strNode.add("world");
 //        strNode.print();
-//
+
+        //测试单链表
 //        ListNode<Integer> intNode = new ListNode<>();
 //        intNode.add(1);
 //        intNode.add(3);
@@ -38,14 +39,23 @@ public class TestListNode {
 //        System.out.println("链表中节点值为7的元素知否删除？ " + intNode.remove(7));
 //        System.out.println("链表是否中存在 6 " + intNode.find(6));
 //        intNode.print();
+        //测试单链表
+//        MyNode<Integer> circulNode = new CirculNode<Integer>();
+//        ((CirculNode) circulNode).add(9);
+//        ((CirculNode) circulNode).add(5);
+//        ((CirculNode) circulNode).add(2);
+//        ((CirculNode) circulNode).add(7);
+//        ((CirculNode) circulNode).print();
+//        ((CirculNode) circulNode).reverse();
+//        ((CirculNode) circulNode).print();
 
-        MyNode<Integer> circulNode = new CirculNode<Integer>();
-        ((CirculNode) circulNode).add(9);
-        ((CirculNode) circulNode).add(5);
-        ((CirculNode) circulNode).add(2);
-        ((CirculNode) circulNode).add(7);
-        ((CirculNode) circulNode).print();
-        ((CirculNode) circulNode).reverse();
-        ((CirculNode) circulNode).print();
+
+        DulNode<Integer> dulNode = new DulNode<>();
+        dulNode.add(9);
+        dulNode.add(5);
+        dulNode.add(2);
+        dulNode.add(7);
+        dulNode.print();
+
     }
 }
