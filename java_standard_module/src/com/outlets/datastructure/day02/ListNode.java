@@ -116,6 +116,21 @@ public class ListNode<T> implements MyNode {
     }
 
     /**
+     * 判断链表的长度
+     *
+     * @return
+     */
+    public int size() {
+        int len = 0;
+        ListNode<T> p = next;
+        while (p.next != null) {
+            p = p.next;
+            len++;
+        }
+        return len;
+    }
+
+    /**
      * 打印链表中的数据域
      */
     public void print() {
