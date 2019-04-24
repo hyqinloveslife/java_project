@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e85df3-49f2-41ba-8d1b-6077510372d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/day02/DataStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/tree/TestTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/tree/Tree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/tree/TreeUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/outlets/datastructure/day02/CirculNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/day02/CirculNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/outlets/datastructure/day02/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/day02/ListNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/outlets/datastructure/day02/MyNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/day02/MyNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/outlets/datastructure/day02/TestListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/day02/TestListNode.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,39 +19,39 @@
     <session id="1251984174">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="4" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.8" value="3" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="45" />
+          <entry key="java" value="54" />
           <entry key="markdown" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="45" />
+          <entry key="JAVA" value="54" />
           <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8288" />
+          <entry key="java" value="11134" />
           <entry key="markdown" value="743" />
-          <entry key="txt" value="115" />
+          <entry key="txt" value="194" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8293" />
+          <entry key="JAVA" value="11139" />
           <entry key="Markdown" value="738" />
-          <entry key="PLAIN_TEXT" value="115" />
+          <entry key="PLAIN_TEXT" value="194" />
         </counts>
       </usages-collector>
     </session>
@@ -60,35 +59,51 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/ListNode.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+            <state relative-caret-position="163">
+              <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
               <folding>
-                <element signature="e#2363#2364#0" expanded="true" />
-                <element signature="e#2413#2414#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#731#732#0" expanded="true" />
+                <element signature="e#771#772#0" expanded="true" />
+                <element signature="e#800#801#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+                <element signature="e#887#888#0" expanded="true" />
+                <element signature="e#927#928#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
+                <element signature="e#1007#1008#0" expanded="true" />
+                <element signature="e#1043#1044#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/TestListNode.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/TreeUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1044">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/Tree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/CirculNode.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/TestTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="83" column="52" selection-start-line="83" selection-start-column="52" selection-end-line="83" selection-end-column="52" />
+            <state relative-caret-position="258">
+              <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -98,8 +113,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -135,8 +150,13 @@
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/DataStructure.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/MyNode.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/ListNode.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/TestListNode.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/CirculNode.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/TestListNode.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/DulNode.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/Tree.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/TreeUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/TestTree.java" />
       </list>
     </option>
   </component>
@@ -169,7 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,20 +229,21 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="outlets" type="462c0819:PsiDirectoryNode" />
               <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="day02" type="462c0819:PsiDirectoryNode" />
+              <item name="tree" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555729758267" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556009436002" />
     <property name="idea.background.editor" value="C:\Users\hyqin\Pictures\壁纸\v2-cc5d438e05001f9dade7ad584a6ea159_r.jpg,15,scale,center" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -246,7 +266,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestListNode">
+  <component name="RunManager" selected="Application.TestTree">
     <configuration name="CallableAndFuture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.outlets.thread.pool.CallableAndFuture" />
       <module name="java_standard_module" />
@@ -299,12 +319,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestThreadPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.outlets.thread.pool.TestThreadPool" />
+    <configuration name="TestTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.outlets.datastructure.tree.TestTree" />
       <module name="java_standard_module" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.outlets.thread.pool.*" />
+          <option name="PATTERN" value="com.outlets.datastructure.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -335,19 +355,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat 7" />
-      <item itemvalue="Application.TestThreadPool" />
       <item itemvalue="Application.CallableAndFuture" />
       <item itemvalue="Application.InitCallableTest" />
       <item itemvalue="Application.TestQueue" />
       <item itemvalue="Application.TestListNode" />
+      <item itemvalue="Application.TestTree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestTree" />
         <item itemvalue="Application.TestListNode" />
         <item itemvalue="Application.TestQueue" />
         <item itemvalue="Application.InitCallableTest" />
         <item itemvalue="Application.CallableAndFuture" />
-        <item itemvalue="Application.TestThreadPool" />
       </list>
     </recent_temporary>
   </component>
@@ -369,7 +389,9 @@
       <workItem from="1555555827405" duration="4956000" />
       <workItem from="1555637861643" duration="1145000" />
       <workItem from="1555661952899" duration="5286000" />
-      <workItem from="1555727885813" duration="1759000" />
+      <workItem from="1555727885813" duration="6809000" />
+      <workItem from="1555920916406" duration="9368000" />
+      <workItem from="1556004766167" duration="3795000" />
     </task>
     <task id="LOCAL-00001" summary="多线程操作文件，读取文件。">
       <created>1555060745425</created>
@@ -399,16 +421,30 @@
       <option name="project" value="LOCAL" />
       <updated>1555570740746</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="用Java实现自定义循环链表。&#10;1.单链表中最后一个节点的指针域的值为空，如果将这个空的指针域的指针指向头节点，则整个链表就形成了一个环形结构，故称为循环链表。">
+      <created>1555730049732</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555730049732</updated>
+    </task>
+    <task id="LOCAL-00006" summary="用Java实现自定义循环链表。&#10;1.单链表中最后一个节点的指针域的值为空，如果将这个空的指针域的指针指向头节点，则整个链表就形成了一个环形结构，故称为循环链表。">
+      <created>1555740075030</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555740075030</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40487000" />
+    <option name="totallyTimeSpent" value="58700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18371467" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18909825" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -418,7 +454,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932706" visible="true" weight="0.3970803" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932706" weight="0.3970803" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4160584" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -453,8 +489,24 @@
     <MESSAGE value="自定义队列的实现" />
     <MESSAGE value="markdown文件的首次编写。" />
     <MESSAGE value="用Java实现自定义链表。&#10;1.尾插法新增节点元素。&#10;2.指定节点的值删除节点。&#10;3.查询是否存在值为输入值的节点。" />
-    <option name="LAST_COMMIT_MESSAGE" value="用Java实现自定义链表。&#10;1.尾插法新增节点元素。&#10;2.指定节点的值删除节点。&#10;3.查询是否存在值为输入值的节点。" />
+    <MESSAGE value="用Java实现自定义循环链表。&#10;1.单链表中最后一个节点的指针域的值为空，如果将这个空的指针域的指针指向头节点，则整个链表就形成了一个环形结构，故称为循环链表。" />
+    <option name="LAST_COMMIT_MESSAGE" value="用Java实现自定义循环链表。&#10;1.单链表中最后一个节点的指针域的值为空，如果将这个空的指针域的指针指向头节点，则整个链表就形成了一个环形结构，故称为循环链表。" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/TestListNode.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -684,9 +736,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/TestListNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/ListNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
+        <state relative-caret-position="558">
           <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
           <folding>
             <element signature="e#2363#2364#0" expanded="true" />
@@ -695,20 +757,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/TestListNode.java">
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/CirculNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+        <state relative-caret-position="1386">
+          <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/CirculNode.java">
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/DulNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="83" column="52" selection-start-line="83" selection-start-column="52" selection-end-line="83" selection-end-column="52" />
+        <state relative-caret-position="327">
+          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <folding>
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/TreeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
+          <folding>
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/TestTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
         </state>
       </provider>
     </entry>
