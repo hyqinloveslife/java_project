@@ -10,8 +10,6 @@
  */
 package com.outlets.datastructure.tree;
 
-import java.util.Scanner;
-
 /**
  * 〈一句话功能简述〉<br> 
  * 〈简单的二叉树实现〉
@@ -62,7 +60,8 @@ public class BinaryTree<T> implements Tree{
 
 
     /**
-     * 在控制台手动输入的方法来创建二叉树
+     * @ERROR 这是一个失败的算法，但是具体哪里有问题，还看不出来
+     * 创建二叉树
      * @param nums
      */
     public BinaryTree createBinaryTree(BinaryTree tree, int [] nums,int index){
@@ -72,7 +71,7 @@ public class BinaryTree<T> implements Tree{
             tree.setValue(nums[index-1]);
         }
         for (int i =index;i<nums.length;i++){
-            if (i%2==0){
+            if (nums[index] <= (int) tree.getValue()) {
                 tree.setlChild(createBinaryTree(tree.getlChild(),nums,++i));
             }else{
                 tree.setrChild(createBinaryTree(tree.getrChild(),nums,++i));
@@ -80,6 +79,26 @@ public class BinaryTree<T> implements Tree{
         }
         return tree;
     }
+
+    /**
+     * 创建二叉排序树
+     *
+     * @param tree
+     * @param value
+     */
+    public BinaryTree createBinaryTree(BinaryTree tree, int value) {
+        if (tree == null) {
+            tree = new BinaryTree(value);
+        } else {
+            if ((int) tree.getValue() >= value) {
+                tree.setlChild(createBinaryTree(tree.getlChild(), value));
+            } else {
+                tree.setrChild(createBinaryTree(tree.getrChild(), value));
+            }
+        }
+        return tree;
+    }
+
 
     /**
      * 先序遍历二叉树
