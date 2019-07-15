@@ -7,12 +7,12 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.dom4j.Document;
-import org.dom4j.Element;
-import org.dom4j.io.SAXReader;
 
 import com.testSSM.test.model.weixin.TextMessage;
 import com.thoughtworks.xstream.XStream;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
 
 /**
  * 微信开发的工具类

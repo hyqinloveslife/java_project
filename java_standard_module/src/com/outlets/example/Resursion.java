@@ -11,8 +11,6 @@
 package com.outlets.example;
 
 import com.outlets.datastructure.tree.BinaryTree;
-import com.outlets.datastructure.tree.BinaryTree2;
-import com.outlets.datastructure.tree.Node;
 
 /**
  * 〈一句话功能简述〉<br>
@@ -25,6 +23,7 @@ import com.outlets.datastructure.tree.Node;
 public class Resursion {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int [] arr2 = {9,8,17,26,5,14,3,22,1,0};
 //        test(arr, 0);
 //        test2(arr);
 
@@ -40,6 +39,7 @@ public class Resursion {
 //            node = tree.insertBinaryTree(node,arr[i]);
 //        }
 //        tree.preOrder(node);
+        insertionSort(arr2);
 
     }
 
@@ -94,7 +94,10 @@ public class Resursion {
         }
     }
 
-
+    /**
+     *
+     * @param arr
+     */
     public static void print(int[] arr) {
         System.out.println();
         for (int i = 0; i < arr.length; i++) {
@@ -102,6 +105,16 @@ public class Resursion {
         }
         System.out.println();
     }
+
+    public static void print(int [] arr,boolean flag){
+        if (flag){
+            for (int i = 0; i < arr.length; i++) {
+                System.err.print(arr[i] + "   ");
+            }
+            System.out.println();
+        }
+    }
+
 
     /**
      * 简单的冒泡排序
@@ -122,6 +135,33 @@ public class Resursion {
             print(arr);
         }
     }
+
+
+    /**
+     * 简单的插入排序
+     * @param arr
+     */
+    public static void insertionSort(int [] arr){
+        System.out.println("排序前");
+        print(arr);
+        for (int i=1;i<arr.length;i++){//外围循环
+            if (arr[i-1]>arr[i]){
+                int temp = arr[i];
+                int j = i;
+                /**
+                 * 插入排序的关键点就在这里。
+                 * 需要循环的将数据往后移动
+                 */
+                while (j>0&&arr[j-1]>temp){
+                    arr[j] = arr[j-1];
+                    j--;
+                }
+                arr[j] = temp;
+            }
+            print(arr);
+        }
+    }
+
 
     public static void testTree(int[] arr) {
         Integer[] integers = new Integer[arr.length];

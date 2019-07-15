@@ -22,18 +22,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.lang.CharSet;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.utils.HttpClientUtils;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -56,7 +52,7 @@ public class ZhihuController extends BaseController{
 	 * @date 2017-8-14  
 	 * @version 1.0.0 
 	 * @param request
-	 * @param model
+	 * @param response
 	 * @return
 	 */
 	@ResponseBody
@@ -238,7 +234,7 @@ public class ZhihuController extends BaseController{
 		
 		NameValuePair pair = new BasicNameValuePair("", "");
 		
-		httpPost.setEntity(new StringEntity("string", Charset.forName("")));
+		httpPost.setEntity(new StringEntity("string", Charset.forName(" ")));
 		httpPost.setEntity(new UrlEncodedFormEntity(new ArrayList<NameValuePair>()));
 		
 		HttpResponse response = client.execute(httpPost);

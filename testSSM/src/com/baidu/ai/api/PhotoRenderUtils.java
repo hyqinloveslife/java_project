@@ -7,10 +7,10 @@ package com.baidu.ai.api;
 
 import java.util.HashMap;
 
+import com.baidu.aip.ocr.AipOcr;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.baidu.aip.ocr.AipOcr;
 
 /**
  * @author hyqin

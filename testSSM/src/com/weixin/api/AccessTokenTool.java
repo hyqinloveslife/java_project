@@ -1,8 +1,9 @@
 package com.weixin.api;
 
+import net.sf.json.JSON;
+import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
-import org.json.JSONObject;
 
 import com.testSSM.test.utils.PropertiesUtils;
 
@@ -64,7 +65,10 @@ public class AccessTokenTool {
 			if(responseContent.contains("errcode")){
 				return responseContent;
 			}
-			object = new JSONObject(responseContent);
+			object = JSONObject.fromObject(responseContent);
+
+
+
 			
 			return (String) object.get("access_token");				
 			
