@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8e85df3-49f2-41ba-8d1b-6077510372d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/tree/TestTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/tree/Tree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/datastructure/tree/TreeUtils.java" afterDir="false" />
+    <list default="true" id="d8e85df3-49f2-41ba-8d1b-6077510372d1" name="Default Changelist" comment="1.创建二叉排序树，用递归的方式实现。">
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/singleton/DoubleCheckFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/singleton/LazyLoaderFacotry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/singleton/SessionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/singleton/Singleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/singleton/TestMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/TransactionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/example/TestFinal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,91 +22,115 @@
     <session id="1251984174">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="4" />
-          <entry key="project.open.time.8" value="3" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.open.time.7" value="6" />
+          <entry key="project.open.time.8" value="7" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="54" />
-          <entry key="markdown" value="1" />
+          <entry key="java" value="78" />
+          <entry key="markdown" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="54" />
-          <entry key="Markdown" value="1" />
+          <entry key="JAVA" value="78" />
+          <entry key="Markdown" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11134" />
-          <entry key="markdown" value="743" />
-          <entry key="txt" value="194" />
+          <entry key="java" value="17659" />
+          <entry key="markdown" value="782" />
+          <entry key="txt" value="256" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11139" />
-          <entry key="Markdown" value="738" />
-          <entry key="PLAIN_TEXT" value="194" />
+          <entry key="JAVA" value="17664" />
+          <entry key="Markdown" value="777" />
+          <entry key="PLAIN_TEXT" value="256" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/SessionFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
+            <state relative-caret-position="108">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/LazyLoaderFacotry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/DoubleCheckFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/Singleton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
-                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
                 <element signature="e#660#661#0" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#771#772#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#851#852#0" expanded="true" />
-                <element signature="e#887#888#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#956#957#0" expanded="true" />
-                <element signature="e#1007#1008#0" expanded="true" />
-                <element signature="e#1043#1044#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/TreeUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/TestMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1044">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/Tree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="233">
+              <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/TestTree.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/example/TestFinal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="251">
+              <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+              <folding>
+                <element signature="e#511#512#0" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1139#1140#0" expanded="true" />
+                <element signature="e#1196#1197#0" expanded="true" />
+                <element signature="e#1240#1241#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,8 +182,28 @@
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/DulNode.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/Tree.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/TreeUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/TestTree.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/graph/graph.markdown" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/graph/Graph.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/graph/Graph2.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/example/Node.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/Node.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree2.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/example/Resursion.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/TransactionState.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/StateModel.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/AlreadySignedOrderState.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/InTransitOrderState.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/ShippedAlreadyOrderState.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/StateContext.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/StateController.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/singleton/SessionFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/singleton/TestMain.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/singleton/LazyLoaderFacotry.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/singleton/DoubleCheckFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/singleton/Singleton.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/example/TestFinal.java" />
       </list>
     </option>
   </component>
@@ -173,10 +220,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1385" />
+    <option name="height" value="755" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -220,31 +267,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="outlets" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java_standard_module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java_standard_module" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="outlets" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556009436002" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564297282967" />
     <property name="idea.background.editor" value="C:\Users\hyqin\Pictures\壁纸\v2-cc5d438e05001f9dade7ad584a6ea159_r.jpg,15,scale,center" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -266,13 +305,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestTree">
-    <configuration name="CallableAndFuture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.outlets.thread.pool.CallableAndFuture" />
+  <component name="RunManager" selected="Application.TestFinal">
+    <configuration name="Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.outlets.datastructure.graph.Graph" />
       <module name="java_standard_module" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.outlets.thread.pool.*" />
+          <option name="PATTERN" value="com.outlets.datastructure.graph.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -280,12 +319,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InitCallableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.outlets.thread.pool.InitCallableTest" />
+    <configuration name="Node" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.outlets.example.Node" />
       <module name="java_standard_module" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.outlets.thread.pool.*" />
+          <option name="PATTERN" value="com.outlets.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -293,12 +332,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestListNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.outlets.datastructure.day02.TestListNode" />
+    <configuration name="Resursion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.outlets.example.Resursion" />
       <module name="java_standard_module" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.outlets.datastructure.day02.*" />
+          <option name="PATTERN" value="com.outlets.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -306,12 +345,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.outlets.datastructure.day01.TestQueue" />
+    <configuration name="TestFinal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.outlets.example.TestFinal" />
       <module name="java_standard_module" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.outlets.datastructure.day01.*" />
+          <option name="PATTERN" value="com.outlets.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -319,12 +358,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.outlets.datastructure.tree.TestTree" />
+    <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.outlets.design.singleton.TestMain" />
       <module name="java_standard_module" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.outlets.datastructure.tree.*" />
+          <option name="PATTERN" value="com.outlets.design.singleton.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -355,19 +394,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat 7" />
-      <item itemvalue="Application.CallableAndFuture" />
-      <item itemvalue="Application.InitCallableTest" />
-      <item itemvalue="Application.TestQueue" />
-      <item itemvalue="Application.TestListNode" />
-      <item itemvalue="Application.TestTree" />
+      <item itemvalue="Application.Graph" />
+      <item itemvalue="Application.Resursion" />
+      <item itemvalue="Application.Node" />
+      <item itemvalue="Application.TestMain" />
+      <item itemvalue="Application.TestFinal" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestTree" />
-        <item itemvalue="Application.TestListNode" />
-        <item itemvalue="Application.TestQueue" />
-        <item itemvalue="Application.InitCallableTest" />
-        <item itemvalue="Application.CallableAndFuture" />
+        <item itemvalue="Application.TestFinal" />
+        <item itemvalue="Application.TestMain" />
+        <item itemvalue="Application.Resursion" />
+        <item itemvalue="Application.Node" />
+        <item itemvalue="Application.Graph" />
       </list>
     </recent_temporary>
   </component>
@@ -392,6 +431,19 @@
       <workItem from="1555727885813" duration="6809000" />
       <workItem from="1555920916406" duration="9368000" />
       <workItem from="1556004766167" duration="3795000" />
+      <workItem from="1556251796773" duration="887000" />
+      <workItem from="1556265286970" duration="2111000" />
+      <workItem from="1556415079256" duration="1233000" />
+      <workItem from="1556420946577" duration="4198000" />
+      <workItem from="1556499261570" duration="2345000" />
+      <workItem from="1556592410418" duration="3978000" />
+      <workItem from="1556623155845" duration="5049000" />
+      <workItem from="1557023715329" duration="660000" />
+      <workItem from="1557068884735" duration="3744000" />
+      <workItem from="1560235333720" duration="387000" />
+      <workItem from="1560236432896" duration="97000" />
+      <workItem from="1563891901494" duration="2623000" />
+      <workItem from="1564293161977" duration="4727000" />
     </task>
     <task id="LOCAL-00001" summary="多线程操作文件，读取文件。">
       <created>1555060745425</created>
@@ -435,16 +487,31 @@
       <option name="project" value="LOCAL" />
       <updated>1555740075030</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1.简单的实现图的数据结构。&#10;2.学习了递归算法。">
+      <created>1556447160803</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556447160803</updated>
+    </task>
+    <task id="LOCAL-00008" summary="1.创建二叉排序树，用递归的方式实现。">
+      <created>1556627670704</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556627670704</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58700000" />
+    <option name="totallyTimeSpent" value="90739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18909825" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2294751" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -454,8 +521,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932706" weight="0.3970803" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4160584" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932706" visible="true" weight="0.3211679" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.22043796" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -476,6 +543,7 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="PlantUML" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +558,9 @@
     <MESSAGE value="markdown文件的首次编写。" />
     <MESSAGE value="用Java实现自定义链表。&#10;1.尾插法新增节点元素。&#10;2.指定节点的值删除节点。&#10;3.查询是否存在值为输入值的节点。" />
     <MESSAGE value="用Java实现自定义循环链表。&#10;1.单链表中最后一个节点的指针域的值为空，如果将这个空的指针域的指针指向头节点，则整个链表就形成了一个环形结构，故称为循环链表。" />
-    <option name="LAST_COMMIT_MESSAGE" value="用Java实现自定义循环链表。&#10;1.单链表中最后一个节点的指针域的值为空，如果将这个空的指针域的指针指向头节点，则整个链表就形成了一个环形结构，故称为循环链表。" />
+    <MESSAGE value="1.简单的实现图的数据结构。&#10;2.学习了递归算法。" />
+    <MESSAGE value="1.创建二叉排序树，用递归的方式实现。" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.创建二叉排序树，用递归的方式实现。" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -501,6 +571,18 @@
           <line>53</line>
           <properties />
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/outlets/example/Resursion.java</url>
+          <line>198</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/outlets/example/Resursion.java</url>
+          <line>146</line>
+          <properties />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -522,62 +604,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13896">
-          <caret line="140" column="6" selection-start-line="140" selection-start-column="6" selection-end-line="140" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/Iterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-573">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/concurrent/Executors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="229" column="63" selection-start-line="229" selection-start-column="63" selection-end-line="229" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/concurrent/ThreadFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/concurrent/Callable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/concurrent/Future.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="95" column="17" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/concurrent/ExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="235" column="18" selection-start-line="235" selection-start-column="18" selection-end-line="235" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/thread/day01/MyRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/thread/day01/MultiThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -750,10 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-          <folding>
-            <element signature="e#2363#2364#0" expanded="true" />
-            <element signature="e#2413#2414#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -761,10 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1386">
           <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
-          <folding>
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -772,10 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -793,31 +807,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
-          <folding>
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#1007#1008#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/graph/graph.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/TestTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
+        <state relative-caret-position="52">
           <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/graph/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/graph/Graph2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/tree/BinaryTree2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1494">
+          <caret line="106" column="33" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/StateModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/AlreadySignedOrderState.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/InTransitOrderState.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/ShippedAlreadyOrderState.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/StateController.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/StateContext.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/TransactionState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/SessionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/LazyLoaderFacotry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/DoubleCheckFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/example/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/Singleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/example/Resursion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="189" column="9" selection-start-line="189" selection-start-column="9" selection-end-line="189" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/TestMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/example/TestFinal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding>
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1196#1197#0" expanded="true" />
+            <element signature="e#1240#1241#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
