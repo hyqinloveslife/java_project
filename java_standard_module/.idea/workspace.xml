@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e85df3-49f2-41ba-8d1b-6077510372d1" name="Default Changelist" comment="设计模式之工厂方法模式。&#10;设计模式之状态模式。">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/templateMethod/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/templateMethod/type01/HummerModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/templateMethod/type01/HummerModelImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/templateMethod/type01/ToyotaModelImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/outlets/example/TestFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/outlets/example/TestFinal.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,26 +36,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="100" />
+          <entry key="java" value="104" />
           <entry key="markdown" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="100" />
+          <entry key="JAVA" value="104" />
           <entry key="Markdown" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="20148" />
+          <entry key="java" value="20674" />
           <entry key="markdown" value="782" />
           <entry key="txt" value="298" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="20153" />
+          <entry key="JAVA" value="20679" />
           <entry key="Markdown" value="777" />
           <entry key="PLAIN_TEXT" value="298" />
         </counts>
@@ -60,46 +64,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/IProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/IFacotry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveComputer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-              <folding>
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#565#566#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiComputer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellComputer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -148,11 +112,82 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/Client.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
               <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/templateMethod/type01/HummerModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="e#856#857#0" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/templateMethod/type01/HummerModelImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+              <folding>
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
+                <element signature="e#739#740#0" expanded="true" />
+                <element signature="e#777#778#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#960#961#0" expanded="true" />
+                <element signature="e#987#988#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/templateMethod/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/templateMethod/type01/ToyotaModelImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding>
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
+                <element signature="e#739#740#0" expanded="true" />
+                <element signature="e#777#778#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#1051#1052#0" expanded="true" />
+                <element signature="e#1086#1087#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -193,11 +228,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/des.markdown" />
-        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/DataStructure.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/MyNode.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/ListNode.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/CirculNode.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/TestListNode.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/DulNode.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/Tree.java" />
@@ -244,6 +274,11 @@
         <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveFactory.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/UnitFactory.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/Client.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/templateMethod/ToyotaModelImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/templateMethod/HummerModelImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/templateMethod/HummerModel.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/templateMethod/Client.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/templateMethod/type01/HummerModel.java" />
       </list>
     </option>
   </component>
@@ -259,7 +294,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1385" />
@@ -319,17 +354,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="outlets" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java_standard_module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java_standard_module" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="outlets" type="462c0819:PsiDirectoryNode" />
-              <item name="design" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-              <item name="type01" type="462c0819:PsiDirectoryNode" />
+              <item name="templateMethod" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -340,7 +365,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565494744051" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565503293037" />
     <property name="idea.background.editor" value="C:\Users\hyqin\Pictures\壁纸\v2-cc5d438e05001f9dade7ad584a6ea159_r.jpg,15,scale,center" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -367,7 +392,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client (1)">
+  <component name="RunManager" selected="Application.Client (2)">
     <configuration name="Client (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.outlets.design.factory.type01.Client" />
       <module name="java_standard_module" />
@@ -387,6 +412,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.outlets.design.statemodel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.outlets.design.templateMethod.Client" />
+      <module name="java_standard_module" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.outlets.design.templateMethod.type01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -420,19 +458,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.outlets.design.singleton.TestMain" />
-      <module name="java_standard_module" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.outlets.design.singleton.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="java_standard_module:war exploded">
@@ -456,19 +481,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat 7" />
-      <item itemvalue="Application.TestMain" />
       <item itemvalue="Application.TestFinal" />
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.LiftClient" />
       <item itemvalue="Application.Client (1)" />
+      <item itemvalue="Application.Client (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client (2)" />
         <item itemvalue="Application.Client (1)" />
         <item itemvalue="Application.LiftClient" />
         <item itemvalue="Application.TestFinal" />
         <item itemvalue="Application.Client" />
-        <item itemvalue="Application.TestMain" />
       </list>
     </recent_temporary>
   </component>
@@ -512,7 +537,7 @@
       <workItem from="1565098762505" duration="1076000" />
       <workItem from="1565267895168" duration="3074000" />
       <workItem from="1565440497086" duration="4254000" />
-      <workItem from="1565494466308" duration="338000" />
+      <workItem from="1565494466308" duration="3826000" />
     </task>
     <task id="LOCAL-00001" summary="多线程操作文件，读取文件。">
       <created>1555060745425</created>
@@ -588,12 +613,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104076000" />
+    <option name="totallyTimeSpent" value="107564000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2550471" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550471" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -603,7 +629,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932706" weight="0.3211679" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932706" visible="true" weight="0.4540146" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.22043796" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -614,7 +640,7 @@
       <window_info anchor="bottom" id="Messages" order="10" weight="0.329927" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.329927" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.329927" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966353" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -688,37 +714,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="110" column="38" lean-forward="true" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/DataStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/MyNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/TestListNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day02/ListNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -1045,6 +1040,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/templateMethod/type01/ToyotaModelImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/templateMethod/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/templateMethod/type01/HummerModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/templateMethod/type01/HummerModelImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
