@@ -1,0 +1,403 @@
+2019-07-05=== [main] INFO ==== com.hyqin.HelloWorldMainApplicationTests - Starting HelloWorldMainApplicationTests on DESKTOP-LQ31IIS with PID 22632 (started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-05=== [main] DEBUG==== com.hyqin.HelloWorldMainApplicationTests - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-05=== [main] INFO ==== com.hyqin.HelloWorldMainApplicationTests - No active profile set, falling back to default profiles: default
+2019-07-05=== [main] INFO ==== o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4d465b11: startup date [Fri Jul 05 23:22:14 CST 2019]; root of context hierarchy
+2019-07-05=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4d465b11: startup date [Fri Jul 05 23:22:14 CST 2019]; root of context hierarchy
+2019-07-05=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-05=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-05=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-05=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-05=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-05=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-05=== [main] INFO ==== com.hyqin.HelloWorldMainApplicationTests - Started HelloWorldMainApplicationTests in 2.807 seconds (JVM running for 3.938)
+2019-07-05=== [main] TRACE==== com.hyqin.HelloWorldMainApplicationTests - 这是一个trace日志
+2019-07-05=== [main] DEBUG==== com.hyqin.HelloWorldMainApplicationTests - 这是一个debug日志
+2019-07-05=== [main] WARN ==== com.hyqin.HelloWorldMainApplicationTests - 这是一个warn日志
+2019-07-05=== [main] INFO ==== com.hyqin.HelloWorldMainApplicationTests - 这是一个info日志
+2019-07-05=== [main] ERROR==== com.hyqin.HelloWorldMainApplicationTests - 这是一个error日志
+2019-07-05=== [Thread-2] INFO ==== o.s.w.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@4d465b11: startup date [Fri Jul 05 23:22:14 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 18332 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5db250b4: startup date [Mon Jul 15 22:24:15 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1800 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5db250b4: startup date [Mon Jul 15 22:24:15 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 4.444 seconds (JVM running for 5.778)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 15504 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 22:27:41 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1029 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 22:27:41 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 2.256 seconds (JVM running for 3.063)
+2019-07-15=== [http-nio-8081-exec-4] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-4] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-4] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplicationTests - Starting HelloWorldMainApplicationTests on DESKTOP-LQ31IIS with PID 10524 (started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplicationTests - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplicationTests - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.w.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3232a28a: startup date [Mon Jul 15 22:28:26 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3232a28a: startup date [Mon Jul 15 22:28:26 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplicationTests - Started HelloWorldMainApplicationTests in 3.185 seconds (JVM running for 4.909)
+2019-07-15=== [main] TRACE==== com.hyqin.HelloWorldMainApplicationTests - 这是一个trace日志
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplicationTests - 这是一个debug日志
+2019-07-15=== [main] WARN ==== com.hyqin.HelloWorldMainApplicationTests - 这是一个warn日志
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplicationTests - 这是一个info日志
+2019-07-15=== [main] ERROR==== com.hyqin.HelloWorldMainApplicationTests - 这是一个error日志
+2019-07-15=== [Thread-2] INFO ==== o.s.w.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@3232a28a: startup date [Mon Jul 15 22:28:26 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 128 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 22:40:01 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1232 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 22:40:01 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/ || /index.html]}" onto public java.lang.String com.hyqin.controller.HelloController.index()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 2.696 seconds (JVM running for 3.501)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 103 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 13248 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 23:03:23 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1056 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 23:03:23 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/ || /index.html]}" onto public java.lang.String com.hyqin.controller.HelloController.index()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 2.673 seconds (JVM running for 3.437)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 10520 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358ee631: startup date [Mon Jul 15 23:08:17 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1765 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358ee631: startup date [Mon Jul 15 23:08:17 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/ || /index.html]}" onto public java.lang.String com.hyqin.controller.HelloController.index()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 3.383 seconds (JVM running for 4.257)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 18184 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358ee631: startup date [Mon Jul 15 23:13:29 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1869 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358ee631: startup date [Mon Jul 15 23:13:29 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 3.948 seconds (JVM running for 4.841)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 64 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 15428 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 23:17:32 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1420 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 23:17:32 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 3.184 seconds (JVM running for 4.008)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 79 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 16244 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358ee631: startup date [Mon Jul 15 23:22:07 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1149 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358ee631: startup date [Mon Jul 15 23:22:07 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 2.859 seconds (JVM running for 3.693)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 10028 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ec756bd: startup date [Mon Jul 15 23:23:22 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1207 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ec756bd: startup date [Mon Jul 15 23:23:22 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.b.a.w.WebMvcAutoConfiguration$WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 2.989 seconds (JVM running for 3.928)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 15772 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358ee631: startup date [Mon Jul 15 23:24:45 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1338 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@358ee631: startup date [Mon Jul 15 23:24:45 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 2.819 seconds (JVM running for 3.857)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 3960 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 23:34:52 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1177 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 23:34:52 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/index.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 3.016 seconds (JVM running for 3.792)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 2324 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 23:36:04 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1229 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3c72f59f: startup date [Mon Jul 15 23:36:04 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/ || /index.html]}" onto public java.lang.String com.hyqin.controller.HelloController.index()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/index.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 3.073 seconds (JVM running for 3.933)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Starting HelloWorldMainApplication on DESKTOP-LQ31IIS with PID 15472 (C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01\target\classes started by hyqin in C:\Users\hyqin\Documents\GitHub\java_project\spring-boot-01)
+2019-07-15=== [main] DEBUG==== com.hyqin.HelloWorldMainApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - No active profile set, falling back to default profiles: default
+2019-07-15=== [main] INFO ==== o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ec756bd: startup date [Mon Jul 15 23:37:05 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-15=== [main] INFO ==== org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-07-15=== [localhost-startStop-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring embedded WebApplicationContext
+2019-07-15=== [localhost-startStop-1] INFO ==== org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1271 ms
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15=== [localhost-startStop-1] INFO ==== o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@ec756bd: startup date [Mon Jul 15 23:37:05 CST 2019]; root of context hierarchy
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/ || /index.do]}" onto public java.lang.String com.hyqin.controller.HelloController.index()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/hello]}" onto public java.lang.String com.hyqin.controller.HelloController.hello()
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-15=== [main] INFO ==== o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/index.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-15=== [main] INFO ==== o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-07-15=== [main] INFO ==== o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8081 (http)
+2019-07-15=== [main] INFO ==== com.hyqin.HelloWorldMainApplication - Started HelloWorldMainApplication in 3.084 seconds (JVM running for 4.041)
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== o.a.c.c.C.[Tomcat].[localhost].[/springboot] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-15=== [http-nio-8081-exec-1] INFO ==== org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms

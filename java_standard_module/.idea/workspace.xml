@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8e85df3-49f2-41ba-8d1b-6077510372d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellComputer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/IFacotry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/IProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveComputer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/UnitFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiComputer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/ILife.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/Life.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/CloseState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/LiftClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/LiftState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/OpenningState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/RunState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/StopingState.java" afterDir="false" />
+    <list default="true" id="d8e85df3-49f2-41ba-8d1b-6077510372d1" name="Default Changelist" comment="设计模式之工厂方法模式。&#10;设计模式之状态模式。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/outlets/example/TestFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/outlets/example/TestFinal.java" afterDir="false" />
     </list>
@@ -66,14 +46,14 @@
         <counts>
           <entry key="java" value="20148" />
           <entry key="markdown" value="782" />
-          <entry key="txt" value="271" />
+          <entry key="txt" value="298" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="20153" />
           <entry key="Markdown" value="777" />
-          <entry key="PLAIN_TEXT" value="271" />
+          <entry key="PLAIN_TEXT" value="298" />
         </counts>
       </usages-collector>
     </session>
@@ -146,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
               <folding>
                 <element signature="e#511#512#0" expanded="true" />
                 <element signature="e#553#554#0" expanded="true" />
@@ -171,8 +151,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="252">
+              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -279,7 +259,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1385" />
@@ -360,7 +340,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565494511589" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565494744051" />
     <property name="idea.background.editor" value="C:\Users\hyqin\Pictures\壁纸\v2-cc5d438e05001f9dade7ad584a6ea159_r.jpg,15,scale,center" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -532,7 +512,7 @@
       <workItem from="1565098762505" duration="1076000" />
       <workItem from="1565267895168" duration="3074000" />
       <workItem from="1565440497086" duration="4254000" />
-      <workItem from="1565494466308" duration="45000" />
+      <workItem from="1565494466308" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="多线程操作文件，读取文件。">
       <created>1555060745425</created>
@@ -597,17 +577,23 @@
       <option name="project" value="LOCAL" />
       <updated>1564307777735</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="设计模式之工厂方法模式。&#10;设计模式之状态模式。">
+      <created>1565494574919</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1565494574919</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103783000" />
+    <option name="totallyTimeSpent" value="104076000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550471" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2550471" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -628,7 +614,7 @@
       <window_info anchor="bottom" id="Messages" order="10" weight="0.329927" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.329927" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966353" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -657,7 +643,8 @@
     <MESSAGE value="1.简单的实现图的数据结构。&#10;2.学习了递归算法。" />
     <MESSAGE value="1.创建二叉排序树，用递归的方式实现。" />
     <MESSAGE value="单例模式的几种写法" />
-    <option name="LAST_COMMIT_MESSAGE" value="单例模式的几种写法" />
+    <MESSAGE value="设计模式之工厂方法模式。&#10;设计模式之状态模式。" />
+    <option name="LAST_COMMIT_MESSAGE" value="设计模式之工厂方法模式。&#10;设计模式之状态模式。" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1028,7 +1015,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
           <folding>
             <element signature="e#511#512#0" expanded="true" />
             <element signature="e#553#554#0" expanded="true" />
@@ -1056,8 +1043,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="252">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
         </state>
       </provider>
     </entry>

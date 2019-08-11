@@ -32,20 +32,20 @@ public class TestFinal {
 //        //b=5;    //这样赋值时错误的
 //        //b = a+2;
 //
-//        final Son son1 = new Son();
-//        son1.setParantName("Tom");  //可以对内部的变量赋值
-//        son1.say();
+        final Son son1 = new Son();
+        son1.setParantName("Tom");  //可以对内部的变量赋值
+        son1.say();
 //
 //        Son son2 = new Son();
 ////        son1 = son2;     //但是无法将整个对象指向另外的对象了
 
 
-        MyClass myClass1 = new MyClass();
-        MyClass myClass2 = new MyClass();
-        System.out.println(myClass1.i);
-        System.out.println(myClass1.j);
-        System.out.println(myClass2.i);
-        System.out.println(myClass2.j);
+//        MyClass myClass1 = new MyClass();
+//        MyClass myClass2 = new MyClass();
+//        System.out.println(myClass1.i);
+//        System.out.println(myClass1.j);
+//        System.out.println(myClass2.i);
+//        System.out.println(myClass2.j);
 
     }
 }
@@ -57,6 +57,13 @@ class MyClass {
 }
 
 class Parent {
+
+    String name;
+
+    public void setName(String name){
+        this.name  = name;
+    }
+
     public void say() {
         System.out.println("hello My son");
     }
@@ -70,6 +77,11 @@ class Son extends Parent {
 
     private String parantName;
 
+    @Override
+    public void setName(String name) {
+        super.setName(name);
+    }
+
     public String getParantName() {
         return parantName;
     }
@@ -80,7 +92,8 @@ class Son extends Parent {
 
     @Override
     public void say() {
-        System.out.println(parantName + "  hello my father");
+        setName("张三");
+        System.out.println(parantName + "  hello my father is " +super.name);
     }
 
 }

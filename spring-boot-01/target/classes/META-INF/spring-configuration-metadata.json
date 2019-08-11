@@ -1,0 +1,38 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "name": "person",
+      "type": "com.hyqin.entity.Person"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "name": "person.address",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "name": "person.age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "defaultValue": false,
+      "name": "person.boss",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "name": "person.dog",
+      "type": "com.hyqin.entity.Dog"
+    },
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "name": "person.name",
+      "type": "java.lang.String"
+    }
+  ]
+}

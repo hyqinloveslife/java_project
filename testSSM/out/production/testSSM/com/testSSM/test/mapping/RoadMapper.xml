@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.testSSM.test.dao.IRoadDao">
+	<select id="queryRoute" resultType="com.testSSM.test.model.entity.Route">
+		select * 
+		from route
+	</select>
+	
+	<select id="getStation" resultType="com.testSSM.test.model.entity.Route">
+		
+	</select>
+	
+	<select id="getRoute" resultType="com.testSSM.test.model.entity.Route">
+	
+	</select>
+	
+	<select id="queryStation" resultType="com.testSSM.test.model.entity.Route">
+		select * from route
+	</select>
+	
+	<insert id="saveRoute" parameterType="com.testSSM.test.model.entity.Route">
+		insert into route (startST,endST,price,stNumber,type,startTime,endTime,useTime)
+		values
+		(#{startST},#{endST},#{price},#{stNumber},#{type},#{startTime},#{endTime},#{useTime})
+	</insert>
+	
+	<insert id="saveStation" parameterType="com.testSSM.test.model.entity.Station">
+		insert into station (name)
+		values
+		(#{name})
+	</insert>
+	
+	<insert id="saveRoad" parameterType="com.testSSM.test.pojo.RoadPojo">
+		insert into route2st(station_id,route_id)
+		values
+		(#{station_id},#{route_id})
+	</insert>
+	
+	<insert id="saveRoadEvent" parameterType="com.testSSM.test.pojo.RoadEvent">
+		insert into route_event
+		values
+		(#{station_id},#{createTime},#{createMan},#{modifyTime},#{modifyMan},#{checkTime},#{checkMan},#{checkFlag})
+	</insert>
+	
+</mapper>
