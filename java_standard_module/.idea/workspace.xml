@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8e85df3-49f2-41ba-8d1b-6077510372d1" name="Default Changelist" comment="1.创建二叉排序树，用递归的方式实现。">
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/singleton/DoubleCheckFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/singleton/LazyLoaderFacotry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/singleton/SessionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/singleton/Singleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/singleton/TestMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/TransactionState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/example/TestFinal.java" afterDir="false" />
+    <list default="true" id="d8e85df3-49f2-41ba-8d1b-6077510372d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellComputer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/IFacotry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/IProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveComputer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/UnitFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiComputer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/ILife.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/Life.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/CloseState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/Context.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/LiftClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/LiftState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/OpenningState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/RunState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/StopingState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/outlets/example/TestFinal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/outlets/example/TestFinal.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,115 +36,152 @@
     <session id="1251984174">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.closed" value="30" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="6" />
-          <entry key="project.open.time.8" value="7" />
-          <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.open.time.7" value="7" />
+          <entry key="project.open.time.8" value="10" />
+          <entry key="project.open.time.9" value="5" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="78" />
+          <entry key="java" value="100" />
           <entry key="markdown" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="78" />
+          <entry key="JAVA" value="100" />
           <entry key="Markdown" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="17659" />
+          <entry key="java" value="20148" />
           <entry key="markdown" value="782" />
-          <entry key="txt" value="256" />
+          <entry key="txt" value="271" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17664" />
+          <entry key="JAVA" value="20153" />
           <entry key="Markdown" value="777" />
-          <entry key="PLAIN_TEXT" value="256" />
+          <entry key="PLAIN_TEXT" value="271" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/SessionFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/IProduct.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/LazyLoaderFacotry.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/IFacotry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+            <state relative-caret-position="108">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/DoubleCheckFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveComputer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/Singleton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="234">
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
               <folding>
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#565#566#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/TestMain.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiComputer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="90">
+              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellComputer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+              <folding>
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <folding>
+                <element signature="e#511#512#0" expanded="true" />
+                <element signature="e#553#554#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+              <folding>
+                <element signature="e#511#512#0" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/example/TestFinal.java">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-              <folding>
-                <element signature="e#511#512#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-                <element signature="e#1106#1107#0" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
-                <element signature="e#1196#1197#0" expanded="true" />
-                <element signature="e#1240#1241#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#736#737#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/UnitFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -162,17 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/outlets/thread/day01/MultiThread.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/thread/day01/MyRunnable.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/thread/day01/MyThread.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/thread/day01/MainThreadTest.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/thread/pool/TestThreadPool.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/thread/pool/CallableAndFuture.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/thread/pool/InitCallableTest.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/thread/pool/MyCallback.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/thread/pool/FileReaderThread.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day01/TestQueue.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day01/Queue.java" />
         <option value="$PROJECT_DIR$/des.markdown" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/DataStructure.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/day02/MyNode.java" />
@@ -203,7 +243,27 @@
         <option value="$PROJECT_DIR$/src/com/outlets/design/singleton/LazyLoaderFacotry.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/design/singleton/DoubleCheckFactory.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/design/singleton/Singleton.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/ILife.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/Life.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/Client.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/example/TestFinal.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/LiftState.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/RunState.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/StopingState.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/CloseState.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/OpenningState.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/Context.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/statemodel/base/LiftClient.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/IProduct.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveComputer.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiComputer.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellComputer.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/IFacotry.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/UnitFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/design/factory/type01/Client.java" />
       </list>
     </option>
   </component>
@@ -236,6 +296,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,21 +330,37 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="outlets" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java_standard_module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java_standard_module" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="outlets" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java_standard_module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java_standard_module" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="outlets" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+              <item name="type01" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564297282967" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565494511589" />
     <property name="idea.background.editor" value="C:\Users\hyqin\Pictures\壁纸\v2-cc5d438e05001f9dade7ad584a6ea159_r.jpg,15,scale,center" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -289,6 +368,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.outlets.design.factory.type01" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.outlets.thread.day01" />
     </key>
@@ -305,13 +387,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestFinal">
-    <configuration name="Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.outlets.datastructure.graph.Graph" />
+  <component name="RunManager" selected="Application.Client (1)">
+    <configuration name="Client (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.outlets.design.factory.type01.Client" />
       <module name="java_standard_module" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.outlets.datastructure.graph.*" />
+          <option name="PATTERN" value="com.outlets.design.factory.type01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -319,12 +401,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Node" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.outlets.example.Node" />
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.outlets.design.statemodel.Client" />
       <module name="java_standard_module" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.outlets.example.*" />
+          <option name="PATTERN" value="com.outlets.design.statemodel.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -332,12 +414,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Resursion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.outlets.example.Resursion" />
+    <configuration name="LiftClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.outlets.design.statemodel.base.LiftClient" />
       <module name="java_standard_module" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.outlets.example.*" />
+          <option name="PATTERN" value="com.outlets.design.statemodel.base.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -394,19 +476,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat 7" />
-      <item itemvalue="Application.Graph" />
-      <item itemvalue="Application.Resursion" />
-      <item itemvalue="Application.Node" />
       <item itemvalue="Application.TestMain" />
       <item itemvalue="Application.TestFinal" />
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.LiftClient" />
+      <item itemvalue="Application.Client (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client (1)" />
+        <item itemvalue="Application.LiftClient" />
         <item itemvalue="Application.TestFinal" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.TestMain" />
-        <item itemvalue="Application.Resursion" />
-        <item itemvalue="Application.Node" />
-        <item itemvalue="Application.Graph" />
       </list>
     </recent_temporary>
   </component>
@@ -443,7 +525,14 @@
       <workItem from="1560235333720" duration="387000" />
       <workItem from="1560236432896" duration="97000" />
       <workItem from="1563891901494" duration="2623000" />
-      <workItem from="1564293161977" duration="4727000" />
+      <workItem from="1564293161977" duration="4801000" />
+      <workItem from="1564927426625" duration="1253000" />
+      <workItem from="1564974937337" duration="9000" />
+      <workItem from="1565014438006" duration="3259000" />
+      <workItem from="1565098762505" duration="1076000" />
+      <workItem from="1565267895168" duration="3074000" />
+      <workItem from="1565440497086" duration="4254000" />
+      <workItem from="1565494466308" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="多线程操作文件，读取文件。">
       <created>1555060745425</created>
@@ -501,17 +590,24 @@
       <option name="project" value="LOCAL" />
       <updated>1556627670704</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="单例模式的几种写法">
+      <created>1564307777735</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1564307777735</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90739000" />
+    <option name="totallyTimeSpent" value="103783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2294751" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550471" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -521,7 +617,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932706" visible="true" weight="0.3211679" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932706" weight="0.3211679" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.22043796" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -560,7 +656,8 @@
     <MESSAGE value="用Java实现自定义循环链表。&#10;1.单链表中最后一个节点的指针域的值为空，如果将这个空的指针域的指针指向头节点，则整个链表就形成了一个环形结构，故称为循环链表。" />
     <MESSAGE value="1.简单的实现图的数据结构。&#10;2.学习了递归算法。" />
     <MESSAGE value="1.创建二叉排序树，用递归的方式实现。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.创建二叉排序树，用递归的方式实现。" />
+    <MESSAGE value="单例模式的几种写法" />
+    <option name="LAST_COMMIT_MESSAGE" value="单例模式的几种写法" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -604,143 +701,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/thread/day01/MultiThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/io/BufferedReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5181">
-          <caret line="99" column="11" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/io/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/javax/security/auth/callback/Callback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/thread/pool/MyCallback.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/thread/day01/MainThreadTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="204" column="45" lean-forward="true" selection-start-line="204" selection-start-column="45" selection-end-line="204" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/thread/day01/MyThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/thread/pool/TestThreadPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/thread/pool/CallableAndFuture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/thread/pool/InitCallableTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/thread/pool/FileReaderThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day01/TestQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/des.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="396">
-            <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/datastructure/day01/Queue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="177" column="25" selection-start-line="177" selection-start-column="25" selection-end-line="177" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/AbstractCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2391">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/AbstractList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="70" column="56" lean-forward="true" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="170" column="16" lean-forward="true" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/Iterable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="143" column="44" selection-start-line="143" selection-start-column="44" selection-end-line="143" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -865,49 +825,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/ShippedAlreadyOrderState.java" />
     <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/StateController.java" />
     <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/StateContext.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/TransactionState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/SessionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/LazyLoaderFacotry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/DoubleCheckFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/example/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2052">
           <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/Singleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -918,29 +839,225 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/SessionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/LazyLoaderFacotry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/DoubleCheckFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/Singleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/TestMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="414">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/example/TestFinal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        <state relative-caret-position="269">
+          <caret line="66" column="23" lean-forward="true" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+          <folding>
+            <element signature="e#1428#1429#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1433#1434#0" expanded="true" />
+            <element signature="e#1461#1462#0" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
+            <element signature="e#1639#1640#0" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/Life.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="40" />
+          <folding>
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/ILife.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/TransactionState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/base/LiftState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/base/OpenningState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/base/LiftClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/base/CloseState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/base/RunState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/base/StopingState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/base/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/IProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/IFacotry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveComputer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding>
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiComputer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellComputer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/DellFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/XiaomiFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
           <folding>
             <element signature="e#511#512#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1240#1241#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/LenoveFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/UnitFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/factory/type01/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
