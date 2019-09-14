@@ -29,5 +29,6 @@ public class Client {
 
         HummerModel hummer = new HummerModelImpl();
         hummer.templateMethod();
+
     }
 }
