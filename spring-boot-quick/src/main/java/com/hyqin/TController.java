@@ -10,12 +10,10 @@
  */
 package com.hyqin;
 
+import com.hyqin.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -35,10 +33,21 @@ public class TController {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    IService service;
+
+
     @ResponseBody
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String hello(){
         List<Map<String, Object>> list = jdbcTemplate.queryForList("select * from employee");
         return list.toString();
     }
+
+    @GetMapping("/getstr.do")
+    public String getStr(){
+        return service.getStr();
+
+    }
+
 }

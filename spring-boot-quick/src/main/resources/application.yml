@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://192.168.0.105:3306/myshop
+    url: jdbc:mysql://162.168.2.102:3306/myshop
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
@@ -27,3 +27,6 @@ spring:
 
 server:
   port: 8099
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml

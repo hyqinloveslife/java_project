@@ -22,7 +22,7 @@ public class Employee {
     private Integer id;
     private String lastName;
     private Integer gender;
-    private String emai;
+    private String email;
     private Integer dId;
 
     public Integer getId() {
@@ -49,12 +49,12 @@ public class Employee {
         this.gender = gender;
     }
 
-    public String getEmai() {
-        return emai;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmai(String emai) {
-        this.emai = emai;
+    public void setEmai(String email) {
+        this.email = email;
     }
 
     public Integer getdId() {
