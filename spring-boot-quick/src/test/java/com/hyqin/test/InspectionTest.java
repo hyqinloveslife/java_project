@@ -11,9 +11,9 @@
 package com.hyqin.test;
 
 import com.SpringBootQuickApplication;
-import com.hyqin.test1.InspectionConstant;
-import com.hyqin.test1.InspectionSolver;
-import com.hyqin.test1.InspectionSolverChooser;
+import com.hyqin.designpattern.InspectionConstant;
+import com.hyqin.designpattern.InspectionSolver;
+import com.hyqin.designpattern.InspectionSolverChooser;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e85df3-49f2-41ba-8d1b-6077510372d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/base/day01/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/base/day02/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/base/day02/Methods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/outlets/base/day02/MyCorp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/base/day03/NewRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/outlets/base/day03/NewThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/outlets/design/templateMethod/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/outlets/design/templateMethod/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/test1/ChangeShippingSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/designpattern/ChangeShippingSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/test1/ChangeWarehouseSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/designpattern/ChangeWarehouseSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/test1/InspectionConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/designpattern/InspectionConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/test1/InspectionSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/designpattern/InspectionSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/test1/InspectionSolverChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/designpattern/InspectionSolverChooser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/test1/ReplaceOrderGoodsSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-quick/src/main/java/com/hyqin/designpattern/ReplaceOrderGoodsSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-quick/src/test/java/com/hyqin/test/InspectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-quick/src/test/java/com/hyqin/test/InspectionTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +24,8 @@
     <session id="1251984174">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="33" />
+          <entry key="project.closed" value="35" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="1" />
@@ -29,35 +34,35 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="7" />
-          <entry key="project.open.time.8" value="10" />
+          <entry key="project.open.time.8" value="11" />
           <entry key="project.open.time.9" value="6" />
-          <entry key="project.opened" value="33" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="126" />
+          <entry key="java" value="138" />
           <entry key="markdown" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="126" />
+          <entry key="JAVA" value="138" />
           <entry key="Markdown" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="21403" />
+          <entry key="java" value="21424" />
           <entry key="markdown" value="782" />
           <entry key="txt" value="305" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="21408" />
+          <entry key="JAVA" value="21429" />
           <entry key="Markdown" value="777" />
           <entry key="PLAIN_TEXT" value="305" />
         </counts>
@@ -65,37 +70,20 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/base/day02/Methods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/outlets/base/day02/MyCorp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>target</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -114,8 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/tree/TestTree.java" />
-        <option value="$PROJECT_DIR$/src/com/outlets/datastructure/graph/graph.markdown" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/graph/Graph.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/datastructure/graph/Graph2.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/example/Node.java" />
@@ -165,6 +151,8 @@
         <option value="$PROJECT_DIR$/src/com/outlets/base/day01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/base/day02/Methods.java" />
         <option value="$PROJECT_DIR$/src/com/outlets/base/day02/MyCorp.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/base/day03/NewThread.java" />
+        <option value="$PROJECT_DIR$/src/com/outlets/base/day03/NewRunnable.java" />
       </list>
     </option>
   </component>
@@ -197,9 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,18 +225,21 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="outlets" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
-              <item name="day02" type="462c0819:PsiDirectoryNode" />
+              <item name="day03" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566719782054" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569237954971" />
     <property name="idea.background.editor" value="C:\Users\hyqin\Pictures\壁纸\v2-cc5d438e05001f9dade7ad584a6ea159_r.jpg,15,scale,center" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -383,6 +371,7 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat 7" />
+      <item itemvalue="Application.Client" />
       <item itemvalue="Application.TestFinal" />
       <item itemvalue="Application.LiftClient" />
       <item itemvalue="Application.Client (1)" />
@@ -442,6 +431,8 @@
       <workItem from="1565494466308" duration="4218000" />
       <workItem from="1565699380899" duration="2700000" />
       <workItem from="1566632155825" duration="3478000" />
+      <workItem from="1569235331744" duration="2126000" />
+      <workItem from="1569808339825" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="多线程操作文件，读取文件。">
       <created>1555060745425</created>
@@ -524,12 +515,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114134000" />
+    <option name="totallyTimeSpent" value="116284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26312247" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27119786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -625,56 +616,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/statemodel/StateContext.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/example/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/example/Resursion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="189" column="9" selection-start-line="189" selection-start-column="9" selection-end-line="189" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/SessionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/LazyLoaderFacotry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/DoubleCheckFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/Singleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/design/singleton/TestMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/example/TestFinal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -868,10 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="147" column="22" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
-          <folding>
-            <element signature="e#5748#5749#0" expanded="true" />
-            <element signature="e#5784#5785#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -952,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/outlets/base/day02/Animal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/base/day01/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -966,10 +896,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/FunctionalInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="55" column="22" lean-forward="true" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/base/day02/Methods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="306">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -978,8 +922,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/outlets/base/day02/MyCorp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="72">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/base/day02/Animal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/ref/Reference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-792">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/ref/WeakReference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/base/day03/NewRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/ThreadLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="229" column="20" selection-start-line="229" selection-start-column="20" selection-end-line="229" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="187" column="11" selection-start-line="187" selection-start-column="11" selection-end-line="187" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/outlets/base/day03/NewThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
         </state>
       </provider>
     </entry>

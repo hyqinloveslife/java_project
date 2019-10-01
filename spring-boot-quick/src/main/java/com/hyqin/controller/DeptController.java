@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @create 2019-09-14
  * @since 1.0.0
  */
-@RestController
+
 public class DeptController {
 
     @Autowired
