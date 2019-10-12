@@ -10,6 +10,7 @@
  */
 package com.hyqin;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -25,6 +26,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @SpringBootApplication 来标志这是一个主程序,说明这是一个spring boot应用
  */
+@MapperScan(value = {"com.hyqin.mapper"})
 @SpringBootApplication
 public class HelloWorldMainApplication {
     public static void main(String[] args) {

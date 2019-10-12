@@ -46,7 +46,7 @@ public class QuartzJobConfig {
     public CronTriggerFactoryBean myFirstExerciseJobTrigger(@Qualifier("myFirstExerciseJobBean") JobDetailFactoryBean myFirstExerciseJobBean) {
         CronTriggerFactoryBean tigger = new CronTriggerFactoryBean();
         tigger.setJobDetail(myFirstExerciseJobBean.getObject());
-        tigger.setCronExpression("0/10 * * * * ?"); // 什么是否触发，Spring Scheduler Cron表达式
+        tigger.setCronExpression("0/50 * * * * ?"); // 什么是否触发，Spring Scheduler Cron表达式
         tigger.setName("general-myFirstExerciseJobTrigger");
         return tigger;
     }

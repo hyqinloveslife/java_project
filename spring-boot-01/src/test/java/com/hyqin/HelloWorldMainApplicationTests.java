@@ -11,6 +11,7 @@
 package com.hyqin;
 
 import com.hyqin.entity.Person;
+import com.hyqin.moduletest.ExcelUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -18,6 +19,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 〈一句话功能简述〉<br> 
@@ -33,12 +40,9 @@ public class HelloWorldMainApplicationTests {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Autowired
-    Person person;
-
     @Test
     public void test1(){
-        System.out.println(person);
+
     }
 
     @Test
