@@ -49,7 +49,7 @@ public class MyFirstExecuteJob implements Job {
 
     private void myJobBusinessMethod(){
         int res = quartzService.addQuarzts();
-        this.logger.info("==============被执行了吗？ "+res+"  =================");
+//        this.logger.info("==============被执行了吗？ "+res+"  =================");
 
     }
 

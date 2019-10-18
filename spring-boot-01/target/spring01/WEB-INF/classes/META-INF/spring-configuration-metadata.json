@@ -1,0 +1,118 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "name": "person",
+      "type": "com.hyqin.entity.Person"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource",
+      "type": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "name": "person.address",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "name": "person.age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "defaultValue": false,
+      "name": "person.boss",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "name": "person.dog",
+      "type": "com.hyqin.entity.Dog"
+    },
+    {
+      "sourceType": "com.hyqin.entity.Person",
+      "name": "person.name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.driver-class-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.initial-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.max-active",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.max-wait",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.min-evictable-idle-time-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.min-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.test-on-borrow",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.test-on-return",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.test-while-idle",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.time-between-eviction-runs-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.type",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.username",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.hyqin.quartz.DruidPrimaryDataSourceConfigProperties",
+      "name": "spring.dataSource.primaryDataSource.validation-query",
+      "type": "java.lang.String"
+    }
+  ]
+}
