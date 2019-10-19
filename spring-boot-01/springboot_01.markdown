@@ -3,6 +3,8 @@
 ## 一、已经完成的功能
 ### 1.实现的基础的yaml配置，实现了数据源的配置。
 ### 2.实现了restful风格的api接口
+#### 2.1.1 实现了restful api风格的提交表单，前端框架采用vue.js，前台ui采用element ui。
+
 ### 3.实现了poi来操作excel的功能，能实现将批量数据写入同一个excel的不同sheet中
 #### 3.1 Java对excel的操作，根据根据模板，生成多个sheet。[Java实现poi操作excel](https://github.com/hyqinloveslife/java_project/blob/master/spring-boot-01/src/test/java/com/hyqin/moduletest/POIUtils.java) 的源代码
 - 预先在模板文件中设置唯一字符 如 ${hello} 这样的
