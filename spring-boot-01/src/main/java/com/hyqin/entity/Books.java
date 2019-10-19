@@ -26,7 +26,7 @@ public class Books {
     private String published;  //出版社
     private String author; //作者
     private String publishDate; //出版时间
-    private String desc;  //简介
+    private String description;  //简介
     private String isbn;  //国际标准书号
 
     public Integer getId() {
@@ -86,11 +86,11 @@ public class Books {
     }
 
     public String getDesc() {
-        return desc;
+        return description;
     }
 
     public void setDesc(String desc) {
-        this.desc = desc;
+        this.description = desc;
     }
 
     public String getIsbn() {
@@ -111,7 +111,7 @@ public class Books {
                 ", published='" + published + '\'' +
                 ", author='" + author + '\'' +
                 ", publishDate='" + publishDate + '\'' +
-                ", desc='" + desc + '\'' +
+                ", desc='" + description + '\'' +
                 ", isbn='" + isbn + '\'' +
                 '}';
     }

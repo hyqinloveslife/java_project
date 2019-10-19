@@ -42,8 +42,20 @@ public interface BookMapper {
     /**
      * 插入一本书
      * @param book
+     *
+     *com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException:
+     * You have an error in your SQL syntax; check the manual that corresponds to your MySQL server
+     * version for the right syntax to use near 'desc) values('三国演义','东汉末年，魏蜀吴三个国家争霸的故事' at line 1
+     * 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+     * 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+     * 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+     * 	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+     *  最后发现，是因为desc是MySQL里面的关键字，所以关键字冲突了
      * @return
      */
-    @Insert("insert into books (name,referred,author,price,desc,isbn) values(#{name},#{referred},#{author},#{price},#{desc},#{isbn})")
+    @Insert("insert into tianshop.books " +
+            "(name,referred,author,price,isbn,published,publishDate,description) " +
+            "values" +
+            "(#{name},#{referred},#{author},#{price},#{isbn},#{published},#{publishDate},#{description})")
     int addBooks(Books book);
 }

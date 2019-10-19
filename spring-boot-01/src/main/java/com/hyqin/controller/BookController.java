@@ -15,6 +15,8 @@ import com.hyqin.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -62,11 +64,17 @@ public class BookController {
         return res;
     }
 
+    /**
+     * 在最开始测试restful api的时候，总是接收不到前台传的参数，最终在csdn的社区里看到有人加了  @RequestBody  然后就可以获取到参数了。
+     * @param books
+     * @param request
+     * @param response
+     * @return
+     */
     @CrossOrigin
     @PostMapping("/booklist")
 //    @RequestMapping(value = "/booklist",method = RequestMethod.POST)
-    public int addBooks(Books books){
-
+    public int addBooks(@RequestBody Books books, HttpServletRequest request, HttpServletResponse response){
         return  bookService.addBooks(books);
     }
 
