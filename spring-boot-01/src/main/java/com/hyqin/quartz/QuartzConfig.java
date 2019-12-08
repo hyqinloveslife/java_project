@@ -41,7 +41,7 @@ public class QuartzConfig {
     @Autowired
     private MyJobFactory factory;
 
-    @Bean(name = "shedulerFactory")
+//    @Bean(name = "shedulerFactory")
     public SchedulerFactoryBean schedulerFactoryBean(Trigger ... triggers){
         SchedulerFactoryBean bean = new SchedulerFactoryBean();
 

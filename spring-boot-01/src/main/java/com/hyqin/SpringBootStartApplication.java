@@ -10,17 +10,20 @@
  */
 package com.hyqin;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 /**
- * 〈一句话功能简述〉<br> 
+ * 〈一句话功能简述〉<br>
+ *     修改启动类
  * 〈一个新的启动类，可以将项目打成war包〉
  *
  * @author hyqin
  * @create 2019-10-01
  * @since 1.0.0
  */
+//@SpringBootApplication
 public class SpringBootStartApplication extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {

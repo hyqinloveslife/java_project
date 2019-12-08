@@ -33,6 +33,8 @@ public class POIExcel2JavaTest {
     private static final String in_path = "d:\\test.xls";
     private static final String out_path = "d:\\test_out.xls";
 
+    private static final String person = "d:\\persons.xlsx";
+
     public static void main(String[] args) throws Exception {
 //        Map<String, String> map = new HashMap<>();
 //        map.put("${no}", "1");
@@ -42,8 +44,13 @@ public class POIExcel2JavaTest {
 //        map.put("${aac004}", "女");
 //        new ExcelUtils().replaceExcel(in_path,out_path,map);
 
-        POIUtils poiUtils = new POIUtils();
-        poiUtils.copySheet("sheet1","叶问",out_path);
+//        POIUtils poiUtils = new POIUtils();
+//        poiUtils.copySheet("sheet1","叶问",out_path);
+
+
+        Excel2007 excel2007 = new Excel2007();
+        excel2007.getExcelContents(new FileInputStream(person));
+
 
     }
 }

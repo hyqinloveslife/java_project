@@ -5,3 +5,13 @@ testSSM/src/config/jdbc.properties
 testSSM/.classpath
 testSSM/src/config/log4j.properties
 testSSM/WebRoot/WEB-INF/classes/com/testSSM/test/controller/UserController.class
+spring-boot-01/.idea/shelf/Default_Changelist.xml
+spring-boot-01/.idea/shelf/Default_Changelist1.xml
+spring-boot-01/.idea/shelf/Default_Changelist/shelved.patch
+spring-boot-01/.idea/shelf/Default_Changelist1/shelved.patch
+spring-boot-01/.idea/workspace.xml
+spring-boot-01/spring-boot.log
+spring-boot-01/.idea/workspace.xml
+spring-boot-01/target/classes/META-INF/spring-configuration-metadata.json
+spring-boot-01/.idea/workspace.xml
+*.log
