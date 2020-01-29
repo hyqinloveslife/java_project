@@ -44,7 +44,7 @@ public class NewsHandlerServlet extends HttpServlet {
 			ps.setString(1, userName);
 			ps.setString(2, "all");
 			ps.setString(3, content);
-			ps.setString(4, new SimpleDateFormat("yyyy-mm-dd hh:mm:ss").format(new Date()));
+			ps.setDate(4, new java.sql.Date(System.currentTimeMillis()));
 			int result=ps.executeUpdate();
 			System.out.println(result);
 			RequestDispatcher dispatcher=request.getRequestDispatcher("NewsDisplay");

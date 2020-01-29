@@ -19,7 +19,7 @@
        background: url("img/bg.jpg") center;
     }
     .content{
-        max-width: 350px;
+        max-width: 420px;
         background: #f5deb3;
         border-radius: 10px;
         margin: 50px auto;

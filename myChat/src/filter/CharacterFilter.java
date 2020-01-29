@@ -29,7 +29,7 @@ public class CharacterFilter implements Filter{
 
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
-		
+		System.out.println("初始化字符过滤器");
 	}
 
 }

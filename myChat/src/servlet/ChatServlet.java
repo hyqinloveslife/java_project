@@ -1,9 +1,11 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,13 +18,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import bean.UserBean;
+import filter.MyServlet;
 import jdbc.JDBC;
 
 /**
  * Servlet implementation class ChatServlet
  */
 @WebServlet("/ChatServlet")
-public class ChatServlet extends HttpServlet {
+public class ChatServlet extends MyServlet {
 	private static final long serialVersionUID = 1L;
 	protected Connection conn=JDBC.getConn();
     public ChatServlet() {
@@ -35,24 +38,24 @@ public class ChatServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
-		System.out.println("获取的值"+request.getParameter("account"));
 		String account=request.getParameter("account");
 		String password=request.getParameter("password");
 		System.out.println(account);
 		System.out.println(password);
-		String sql="select * from users where account=?";
+		String sql="select * from users where account='"+account+"'";
 		String nickName;
 		HttpSession session=request.getSession();
 		List<UserBean> userBeans=new ArrayList<>();
 		try {
-			PreparedStatement ps=conn.prepareStatement(sql);
-			ps.setString(1, account);
-			ResultSet set=ps.executeQuery();
-			UserBean userBean=new UserBean();
+			Statement ps=conn.createStatement();
+			//ps.setString(1, account);
+			ResultSet set=ps.executeQuery(sql);
+			UserBean userBean = null;
 			while (set.next()) {
+				userBean = new UserBean();
 				userBean.setAccount(set.getString("account"));
 				userBean.setId(set.getString("id"));
-				userBean.setPassword(set.getString("password"));
+				userBean.setPassword(set.getString("psw"));
 				userBean.setGender(set.getString("gender"));
 				userBean.setName(set.getString("name"));
 				userBean.setAge(set.getInt("age"));
@@ -60,6 +63,15 @@ public class ChatServlet extends HttpServlet {
 				userBeans.add(userBean);
 			}
 			System.out.println(userBean);
+			if(null==userBean) {
+
+				response.setHeader("Content-type", "text/html;charset=UTF-8");
+				
+				response.setCharacterEncoding("UTF-8");
+				PrintWriter out = response.getWriter();
+				out.print("<script>alert('登录失败!');window.location.href='index.jsp'</script>");
+				return;
+			}
 			if (userBean.getAge()<15) {
 				if (userBean.getGender().equals("男")) {
 					nickName="小正太";
@@ -87,10 +99,11 @@ public class ChatServlet extends HttpServlet {
 				dispatcher.forward(request, response);
 			}else{
 				System.out.println("登录失败");
+				sendMessage(request, response, "登录失败");
 				response.sendRedirect("index.jsp?error=登录失败");
 			}
 		} catch (Exception e) {
-			e.getStackTrace();
+			sendMessage(request, response, e.getMessage());	
 		}
 	}
 
