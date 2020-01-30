@@ -48,6 +48,6 @@ create table comments(
     users_id int not null comment '作者id',
     author varchar(200) not null comment '作者名字',
     beComented int not null comment '被评论的人的id',
-		varchar(200) not null comment '被评论的人的名字'
+	beComenter	varchar(200) not null comment '被评论的人的名字'
 )engine=innodb default charset=utf8;
 
