@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%> 
 <%
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/";
 
@@ -101,6 +102,20 @@
 		margin-top: 10px !important;
 		margin-bottom: 10px !important;
 	}
+	
+	.praise{
+		/* 换行，第一行在上方 */
+		display: flex;
+		flex-flow: warp;
+	}
+	.praise img{
+		width: 20px;
+		height: 20px;
+		margin-right: 8px;
+	}
+	.praise span{
+		color: #295c9d;
+	}
 </style>
 </head>
 <script type="text/javascript">
@@ -177,7 +192,24 @@
 				<hr>
 				<!-- 点赞人数显示  这里使用flex的流式布局 -->
 				<div class="praise">
+					<c:if test="${fn:length(a.praisers)>0 }">
+						<img alt="" src="${basePath}img/praise2.png">
+					</c:if>
+					<c:forEach items="${a.praisers }" var="t" varStatus="vs">
+						<div style="margin-right: 6px;">
+							<a href="#">
+								<c:out value="${t.name}" ></c:out>
+							</a> 
+							<c:if test="${fn:length(a.praisers)>vs.index+1 }">
+								、
+							</c:if>
+						</div>
+					</c:forEach>
+					<%-- 获取数组总长度 <span>${fn:length(a.praisers)}</span>  --%>
 					
+					<c:if test="${fn:length(a.praisers)>0 }">
+						<span>等${fn:length(a.praisers)}人觉得很赞</span>
+					</c:if>
 				</div>
 				
 				<!-- 评论显示 -->

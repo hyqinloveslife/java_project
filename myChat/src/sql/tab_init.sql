@@ -51,3 +51,11 @@ create table comments(
 	beComenter	varchar(200) not null comment '被评论的人的名字'
 )engine=innodb default charset=utf8;
 
+##点赞表
+drop table if exists praise;
+create table praise(
+	id int primary key not null auto_increment,
+    article_id int not null comment '所属文章id',
+    user_id int not null comment '人员id',
+    createTime datetime comment '点赞时间'
+)engine=innodb default charset=utf8;

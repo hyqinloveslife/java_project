@@ -3,9 +3,7 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -16,12 +14,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import bean.Articles;
-import jdbc.JDBCHelper;
+import dao.ArticleDAO;
+import dao.ArticleDAOImpl;
 
 @WebServlet("/queryArticle")
 public class ArticleServlet extends HttpServlet {
 	private static final long serialVersionUID = 650707582634909101L;
+	
+	ArticleDAO articleDao = new ArticleDAOImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -53,27 +53,35 @@ public class ArticleServlet extends HttpServlet {
 	 * @throws ServletException 
 	 */
 	private void listArticle(HttpServletRequest request,HttpServletResponse response) throws IOException{
-        StringBuilder sql = new StringBuilder();
-        sql.append(" SELECT  ");
-        sql.append("     articles.id, ");
-        sql.append("     articles.author, ");
-        sql.append("     articles.content, ");
-        sql.append("     articles.oppose, ");
-        sql.append("     articles.praise, ");
-        sql.append("     articles.title, ");
-        sql.append("     date_format(articles.editTime,'%H:%i' ) editTime ");
-        sql.append(" FROM ");
-        sql.append("     articles, ");
-        sql.append("     users a ");
-        sql.append(" WHERE ");
-        sql.append("     articles.users_id = a.id; ");
-
-		List<Map<String, Object>> maps = null;
-		try {
-			maps = JDBCHelper.queryList(sql.toString());
-		} catch (SQLException e1) {
-			throw new RuntimeException("查询数据库失败");
+		
+		List<Map<String, Object>> maps = articleDao.queryArticles();
+		Iterator<Map<String,Object>> iterator = maps.iterator();
+		
+		/* 这两种办法都可以对list进行循环并修改内容，用迭代器的方式效率更高 */
+		while (iterator.hasNext()) {
+			Map<String,Object> map = (Map<String,Object>) iterator.next();
+			String contentId = map.get("id")+"";
+			if(contentId==null||contentId.trim().length()==0){
+				throw new RuntimeException("获取文章id为空");
+			}
+			
+			/* 查询每一篇文章下点赞的人 */
+			List<Map<String,Object>> praisers = articleDao.getPraises(contentId);
+			map.put("praisers", praisers);
 		}
+		
+		/* 这种办法可以循环赋值 */
+//		for (Map<String, Object> map : maps) {
+//			String contentId = map.get("id")+"";
+//			if(contentId==null||contentId.trim().length()==0){
+//				throw new RuntimeException("获取文章id为空");
+//			}
+//			
+//			/* 查询每一篇文章下点赞的人 */
+//			List<Map<String,Object>> praisers = articleDao.getPraises(contentId);
+//			map.put("praisers", praisers);
+//		}
+		
 		
 		/**
 		 * 在这里，最开始用request传值总是无效，但是用session就可以。
