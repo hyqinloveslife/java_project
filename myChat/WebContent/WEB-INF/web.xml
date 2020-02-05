@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns="http://java.sun.com/xml/ns/javaee" 
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
-	id="WebApp_ID" 
-	version="3.0">
-  <display-name>myChat</display-name>
-  <filter>
-  		<filter-name>characterFilter</filter-name>
-  		<filter-class>filter.CharacterFilter</filter-class>
-  	</filter>
-  	<filter-mapping>
-  		<filter-name>characterFilter</filter-name>
-  		<url-pattern>*</url-pattern>
-  	</filter-mapping>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>myChat</display-name>
+
+	<!-- 自定义拦截器可以实现很多东西，比如说ip访问该网页的次数，或者登录验证，在每次访问的时候都会判断session中是否还保存了信息 -->
+	<!-- 注册filter -->
+	<filter>
+		<description>字符串过滤器</description>
+		<filter-name>characterFilter</filter-name>
+		<filter-class>filter.CharacterFilter</filter-class>
+	</filter>
+	
+	<!-- 映射filter -->
+	<filter-mapping>
+		<filter-name>characterFilter</filter-name>
+		<url-pattern>*</url-pattern>
+	</filter-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>

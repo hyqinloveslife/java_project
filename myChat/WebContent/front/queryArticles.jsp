@@ -106,12 +106,13 @@
 	.praise{
 		/* 换行，第一行在上方 */
 		display: flex;
-		flex-flow: warp;
+		/* 为了这一个错误检查到半夜，结果把自己搞的感冒了 */
+		flex-flow: wrap;
 	}
 	.praise img{
 		width: 20px;
 		height: 20px;
-		margin-right: 8px;
+		/*margin-right: 8px;*/
 	}
 	.praise span{
 		color: #295c9d;
@@ -196,7 +197,7 @@
 						<img alt="" src="${basePath}img/praise2.png">
 					</c:if>
 					<c:forEach items="${a.praisers }" var="t" varStatus="vs">
-						<div style="margin-right: 6px;">
+						<div >
 							<a href="#">
 								<c:out value="${t.name}" ></c:out>
 							</a> 
