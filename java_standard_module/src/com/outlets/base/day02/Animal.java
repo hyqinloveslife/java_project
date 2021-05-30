@@ -11,12 +11,21 @@
 package com.outlets.base.day02;
 
 /**
- * 〈一句话功能简述〉<br> 
- * 〈动物类〉
+ * 〈一句话功能简述〉<br> 〈动物类〉
  *
  * @author hyqin
  * @create 2019-08-25
  * @since 1.0.0
  */
 public class Animal {
+
+  private String type;
+
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
 }

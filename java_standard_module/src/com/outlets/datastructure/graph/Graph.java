@@ -10,9 +10,10 @@
  */
 package com.outlets.datastructure.graph;
 
+import com.sun.istack.internal.NotNull;
+
 /**
- * 〈一句话功能简述〉<br>
- * 〈图的实现方式，通过邻接矩阵的方式〉
+ * 〈一句话功能简述〉<br> 〈图的实现方式，通过邻接矩阵的方式〉 这不就是一个二维数组吗？
  *
  * @author hyqin
  * @create 2019-04-26
@@ -28,6 +29,7 @@ public class Graph {
         print(graphs);
     }
 
+    @NotNull
     public static void print(int[][] graphs) {
         for (int i = 0; i < graphs.length; i++) {
             for (int j = 0; j < graphs[i].length; j++) {

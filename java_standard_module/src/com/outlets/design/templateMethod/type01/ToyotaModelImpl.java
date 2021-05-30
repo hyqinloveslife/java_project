@@ -44,7 +44,8 @@ public class ToyotaModelImpl extends HummerModel {
         System.out.println("丰田的引擎启动了");
     }
 
-    protected boolean isAlarm() {
-        return true;
-    }
+  @Override
+  protected boolean isAlarm() {
+    return true;
+  }
 }
